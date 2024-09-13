@@ -55,6 +55,7 @@ public class KeyRock : MonoBehaviour
     {
         if (other.gameObject.tag == "Key")
         {
+            Debug.Log("aaaaaaaa");
             ADXSoundManager.Instance.PlaySound("KeyRock", getkey.AcbAsset.Handle, getkey.CueId, gameObject.transform, false);
             other.gameObject.SetActive(false);
             audiosource.PlayOneShot(GetKeySound);

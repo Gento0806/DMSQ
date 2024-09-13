@@ -19,7 +19,7 @@ public class Move_Player : MonoBehaviour
 
     static float speed = 4f; // 移動速度
     static float speed2d = 4f;
-    static int jumpforce = 3000;
+    public int jumpforce = 3000;
     Rigidbody rb;
     bool imputkey = false;
     private Tmpg tmpg_;
@@ -29,7 +29,6 @@ public class Move_Player : MonoBehaviour
     // 1フレーム前の位置
     private Vector3 _prevPosition;
     float rakka = 0.5f;
-
     public float initialForce = 10f; // 初期の力の量
     public float maxForce = 50f; // 最大の力の量
     public float forceIncreaseRate = 10f; // 力の増加率
@@ -131,10 +130,10 @@ public class Move_Player : MonoBehaviour
         //落下速度上昇
         if (cameracon.GetComponent<CameraCon>().sanji)
         {
-            rb.AddForce(0, -12f, 0, ForceMode.Acceleration);
+            rb.AddForce(0, -50f, 0, ForceMode.Acceleration);
             if(vec.y <= 0.0f)
             {
-                rb.AddForce(0f, -15f, 0f, ForceMode.Acceleration);
+                rb.AddForce(0f, -30f, 0f, ForceMode.Acceleration);
             }
             
         }
@@ -144,10 +143,10 @@ public class Move_Player : MonoBehaviour
             switch (dir)//重力方向の切り替え
             {
                 case 0:
-                    rb.AddForce(0, -12f, 0, ForceMode.Acceleration);
+                    rb.AddForce(0, -50f, 0, ForceMode.Acceleration);
                     if (rb.velocity.y < 0)
                     {
-                        rb.AddForce(0, -15, 0, ForceMode.Acceleration);
+                        rb.AddForce(0, -30, 0, ForceMode.Acceleration);
                     }
                     break;
                 case 1:
