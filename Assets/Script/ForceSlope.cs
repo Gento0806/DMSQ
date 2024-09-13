@@ -37,6 +37,8 @@ public class ForceSlope : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Force= Vector3.zero;
+            other.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
+        
     }
 }

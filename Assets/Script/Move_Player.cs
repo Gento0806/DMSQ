@@ -87,6 +87,7 @@ public class Move_Player : MonoBehaviour
     move_type currentstate = move_type.idle;
     move_type transit = move_type.idle;
     bool first_hover = true;
+    Vector3 vec;
     //----------
     void Start()
     {
@@ -100,12 +101,12 @@ public class Move_Player : MonoBehaviour
         t = 4;
         skyboxMaterial.SetColor("_Tint", startColor);
         animator = this.gameObject.GetComponent<Animator>();
+       
     }
     void Update()
     {
 
         Rigidbody rb = this.transform.GetComponent<Rigidbody>();
-        Vector3 vec;
         vec = rb.velocity;
         //Debug.Log(vec.y);
 
@@ -127,51 +128,7 @@ public class Move_Player : MonoBehaviour
             dir = 3;
         }
 
-        //落下速度上昇
-        if (cameracon.GetComponent<CameraCon>().sanji)
-        {
-            rb.AddForce(0, -50f, 0, ForceMode.Acceleration);
-            if(vec.y <= 0.0f)
-            {
-                rb.AddForce(0f, -30f, 0f, ForceMode.Acceleration);
-            }
-            
-        }
-        else if (cameracon.GetComponent<CameraCon>().sanji == false)
-        {
-            rb.useGravity = false;
-            switch (dir)//重力方向の切り替え
-            {
-                case 0:
-                    rb.AddForce(0, -50f, 0, ForceMode.Acceleration);
-                    if (rb.velocity.y < 0)
-                    {
-                        rb.AddForce(0, -30, 0, ForceMode.Acceleration);
-                    }
-                    break;
-                case 1:
-                    rb.AddForce(0, 0, 10f, ForceMode.Acceleration);
-                    if (rb.velocity.y < 0)
-                    {
-                        rb.AddForce(0, 0, 10, ForceMode.Acceleration);
-                    }
-                    break;
-                case 2:
-                    rb.AddForce(0, 10f, 0, ForceMode.Acceleration);
-                    if (rb.velocity.y < 0)
-                    {
-                        rb.AddForce(0, 10, 0, ForceMode.Acceleration);
-                    }
-                    break;
-                case 3:
-                    rb.AddForce(0, 0, -10f, ForceMode.Acceleration);
-                    if (rb.velocity.y < 0)
-                    {
-                        rb.AddForce(0, 0, -10, ForceMode.Acceleration);
-                    }
-                    break;
-            }
-        }
+        
 
 
 
@@ -413,6 +370,55 @@ public class Move_Player : MonoBehaviour
             }
         }
 
+    }
+
+    public void FixedUpdate()
+    {
+        //落下速度上昇
+        if (cameracon.GetComponent<CameraCon>().sanji)
+        {
+            rb.AddForce(0, -50f, 0, ForceMode.Acceleration);
+            if (vec.y <= 0.0f)
+            {
+                rb.AddForce(0f, -30f, 0f, ForceMode.Acceleration);
+            }
+
+        }
+        else if (cameracon.GetComponent<CameraCon>().sanji == false)
+        {
+            rb.useGravity = false;
+            switch (dir)//重力方向の切り替え
+            {
+                case 0:
+                    rb.AddForce(0, -50f, 0, ForceMode.Acceleration);
+                    if (rb.velocity.y < 0)
+                    {
+                        rb.AddForce(0, -30, 0, ForceMode.Acceleration);
+                    }
+                    break;
+                case 1:
+                    rb.AddForce(0, 0, 10f, ForceMode.Acceleration);
+                    if (rb.velocity.y < 0)
+                    {
+                        rb.AddForce(0, 0, 10, ForceMode.Acceleration);
+                    }
+                    break;
+                case 2:
+                    rb.AddForce(0, 10f, 0, ForceMode.Acceleration);
+                    if (rb.velocity.y < 0)
+                    {
+                        rb.AddForce(0, 10, 0, ForceMode.Acceleration);
+                    }
+                    break;
+                case 3:
+                    rb.AddForce(0, 0, -10f, ForceMode.Acceleration);
+                    if (rb.velocity.y < 0)
+                    {
+                        rb.AddForce(0, 0, -10, ForceMode.Acceleration);
+                    }
+                    break;
+            }
+        }
     }
 
     //ジャンプ（そうた）
