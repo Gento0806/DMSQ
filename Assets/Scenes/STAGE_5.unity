@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3708324, g: 0.24146679, b: 0.28508168, a: 1}
+  m_IndirectSpecularColor: {r: 0.44346502, g: 0.80926496, b: 0.99221116, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6157,7 +6157,7 @@ Transform:
   m_GameObject: {fileID: 441685533}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7, y: 219.9, z: 0.03}
+  m_LocalPosition: {x: -3.68, y: 219.9, z: 0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6631,7 +6631,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527683579}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14968996, y: 0.7732909, z: -0.19844848, w: 0.5832944}
+  m_LocalRotation: {x: 0.14968996, y: 0.7732909, z: -0.19844846, w: 0.5832944}
   m_LocalPosition: {x: -207.17, y: 135.8, z: -28.900002}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
@@ -13348,6 +13348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 0}
+  jumpforce: 3000
   initialForce: 10
   maxForce: 50
   forceIncreaseRate: 10
@@ -14558,7 +14559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174674437}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.13645327, y: 0.857448, z: -0.29133344, w: -0.40160713}
+  m_LocalRotation: {x: -0.1364533, y: 0.857448, z: -0.29133338, w: -0.40160722}
   m_LocalPosition: {x: 26.6, y: 46.5, z: 25.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -20692,7 +20693,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: aa47dd4c87848ef4c83759e0ac1715cd, type: 3}
       propertyPath: m_LocalScale.z
-      value: 150.444
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa47dd4c87848ef4c83759e0ac1715cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20700,7 +20701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa47dd4c87848ef4c83759e0ac1715cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -112.21
+      value: -112.2459
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa47dd4c87848ef4c83759e0ac1715cd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22142,6 +22143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 527683579}
+  jumpforce: 3000
   initialForce: 10
   maxForce: 50
   forceIncreaseRate: 10
@@ -28300,6 +28302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 527683579}
+  jumpforce: 3000
   initialForce: 10
   maxForce: 50
   forceIncreaseRate: 10
@@ -28987,7 +28990,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094368303}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14968996, y: 0.7732909, z: -0.19844848, w: 0.5832944}
+  m_LocalRotation: {x: 0.14968996, y: 0.7732909, z: -0.19844846, w: 0.5832944}
   m_LocalPosition: {x: -207.17, y: 135.8, z: -28.900002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

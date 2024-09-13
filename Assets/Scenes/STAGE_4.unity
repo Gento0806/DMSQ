@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3708324, g: 0.24146679, b: 0.28508168, a: 1}
+  m_IndirectSpecularColor: {r: 0.37092832, g: 0.24144235, b: 0.28507993, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5083,7 +5083,7 @@ MonoBehaviour:
   Qoshiteru: 1
   dX: 141
   dY: 123
-  dXD: -3.3
+  dXD: 0
   dYD: 143
   P_Ball3D: {fileID: 1180648988}
   P_Ball2D: {fileID: 782885750}
@@ -6071,7 +6071,7 @@ Transform:
   m_GameObject: {fileID: 441685533}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.2, y: 143.2, z: 0.03}
+  m_LocalPosition: {x: -0.5, y: 143.2, z: 0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6663,7 +6663,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527683579}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13855901, y: 0.80417466, z: -0.20637411, w: 0.5399207}
+  m_LocalRotation: {x: 0.138559, y: 0.8041747, z: -0.20637412, w: 0.5399206}
   m_LocalPosition: {x: -194.70773, y: 138.8, z: 7.891884}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
@@ -8334,7 +8334,7 @@ Transform:
   m_GameObject: {fileID: 847148376}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -14.700003, y: 146.03, z: 0.70000136}
+  m_LocalPosition: {x: -10.000001, y: 146.03, z: 0.7000013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13350,6 +13350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 0}
+  jumpforce: 3000
   initialForce: 10
   maxForce: 50
   forceIncreaseRate: 10
@@ -13895,7 +13896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7bdb43a04b293c4f9aca58f65e1cf69, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7bdb43a04b293c4f9aca58f65e1cf69, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14666,7 +14667,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174674437}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.1364533, y: 0.857448, z: -0.29133338, w: -0.40160722}
+  m_LocalRotation: {x: -0.13645327, y: 0.857448, z: -0.29133344, w: -0.40160713}
   m_LocalPosition: {x: 26.6, y: 46.5, z: 25.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -21648,6 +21649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 527683579}
+  jumpforce: 3000
   initialForce: 10
   maxForce: 50
   forceIncreaseRate: 10
@@ -27678,7 +27680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995419957}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645327, w: 0.857448}
+  m_LocalRotation: {x: 0.29133344, y: 0.40160713, z: -0.13645327, w: 0.857448}
   m_LocalPosition: {x: -33.4, y: 46.5, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -27806,6 +27808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 527683579}
+  jumpforce: 3000
   initialForce: 10
   maxForce: 50
   forceIncreaseRate: 10
@@ -28194,7 +28197,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094368303}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13855901, y: 0.80417466, z: -0.20637411, w: 0.5399207}
+  m_LocalRotation: {x: 0.138559, y: 0.8041747, z: -0.20637412, w: 0.5399206}
   m_LocalPosition: {x: -194.70773, y: 138.8, z: 7.891884}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
