@@ -166,6 +166,11 @@ public class Move_Player : MonoBehaviour
                     banmove = false;
                 }
             }
+            else
+            {
+                banmove = false;
+            }
+
             /*重力切替-----------------------------
             // Gキーが押されたかを確認
             if (Input.GetKeyDown(KeyCode.G)&&!cameracon.GetComponent<CameraCon>().sanji)
