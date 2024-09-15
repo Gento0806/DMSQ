@@ -6,6 +6,7 @@ using System.Net;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 
 public class Move_Player : MonoBehaviour
@@ -62,6 +63,8 @@ public class Move_Player : MonoBehaviour
     private float elapsedTime = 0.0f;
     //
 
+    
+
     //----音----
     public enum move_type
     {
@@ -89,6 +92,8 @@ public class Move_Player : MonoBehaviour
     bool first_hover = true;
     Vector3 vec;
     //----------
+
+   
     void Start()
     {
         Time.timeScale = 1.0f;
@@ -105,6 +110,9 @@ public class Move_Player : MonoBehaviour
     }
     void Update()
     {
+        // ゲームパッド（デバイス取得）
+        var gamepad = Gamepad.current;
+        if (gamepad == null) return;
 
         Rigidbody rb = this.transform.GetComponent<Rigidbody>();
         vec = rb.velocity;
@@ -136,8 +144,8 @@ public class Move_Player : MonoBehaviour
         {
             //あたらしい移動（大地)
             // 移動量
-            moveX = Input.GetAxis("Horizontal") * speed; // 左右
-            moveZ = Input.GetAxis("Vertical") * speed; // 前後
+            moveX = gamepad.leftStick.x.ReadValue() * speed; // 左右
+            moveZ = gamepad.leftStick.y.ReadValue() * speed; // 前後
                                                        // カメラの方向から、X-Z平面の単位ベクトルを取得
             Vector3 cameraForward = Vector3.Scale(MainCamera.transform.forward, new Vector3(1, 0, 1)).normalized;
             // 方向キーの入力値とカメラの向きから、移動方向を決定
