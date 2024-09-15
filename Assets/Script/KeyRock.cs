@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeyRock : MonoBehaviour
 {
@@ -12,9 +13,11 @@ public class KeyRock : MonoBehaviour
     [SerializeField] GameObject[] Lock;
     [SerializeField] AudioClip GetKeySound;
     [SerializeField] CriWare.Assets.CriAtomCueReference getkey;
+    [SerializeField] GameObject KeyNumImage;
+    [SerializeField] Sprite[] KeyNumSprite;
     AudioSource audiosource;
     int KeyNow;
-    
+    int a = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +28,7 @@ public class KeyRock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        KeyNow = 0;
+        a = 0;
         for(int i = 0; i < KeyObj.Length; i++)
         {
             if (KeyObj[i].activeSelf==false)
@@ -38,8 +41,12 @@ public class KeyRock : MonoBehaviour
                 {
                     KeyObj[i-1].SetActive(false);
                 }
-                KeyNow++;
+                a++;
             }
+        }
+        if (KeyNow < a)//Œ®Žæ“¾”XV
+        {
+            KeyNow = a;
         }
 
         if(KeyNow == KeyNum)
@@ -50,12 +57,13 @@ public class KeyRock : MonoBehaviour
                 Destroy(Lock[i]);
             }
         }
+        Image img=KeyNumImage.GetComponent<Image>();
+        img.sprite = KeyNumSprite[(KeyNum - KeyNow) / 2];
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Key")
         {
-            Debug.Log("aaaaaaaa");
             ADXSoundManager.Instance.PlaySound("KeyRock", getkey.AcbAsset.Handle, getkey.CueId, gameObject.transform, false);
             other.gameObject.SetActive(false);
             audiosource.PlayOneShot(GetKeySound);
