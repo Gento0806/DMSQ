@@ -13,6 +13,9 @@ public class camera_ch : MonoBehaviour
     public CinemachineVirtualCameraBase vcam4;
     public CinemachineVirtualCameraBase vcam5;
 
+    Move_Player moveplayer2D;
+    Move_Player moveplayer3D;
+
     double a = 0;
 
     double b = 0;
@@ -34,8 +37,8 @@ public class camera_ch : MonoBehaviour
 
     //360ìxÉJÉÅÉâ
     public GameObject Player;
-    bool camera90 = true;
-    bool camera360 = false;
+    bool Nomal = true;
+    bool Goal = false;
     //
 
     void Start()
@@ -44,12 +47,14 @@ public class camera_ch : MonoBehaviour
         tmpg_.Enable();
         cameracon.GetComponent<CameraCon>();
         system = GameObject.Find("System").GetComponent<Sisutemu>();
+        moveplayer2D = GameObject.Find("mashiro_2model").GetComponent<Move_Player>();
+        moveplayer3D = GameObject.Find("mashiro_3model").GetComponent<Move_Player>();
     }
 
     void Update()
     {
 
-        if (camera90)
+        if (Nomal)
         {
             if (tmpg_.Player.Houkoukirikaehidari.triggered) // Left click
             {
@@ -103,8 +108,6 @@ public class camera_ch : MonoBehaviour
                 {
                     vcam5.Priority = 3;
                     system.bankey = true;
-
-
                 }
                 if (b % 2 == 0)
                 {
@@ -200,39 +203,17 @@ public class camera_ch : MonoBehaviour
             }
 
         }
-        else if (camera360)
+        else if (Goal)
         {
-            vcam1.Priority = 1;
-            vcam2.Priority = 0;
-            vcam3.Priority = 0;
-            vcam4.Priority = 0;
-
-            if (Input.GetMouseButton(1))
-            {
-                vcam1.transform.RotateAround(Player.transform.position, new Vector3(0, 1, 0), 0.5f);
-            }
-            if (Input.GetMouseButton(0))
-            {
-                vcam1.transform.RotateAround(Player.transform.position, new Vector3(0, 1, 0), -0.5f);
-            }
-           
+            vcam5.Priority = 3;
         }
 
-        if (Input.GetKeyDown(KeyCode.C))
+        /*if (moveplayer2D.SkyBoxChangeBool || moveplayer3D.SkyBoxChangeBool)
         {
-            if (camera90)
-            {
-                camera90 = false;
-                camera360 = true;
-                Debug.Log("360");
-            }
-            if (camera360)
-            {
-                camera90 = true;
-                camera360 = false;
-                Debug.Log("90");
-            }
-        }
+            Nomal = false;
+            Goal = true;
+        }*/
+
     }
 
 

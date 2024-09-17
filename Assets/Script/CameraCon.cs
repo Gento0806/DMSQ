@@ -6,6 +6,7 @@ using UnityEngine.Playables;
 using Cinemachine;
 using CriWare;
 using JetBrains.Annotations;
+using Effekseer;
 
 public class CameraCon : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class CameraCon : MonoBehaviour
 
     Move_Player moveplayer2D;
     Move_Player moveplayer3D;
+    Vector3 Pos;
 
     //カメラ切り替えのタイムラインのやつ
     public PlayableDirector playableDirector;
@@ -51,13 +53,15 @@ public class CameraCon : MonoBehaviour
     public float BallScale = 0;
     public float Max_Scale = 0;
     public float henkaTime = 0;
-    Vector3 P_Ball_Scale= new Vector3(0, 0, 0);//スケールを入れておくベクトル
+    Vector3 mashiro_Scale= new Vector3(5f, 5f, 5f);//スケールを入れておくベクトル
     Vector3 nijigen_Pos = new Vector3();
 
     Vector3 Origin = new Vector3(0, 0, 0);
     Rigidbody sanjiRB;
     Rigidbody nijiRB;
 
+    EffekseerEffectAsset effect;
+    Move_Player move_Player;
 
     //----音----
     [SerializeField]
@@ -81,18 +85,32 @@ public class CameraCon : MonoBehaviour
         DelayTime = SwitchTime + Delay;
         DelayTimeT = DelayTime;
 
+        
 
-        //moveplayer2D = GameObject.Find("mashiro_2model").GetComponent<Move_Player>();
-        //moveplayer3D = GameObject.Find("mashiro_3model").GetComponent<Move_Player>();
+        moveplayer2D = GameObject.Find("mashiro_2model").GetComponent<Move_Player>();
+        
 
 
-        sanjiRB = sanjigen.GetComponent<Rigidbody>();
-        nijiRB = nijigen.GetComponent<Rigidbody>();
+        //sanjiRB = sanjigen.GetComponent<Rigidbody>();
+        //nijiRB = nijigen.GetComponent<Rigidbody>();
         CriAtomEx.ApplyDspBusSnapshot("Snapshot", 100);
+
+        
     }
 
     void Update()
     {
+        if (sanji)
+        {
+            moveplayer3D = GameObject.Find("mashiro_3model").GetComponent<Move_Player>();
+            sanjiRB = GameObject.Find("mashiro_3model").GetComponent<Rigidbody>(); 
+        }
+        else
+        {
+            moveplayer2D = GameObject.Find("mashiro_2model").GetComponent<Move_Player>();
+            nijiRB = GameObject.Find("mashiro_2model").GetComponent<Rigidbody>();
+        }
+
         /*if(!moveplayer2D.SkyBoxChangeBool || !moveplayer3D.SkyBoxChangeBool)
         {
             //if (Input.GetKeyDown("q"))
@@ -179,12 +197,13 @@ public class CameraCon : MonoBehaviour
 
                     DelayTimeT = 0;
 
-                    P_Ball2D.SetActive(true);
-                    P_Ball3D.SetActive(true);
+                    //P_Ball2D.SetActive(true);
+                    //P_Ball3D.SetActive(true);
                     //----隠す球ｰｰｰｰ
                     cameraCh_P = true;
-                    BallScale = 0;
+                    BallScale = 5f;
                     //--------------
+
 
                     //----音----
                     ADXSoundManager.Instance.PlaySound("dimchange", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
@@ -203,11 +222,11 @@ public class CameraCon : MonoBehaviour
                 else if (sanji == false)
                 {
                     DelayTimeT = 0;
-                    P_Ball2D.SetActive(true);
-                    P_Ball3D.SetActive(true);
+                    //P_Ball2D.SetActive(true);
+                    //P_Ball3D.SetActive(true);
                     //----隠す球ｰｰｰｰ
                     cameraCh_P = true;
-                    BallScale = 0;
+                    BallScale = 5f;
                     //--------------
 
                     //----音----
@@ -240,32 +259,41 @@ public class CameraCon : MonoBehaviour
             }
         }
 
-        
-
         //隠す球---
         if (cameraCh_P)
         {
             nijigen_Pos = nijigen.transform.position;
-            BallScale += 10f*Time.deltaTime;
+            BallScale -= 7f*Time.deltaTime;
             //sanjigen_Scale -= 0.4f;
-            P_Ball_Scale = new Vector3(BallScale, BallScale, BallScale);
-            P_Ball3D.transform.localScale = P_Ball_Scale;
-            P_Ball2D.transform.position = new Vector3(nijigen_Pos.x,nijigen_Pos.y+5,nijigen_Pos.z);
-            P_Ball2D.transform.localScale = P_Ball_Scale;
-
-
+            mashiro_Scale = new Vector3(BallScale, BallScale, BallScale);
+            sanjigen.transform.localScale = mashiro_Scale;
+            nijigen.transform.localScale = mashiro_Scale;
+            effect = Resources.Load<EffekseerEffectAsset>("change3");
+            EffekseerHandle handle = EffekseerSystem.PlayEffect(effect, sanjigen.transform.position);
+            EffekseerHandle handle2 = EffekseerSystem.PlayEffect(effect, nijigen.transform.position);
             
-
-            if (BallScale >= Max_Scale)
+            /*if (!sanji)
             {
-                BallScale = Max_Scale;
-                //sanjigen_Scale = 0;
+                Pos.y = Pos.x + dYD;
+                Pos.x = dXD;
+                nijigen.transform.position = Pos;
+            }*/
+
+
+            if (BallScale <= 0.1f)
+            {
+                BallScale = 0.1f;
+                if (!sanji)
+                {
+                    nijiRB.constraints = RigidbodyConstraints.FreezePositionY;
+                }
+                
             }
 
             henkaTime += (SwitchTime / 2)*Time.deltaTime;
             if (henkaTime >= SwitchTime)
             {
-                Physics.gravity = new Vector3(0, -40f, 0); // 重力を下方向に戻す
+                //Physics.gravity = new Vector3(0, -40f, 0); // 重力を下方向に戻す
                 cameraCh_P = false;
                 henkaTime = 0;
                 
@@ -273,25 +301,41 @@ public class CameraCon : MonoBehaviour
         }
         else
         {
+            BallScale += 10f * Time.deltaTime;
+            mashiro_Scale = new Vector3(BallScale, BallScale, BallScale);
+            sanjigen.transform.localScale = mashiro_Scale;
+            nijigen.transform.localScale = mashiro_Scale;
+            
+            effect = Resources.Load<EffekseerEffectAsset>("change3");
+            EffekseerHandle handle = EffekseerSystem.PlayEffect(effect, sanjigen.transform.position);
+            EffekseerHandle handle2 = EffekseerSystem.PlayEffect(effect, nijigen.transform.position);
 
-            nijigen_Pos = nijigen.transform.position;
-            BallScale -= 20f * Time.deltaTime;
-            P_Ball_Scale = new Vector3(BallScale, BallScale, BallScale);
-            P_Ball3D.transform.localScale = P_Ball_Scale;
-            P_Ball2D.transform.position = new Vector3(nijigen_Pos.x, nijigen_Pos.y + 5, nijigen_Pos.z);
-            P_Ball2D.transform.localScale = P_Ball_Scale;
+            /*(!sanji && BallScale <= 5f)
+            {
+                Pos.y = Pos.x + dYD;
+                Pos.x = dXD;
+                nijigen.transform.position = Pos;
+            }*/
 
             if (sanji)
             {
                 Camera.main.orthographic = false;
             }
 
-            if (BallScale <= 0)
+            if (BallScale >= 5f)
             {
-                BallScale = 0;
+                BallScale = 5f;
                 henkaTime = 0;
-                P_Ball2D.SetActive(false);
-                P_Ball3D.SetActive(false);
+                if (!sanji)
+                {
+                    nijiRB.constraints = RigidbodyConstraints.None;
+                    nijiRB.constraints = RigidbodyConstraints.FreezeRotationX;
+                    nijiRB.constraints = RigidbodyConstraints.FreezeRotationZ;
+                }
+                
+                sanjigen.transform.localScale = new Vector3(5f, 5f, 5f);
+                nijigen.transform.localScale = new Vector3(5f, 5f, 5f);
+                
             }
 
 
@@ -313,7 +357,7 @@ public class CameraCon : MonoBehaviour
     }
     public void moveCharacter()
     {
-        Vector3 Pos;
+        
 
         //現在位置の取得
         if (sanji)
@@ -354,6 +398,7 @@ public class CameraCon : MonoBehaviour
             Pos.y = Pos.x + dYD;
             Pos.x = dXD;
             nijigen.transform.position = Pos;
+            
         }
 
     }
