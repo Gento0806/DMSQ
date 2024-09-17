@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44433835, g: 0.8105564, b: 0.9933267, a: 1}
+  m_IndirectSpecularColor: {r: 0.44335777, g: 0.8093449, b: 0.99220675, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -612,6 +612,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3591106599516858237, guid: 1c729ce1c6d6ec1449722a888ad1368f, type: 3}
   m_PrefabInstance: {fileID: 105275351}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &131007326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 131007327}
+  - component: {fileID: 131007328}
+  m_Layer: 0
+  m_Name: GameObject (5)
+  m_TagString: Floor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &131007327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131007326}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -38.6, y: -27.33, z: -49.26}
+  m_LocalScale: {x: 20, y: 1, z: 62.958733}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2102437779}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &131007328
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131007326}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &148465551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,7 +1192,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307242640}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.1364533, y: 0.857448, z: -0.29133338, w: -0.40160722}
+  m_LocalRotation: {x: -0.13645327, y: 0.857448, z: -0.29133344, w: -0.40160713}
   m_LocalPosition: {x: 26.6, y: 46.5, z: 25.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6943,6 +6996,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 158391857}
     m_Modifications:
+    - target: {fileID: 1998397265378140689, guid: ed2a9b0589f70394e975be4f3ad7531f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2866235798370388276, guid: ed2a9b0589f70394e975be4f3ad7531f, type: 3}
       propertyPath: m_Name
       value: 7
@@ -7026,7 +7083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 766979295}
   m_Layer: 0
-  m_Name: ground
+  m_Name: 2DGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10002,7 +10059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1354253212
 Transform:
   m_ObjectHideFlags: 0
@@ -21381,7 +21438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874705263}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.29133344, y: 0.40160713, z: -0.13645327, w: 0.857448}
+  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645329, w: 0.857448}
   m_LocalPosition: {x: -33.4, y: 46.5, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -26765,7 +26822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2102437779}
   m_Layer: 0
-  m_Name: Ground
+  m_Name: 3DGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26785,6 +26842,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 405466359}
+  - {fileID: 131007327}
   - {fileID: 1354253212}
   - {fileID: 1049950543}
   m_Father: {fileID: 0}
@@ -26813,13 +26871,13 @@ SceneRoots:
   - {fileID: 307242642}
   - {fileID: 22767015}
   - {fileID: 2102437779}
+  - {fileID: 766979295}
   - {fileID: 1289852564}
   - {fileID: 209806855}
   - {fileID: 1448213234}
   - {fileID: 646582001}
   - {fileID: 1412545407}
   - {fileID: 1406384172}
-  - {fileID: 766979295}
   - {fileID: 1617382531}
   - {fileID: 1585196893}
   - {fileID: 741774235}
