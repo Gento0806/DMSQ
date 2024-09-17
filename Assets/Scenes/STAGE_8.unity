@@ -8868,10 +8868,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -5.18
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 5a58e81baf4e0764c8faaa390a9c903b, type: 3}
-      propertyPath: m_Name
-      value: mashiro_3model
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23373,7 +23369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874705263}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645329, w: 0.857448}
+  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645327, w: 0.857448}
   m_LocalPosition: {x: -33.4, y: 46.5, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -23595,7 +23591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03c9126af3114904ca76e4911b378468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 942430500}
+  targetObject: {fileID: 315520423}
 --- !u!1001 &1964684093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28894,6 +28890,7 @@ SceneRoots:
   - {fileID: 22767015}
   - {fileID: 2102437779}
   - {fileID: 1289852564}
+  - {fileID: 741774235}
   - {fileID: 209806855}
   - {fileID: 938032670}
   - {fileID: 529382949}
@@ -28907,7 +28904,6 @@ SceneRoots:
   - {fileID: 766979295}
   - {fileID: 1617382531}
   - {fileID: 1585196893}
-  - {fileID: 741774235}
   - {fileID: 1205310745}
   - {fileID: 455044660}
   - {fileID: 1341614531}

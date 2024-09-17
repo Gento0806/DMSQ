@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3708324, g: 0.24146679, b: 0.28508168, a: 1}
+  m_IndirectSpecularColor: {r: 0.44335777, g: 0.8093449, b: 0.99220675, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14980,7 +14980,7 @@ MonoBehaviour:
   Sanji: 1
   bankey: 0
   DeathLine3D: -15
-  DeathLine2D: 125
+  DeathLine2D: 370
   RespawnPoint3D: {fileID: 695859765}
   RespawnPoint2D: {fileID: 441685533}
   Player3D: {fileID: 2004670187}
@@ -17018,7 +17018,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174674437}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.1364533, y: 0.857448, z: -0.29133338, w: -0.40160722}
+  m_LocalRotation: {x: -0.13645327, y: 0.857448, z: -0.29133344, w: -0.40160713}
   m_LocalPosition: {x: 26.6, y: 46.5, z: 25.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
