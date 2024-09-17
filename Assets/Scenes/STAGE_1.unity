@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44335777, g: 0.8093449, b: 0.99220675, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708324, g: 0.24146679, b: 0.28508168, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1123,8 +1123,8 @@ Transform:
   m_GameObject: {fileID: 311353595}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.1, y: 1.5751953, z: -79.6}
-  m_LocalScale: {x: 8.4344, y: 1, z: 20}
+  m_LocalPosition: {x: -2.1, y: 1.5751953, z: -78.61}
+  m_LocalScale: {x: 8.4344, y: 1, z: 58.225998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 766979295}
@@ -6957,7 +6957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 766979295}
   m_Layer: 0
-  m_Name: ground
+  m_Name: 2DGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9427,7 +9427,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340245212}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10951676, y: 0.89028645, z: -0.30249083, w: 0.32232812}
+  m_LocalRotation: {x: 0.1095168, y: 0.89028645, z: -0.30249086, w: 0.32232815}
   m_LocalPosition: {x: -28.4, y: 46.5, z: 30.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15775,6 +15775,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameObject
       objectReference: {fileID: 0}
+    - target: {fileID: 1296598378406345330, guid: 0121d89da07523544be93ebd20dcd29b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1932422210489527425, guid: 0121d89da07523544be93ebd20dcd29b, type: 3}
       propertyPath: m_Size.x
       value: 2
@@ -21585,7 +21589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874705263}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645327, w: 0.857448}
+  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645329, w: 0.857448}
   m_LocalPosition: {x: -33.4, y: 46.5, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -27022,7 +27026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2102437779}
   m_Layer: 0
-  m_Name: Ground
+  m_Name: 3DGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27069,13 +27073,13 @@ SceneRoots:
   - {fileID: 307242642}
   - {fileID: 22767015}
   - {fileID: 2102437779}
+  - {fileID: 766979295}
   - {fileID: 1289852564}
   - {fileID: 209806855}
   - {fileID: 1448213234}
   - {fileID: 646582001}
   - {fileID: 1412545407}
   - {fileID: 1406384172}
-  - {fileID: 766979295}
   - {fileID: 1617382531}
   - {fileID: 1585196893}
   - {fileID: 741774235}
