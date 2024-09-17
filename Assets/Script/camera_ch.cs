@@ -15,6 +15,8 @@ public class camera_ch : MonoBehaviour
 
     Move_Player moveplayer2D;
     Move_Player moveplayer3D;
+    Rigidbody sanjiRB;
+    Rigidbody nijiRB;
 
     double a = 0;
 
@@ -47,12 +49,20 @@ public class camera_ch : MonoBehaviour
         tmpg_.Enable();
         cameracon.GetComponent<CameraCon>();
         system = GameObject.Find("System").GetComponent<Sisutemu>();
-        moveplayer2D = GameObject.Find("mashiro_2model").GetComponent<Move_Player>();
-        moveplayer3D = GameObject.Find("mashiro_3model").GetComponent<Move_Player>();
     }
 
     void Update()
     {
+        if (cameracon.sanji)
+        {
+            moveplayer3D = GameObject.Find("mashiro_3model").GetComponent<Move_Player>();
+            sanjiRB = GameObject.Find("mashiro_3model").GetComponent<Rigidbody>();
+        }
+        else
+        {
+            moveplayer2D = GameObject.Find("mashiro_2model").GetComponent<Move_Player>();
+            nijiRB = GameObject.Find("mashiro_2model").GetComponent<Rigidbody>();
+        }
 
         if (Nomal)
         {

@@ -84,13 +84,6 @@ public class CameraCon : MonoBehaviour
         nijigen.gameObject.SetActive(false);
         DelayTime = SwitchTime + Delay;
         DelayTimeT = DelayTime;
-
-        
-
-        moveplayer2D = GameObject.Find("mashiro_2model").GetComponent<Move_Player>();
-        
-
-
         //sanjiRB = sanjigen.GetComponent<Rigidbody>();
         //nijiRB = nijigen.GetComponent<Rigidbody>();
         CriAtomEx.ApplyDspBusSnapshot("Snapshot", 100);
@@ -306,9 +299,9 @@ public class CameraCon : MonoBehaviour
             sanjigen.transform.localScale = mashiro_Scale;
             nijigen.transform.localScale = mashiro_Scale;
             
-            effect = Resources.Load<EffekseerEffectAsset>("change3");
+            /*effect = Resources.Load<EffekseerEffectAsset>("change3");
             EffekseerHandle handle = EffekseerSystem.PlayEffect(effect, sanjigen.transform.position);
-            EffekseerHandle handle2 = EffekseerSystem.PlayEffect(effect, nijigen.transform.position);
+            EffekseerHandle handle2 = EffekseerSystem.PlayEffect(effect, nijigen.transform.position);*/
 
             /*(!sanji && BallScale <= 5f)
             {
@@ -397,7 +390,7 @@ public class CameraCon : MonoBehaviour
             Pos.y = Pos.x + dYD;
             Pos.x = dXD;
             nijigen.transform.position = Pos;
-            
+            nijiRB.constraints = RigidbodyConstraints.FreezeRotation;
         }
 
     }
