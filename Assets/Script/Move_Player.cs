@@ -20,7 +20,7 @@ public class Move_Player : MonoBehaviour
 
     static float speed = 4f; // ˆÚ“®‘¬“x
     static float speed2d = 4f;
-    public int jumpforce = 3000;
+    int jumpforce = 3500;
     Rigidbody rb;
     bool imputkey = false;
     private Tmpg tmpg_;
