@@ -329,8 +329,7 @@ public class CameraCon : MonoBehaviour
                 if (!sanji)
                 {
                     nijiRB.constraints = RigidbodyConstraints.None;
-                    nijiRB.constraints = RigidbodyConstraints.FreezeRotationX;
-                    nijiRB.constraints = RigidbodyConstraints.FreezeRotationZ;
+                    nijiRB.constraints = RigidbodyConstraints.FreezeRotation;
                 }
                 
                 sanjigen.transform.localScale = new Vector3(5f, 5f, 5f);
