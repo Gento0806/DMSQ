@@ -294,26 +294,33 @@ public class CameraCon : MonoBehaviour
         }
         else
         {
-            BallScale += 10f * Time.deltaTime;
-            mashiro_Scale = new Vector3(BallScale, BallScale, BallScale);
-            sanjigen.transform.localScale = mashiro_Scale;
-            nijigen.transform.localScale = mashiro_Scale;
-            
-            /*effect = Resources.Load<EffekseerEffectAsset>("change3");
-            EffekseerHandle handle = EffekseerSystem.PlayEffect(effect, sanjigen.transform.position);
-            EffekseerHandle handle2 = EffekseerSystem.PlayEffect(effect, nijigen.transform.position);*/
-
-            /*(!sanji && BallScale <= 5f)
+            if (BallScale < 5f)
             {
-                Pos.y = Pos.x + dYD;
-                Pos.x = dXD;
-                nijigen.transform.position = Pos;
-            }*/
+                BallScale += 10f * Time.deltaTime;
+                mashiro_Scale = new Vector3(BallScale, BallScale, BallScale);
+                sanjigen.transform.localScale = mashiro_Scale;
+                nijigen.transform.localScale = mashiro_Scale;
+                effect = Resources.Load<EffekseerEffectAsset>("change3");
+                EffekseerHandle handle = EffekseerSystem.PlayEffect(effect, sanjigen.transform.position);
+                EffekseerHandle handle2 = EffekseerSystem.PlayEffect(effect, nijigen.transform.position);
 
-            if (sanji)
-            {
-                Camera.main.orthographic = false;
+                /*effect = Resources.Load<EffekseerEffectAsset>("change3");
+                EffekseerHandle handle = EffekseerSystem.PlayEffect(effect, sanjigen.transform.position);
+                EffekseerHandle handle2 = EffekseerSystem.PlayEffect(effect, nijigen.transform.position);*/
+
+                /*(!sanji && BallScale <= 5f)
+                {
+                    Pos.y = Pos.x + dYD;
+                    Pos.x = dXD;
+                    nijigen.transform.position = Pos;
+                }*/
+
+                if (sanji)
+                {
+                    Camera.main.orthographic = false;
+                }
             }
+            
 
             if (BallScale >= 5f)
             {
