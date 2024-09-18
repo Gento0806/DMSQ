@@ -156,18 +156,20 @@ public class Move_Player : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                if (Vector3.Distance(hit.point, this.transform.position) < 2 && hit.collider.gameObject.tag != "saka1" && hit.collider.gameObject.tag != "Goal")
+                if (Vector3.Distance(hit.point, this.transform.position) < 5 && hit.collider.gameObject.tag != "saka1" && hit.collider.gameObject.tag != "Goal" && hit.collider.gameObject.tag != "Floor")
                 {
+                    Debug.Log(hit.collider.gameObject.name);
+                    banmove = true;
+                    /*
                     if (cameracon.GetComponent<CameraCon>().sanji && hit.collider.gameObject.tag != "Wall" || cameracon.GetComponent<CameraCon>().sanji == false)
                     {
-                        Debug.Log(hit.collider.gameObject.name);
-                        banmove = true;
+
                     }
                     else
                     {
                         Debug.Log(hit.collider.gameObject.name);
                         banmove = false;
-                    }
+                    }*/
                 }
                 else
                 {
