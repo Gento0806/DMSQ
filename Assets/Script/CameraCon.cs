@@ -278,7 +278,7 @@ public class CameraCon : MonoBehaviour
                 BallScale = 0.1f;
                 if (!sanji)
                 {
-                    nijiRB.constraints = RigidbodyConstraints.FreezePositionY;
+                    nijiRB.constraints = RigidbodyConstraints.FreezeAll;
                 }
                 
             }
@@ -330,8 +330,10 @@ public class CameraCon : MonoBehaviour
                 {
                     nijiRB.constraints = RigidbodyConstraints.None;
                     nijiRB.constraints = RigidbodyConstraints.FreezeRotation;
+                    nijiRB.constraints = RigidbodyConstraints.FreezePositionX;
+                    nijiRB.constraints = RigidbodyConstraints.FreezePositionZ;
                 }
-                
+
                 sanjigen.transform.localScale = new Vector3(5f, 5f, 5f);
                 nijigen.transform.localScale = new Vector3(5f, 5f, 5f);
                 
@@ -397,7 +399,7 @@ public class CameraCon : MonoBehaviour
             Pos.y = Pos.x + dYD;
             Pos.x = dXD;
             nijigen.transform.position = Pos;
-            nijiRB.constraints = RigidbodyConstraints.FreezeRotation;
+            //nijiRB.constraints = RigidbodyConstraints.FreezeRotation;
         }
 
     }
