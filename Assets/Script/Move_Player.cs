@@ -6,7 +6,6 @@ using System.Net;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem;
 
 
 public class Move_Player : MonoBehaviour
@@ -23,7 +22,7 @@ public class Move_Player : MonoBehaviour
     int jumpforce = 3500;
     Rigidbody rb;
     bool imputkey = false;
-    private Tmpg tmpg_;
+   
     bool jumpsieru = false;
     int dir = 0;
     float LookRotate;
@@ -97,8 +96,7 @@ public class Move_Player : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1.0f;
-        tmpg_ = new Tmpg();
-        tmpg_.Enable();
+        
         rb = this.GetComponent<Rigidbody>();
         currentForce = initialForce;
         currentstate = moveplayer;
@@ -110,13 +108,11 @@ public class Move_Player : MonoBehaviour
     }
     void Update()
     {
-        // ゲームパッド（デバイス取得）
-        var gamepad = Gamepad.current;
-        if (gamepad == null) return;
 
-        Rigidbody rb = this.transform.GetComponent<Rigidbody>();
-        vec = rb.velocity;
-        //Debug.Log(vec.y);
+        Rigidbody rb = this.GetComponent<Rigidbody>();
+        Vector3 ResetVelocity = new Vector3(0, 0, 0);
+        ResetVelocity.y = rb.velocity.y;
+        rb.velocity = ResetVelocity;
 
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -144,8 +140,8 @@ public class Move_Player : MonoBehaviour
         {
             //あたらしい移動（大地)
             // 移動量
-            moveX = gamepad.leftStick.x.ReadValue() * speed; // 左右
-            moveZ = gamepad.leftStick.y.ReadValue() * speed; // 前後
+            moveX = Input.GetAxis("Horizontal") * speed; // 左右
+            moveZ = Input.GetAxis("Vertical")* speed; // 前後
                                                        // カメラの方向から、X-Z平面の単位ベクトルを取得
             Vector3 cameraForward = Vector3.Scale(MainCamera.transform.forward, new Vector3(1, 0, 1)).normalized;
             // 方向キーの入力値とカメラの向きから、移動方向を決定
@@ -247,7 +243,7 @@ public class Move_Player : MonoBehaviour
                     reverse = 1;
                 else
                     reverse = -1;*/
-                if (tmpg_.Player.MoveButton.triggered || tmpg_.Player.Move.triggered)
+                if (moveX>0.1f || moveZ>0.1f)
                 {
                     //----音----
                     if (ismovestart)
@@ -306,20 +302,12 @@ public class Move_Player : MonoBehaviour
             }
 
 
-            if (tmpg_.Player.Jump.triggered)
+            if (Input.GetButtonDown("Jump"))
             {
                 imputkey = false;
             }
-            if (((Input.GetButtonUp("Horizontal") || Input.GetButtonUp("Vertical")) || tmpg_.Player.MoveCancelStick.triggered)
+            if (((Input.GetButtonUp("Horizontal") || Input.GetButtonUp("Vertical")))
                 && !ismovestart
-                && !Input.GetKey("w")
-                && !Input.GetKey("a")
-                && !Input.GetKey("s")
-                && !Input.GetKey("d")
-                && !Input.GetKey(KeyCode.LeftArrow)
-                && !Input.GetKey(KeyCode.UpArrow)
-                && !Input.GetKey(KeyCode.DownArrow)
-                && !Input.GetKey(KeyCode.RightArrow)
                 )
             {
                 // Debug.Log("idle!");
@@ -381,6 +369,7 @@ public class Move_Player : MonoBehaviour
                 ADXSoundManager.Instance.StopSound("bgm");
                 ADXSoundManager.Instance.PlaySound("goal", goal.AcbAsset.Handle, goal.CueId, gameObject.transform, false);
                 SceneSelect.StageNumChange();
+                SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
                 SceneManager.LoadScene("Next");
             }
         }
@@ -440,7 +429,7 @@ public class Move_Player : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
 
-        if (other.CompareTag("Floor") && (tmpg_.Player.Jump.triggered || Input.GetKeyDown(KeyCode.Space))&& system.GetComponent<Sisutemu>().bankey == false)
+        if (other.CompareTag("Floor") && Input.GetButtonDown("Jump") && system.GetComponent<Sisutemu>().bankey == false)
         {
             rb.velocity = Vector3.zero;
             rb.AddForce(0, jumpforce, 0);

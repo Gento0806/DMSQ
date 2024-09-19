@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class camera_ch : MonoBehaviour
 {
-    private Tmpg tmpg_;
 
     public CinemachineVirtualCameraBase vcam1;
     public CinemachineVirtualCameraBase vcam2;
@@ -45,8 +44,6 @@ public class camera_ch : MonoBehaviour
 
     void Start()
     {
-        tmpg_ = new Tmpg();
-        tmpg_.Enable();
         cameracon.GetComponent<CameraCon>();
         system = GameObject.Find("System").GetComponent<Sisutemu>();
     }
@@ -66,12 +63,12 @@ public class camera_ch : MonoBehaviour
 
         if (Nomal)
         {
-            if (tmpg_.Player.Houkoukirikaehidari.triggered) // Left click
+            if (Input.GetButtonDown("KirikaeLeft")) // Left click
             {
                 a++;
 
             }
-            else if (tmpg_.Player.Houkoukirikaemigi.triggered) // Right click
+            else if (Input.GetButtonDown("KirikaeRight")) // Right click
             {
                 a--;
 
@@ -79,7 +76,7 @@ public class camera_ch : MonoBehaviour
 
             if (cameracon.Qoshiteru && cameracon.sanji)
             {
-                if (tmpg_.Player.Kirikae.triggered)
+                if (Input.GetButtonDown("Change"))
                 {
                     c++;
                 }
@@ -97,7 +94,7 @@ public class camera_ch : MonoBehaviour
             if (vca5 == true)
             {
 
-                if (tmpg_.Player.Hukann.triggered)
+                if (Input.GetButtonDown("Hukan"))
                 {
                     b++;
                     if (b % 2 == 1)
@@ -130,7 +127,7 @@ public class camera_ch : MonoBehaviour
             else if (vca5 == false)
             {
 
-                if (tmpg_.Player.Hukann.triggered)
+                if (Input.GetButtonDown("Hukan"))
                 {
                     b = 0;
 

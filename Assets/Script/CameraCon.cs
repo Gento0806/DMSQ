@@ -77,8 +77,6 @@ public class CameraCon : MonoBehaviour
 
     void Start()
     {
-        tmpg_ = new Tmpg();
-        tmpg_.Enable();
 
         sanjigen.gameObject.SetActive(true);
         nijigen.gameObject.SetActive(false);
@@ -175,7 +173,7 @@ public class CameraCon : MonoBehaviour
         }
         */
         //if (Input.GetKeyDown("q"))
-        if (tmpg_.Player.Kirikae.triggered)
+        if (Input.GetButtonDown("Change"))
         {
 
             if (Qoshiteru)

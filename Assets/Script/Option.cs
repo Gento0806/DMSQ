@@ -8,7 +8,7 @@ public class Option : MonoBehaviour
 {
     bool option = false;
     public GameObject[] GameObjectsTohidden;
-    private Tmpg tmpg_;
+   
 
     [SerializeField]
     CriWare.Assets.CriAtomCueReference inopt;
@@ -20,14 +20,13 @@ public class Option : MonoBehaviour
     {
         //シーンが破棄されたときに呼び出されるようにする
         SceneManager.sceneUnloaded += OnSceneUnloaded;
-        tmpg_ = new Tmpg();
-        tmpg_.Enable();
+       
     }
 
     //サブボタンが押された
     void Update()
     {
-        if (tmpg_.Player.Option.triggered)
+        if (Input.GetButtonDown("Option"))
         {
             if (option == false)
             {
