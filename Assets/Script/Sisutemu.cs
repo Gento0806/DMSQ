@@ -9,8 +9,6 @@ public class Sisutemu : MonoBehaviour
 {
     public static Sisutemu Instance;
 
-    private Tmpg tmpg_;
-
     private Image image;
 
     public GameObject[] lifeArray_3d = new GameObject[5];
@@ -40,8 +38,6 @@ public class Sisutemu : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1.0f;
-        tmpg_ = new Tmpg();
-        tmpg_.Enable();
         for(int i = 0; i < 5; i++)
         {
             image = lifeArray_3d[i].GetComponent<Image>();
@@ -51,7 +47,7 @@ public class Sisutemu : MonoBehaviour
 
     void Update()
     {
-        if(tmpg_.Player.Kirikae.triggered) 
+        if(Input.GetButtonDown("Change")) 
         {
            Sanji = !Sanji;
             bankey = true;

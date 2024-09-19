@@ -11,7 +11,6 @@ public class MoveFloor2 : MonoBehaviour
     float time;
     float distance, speed = 0;
     bool forward = false;
-    private Tmpg tmpg_;
     Vector3 vec;
     Vector3 StartPos, EndPos;
 
@@ -29,8 +28,6 @@ public class MoveFloor2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tmpg_ = new Tmpg();
-        tmpg_.Enable();
         floor.transform.position = new Vector3(StartX, StartY, StartZ);
         StartPos = new Vector3(StartX, StartY, StartZ);
         EndPos = new Vector3(EndX, EndY, EndZ);
@@ -43,7 +40,7 @@ public class MoveFloor2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (tmpg_.Player.Kirikae.triggered)
+        if (Input.GetButtonDown("Change"))
         {
             ChangeMode();
             if (ReturunFlag)

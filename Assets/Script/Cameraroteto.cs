@@ -14,7 +14,7 @@ public class Cameraroteto : MonoBehaviour
     //----------
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("KirikaeLeft"))
         {
             //RotateAround(’†S‚ÌêŠ,‰ñ“]²,‰ñ“]Šp“x)
             transform.RotateAround(centerObj.transform.position, Vector3.up, angle);
@@ -23,7 +23,7 @@ public class Cameraroteto : MonoBehaviour
             
             
         }
-        else if (Input.GetMouseButtonDown(1))
+        else if (Input.GetButtonDown("KirikaeRight"))
         {
             //RotateAround(’†S‚ÌêŠ,‰ñ“]²,‰ñ“]Šp“x)
             transform.RotateAround(centerObj.transform.position, Vector3.up, -angle);
