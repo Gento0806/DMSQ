@@ -9525,7 +9525,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527683579}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14968996, y: 0.7732909, z: -0.19844846, w: 0.5832944}
+  m_LocalRotation: {x: 0.14968996, y: 0.7732909, z: -0.19844848, w: 0.5832944}
   m_LocalPosition: {x: -239, y: 137.94, z: -25.900002}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
@@ -17043,7 +17043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 0}
-  jumpforce: 3000
+  noChange: 1
   initialForce: 10
   maxForce: 50
   forceIncreaseRate: 10
@@ -17455,7 +17455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyObject: {fileID: 8599490123761069825, guid: 2956668c6d178db4786c532813b0f1fe, type: 3}
-  SpawnTime: 1
+  SpawnTime: 0.8
   Spawnrotate: {x: 0, y: 90, z: 0}
 --- !u!65 &948282999
 BoxCollider:
@@ -18340,6 +18340,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 109468959}
     m_Modifications:
+    - target: {fileID: 226494367274464436, guid: 4f29e47c68ba0304e86a2ac5aa1c33cc, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 355059559217465649, guid: 4f29e47c68ba0304e86a2ac5aa1c33cc, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -25135,7 +25139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyObject: {fileID: 8599490123761069825, guid: 2956668c6d178db4786c532813b0f1fe, type: 3}
-  SpawnTime: 3
+  SpawnTime: 0.8
   Spawnrotate: {x: 0, y: -90, z: 0}
 --- !u!65 &1523840320
 BoxCollider:
@@ -25869,7 +25873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyObject: {fileID: 8599490123761069825, guid: 6448aafbcef37404eb86008c1409dc79, type: 3}
-  SpawnTime: 3
+  SpawnTime: 0.8
   Spawnrotate: {x: -90, y: 90, z: 0}
 --- !u!65 &1618443539
 BoxCollider:
@@ -27429,7 +27433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 527683579}
-  jumpforce: 5000
+  noChange: 1
   initialForce: 10
   maxForce: 50
   forceIncreaseRate: 10
@@ -33048,7 +33052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyObject: {fileID: 8599490123761069825, guid: 6448aafbcef37404eb86008c1409dc79, type: 3}
-  SpawnTime: 3
+  SpawnTime: 0.8
   Spawnrotate: {x: 90, y: 90, z: 0}
 --- !u!65 &1844562883
 BoxCollider:
@@ -33898,7 +33902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 527683579}
-  jumpforce: 1500
+  noChange: 1
   initialForce: 10
   maxForce: 50
   forceIncreaseRate: 10
@@ -34957,7 +34961,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094368303}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14968996, y: 0.7732909, z: -0.19844846, w: 0.5832944}
+  m_LocalRotation: {x: 0.14968996, y: 0.7732909, z: -0.19844848, w: 0.5832944}
   m_LocalPosition: {x: -239, y: 137.94, z: -25.900002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
