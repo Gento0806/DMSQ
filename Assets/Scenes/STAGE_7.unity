@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44335777, g: 0.8093449, b: 0.99220675, a: 1}
+  m_IndirectSpecularColor: {r: 0.37092832, g: 0.24144235, b: 0.28507993, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1135,7 +1135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244856498}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645327, w: 0.857448}
+  m_LocalRotation: {x: 0.29133344, y: 0.40160713, z: -0.13645327, w: 0.857448}
   m_LocalPosition: {x: -33.4, y: 46.5, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9044,8 +9044,9 @@ GameObject:
   - component: {fileID: 958047606}
   - component: {fileID: 958047608}
   - component: {fileID: 958047607}
+  - component: {fileID: 958047609}
   m_Layer: 5
-  m_Name: ForOption (1)
+  m_Name: ForOption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9108,6 +9109,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958047605}
   m_CullTransparentMesh: 1
+--- !u!114 &958047609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958047605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97b776b0354c0744bfa7e04292ead54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Jump3D: {fileID: 0}
+  Hukan3D: {fileID: 0}
+  Change3D: {fileID: 0}
+  L_Camera3D: {fileID: 0}
+  R_Camera3D: {fileID: 0}
+  Neutral3D: {fileID: 0}
+  Jump2D: {fileID: 0}
+  Hukan2D: {fileID: 0}
+  Change2D: {fileID: 0}
+  Neutral2D: {fileID: 0}
 --- !u!4 &973004280 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 704338084507507498, guid: d2b94f2d74e8bb4489d31f6c703812e8, type: 3}
@@ -9224,7 +9247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 0}
-  jumpforce: 3000
+  noChange: 1
   initialForce: 10
   maxForce: 50
   forceIncreaseRate: 10
@@ -10593,7 +10616,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290988026}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16228439, y: 0.7891673, z: -0.23565762, w: 0.54345584}
+  m_LocalRotation: {x: 0.16228439, y: 0.78916734, z: -0.23565768, w: 0.54345584}
   m_LocalPosition: {x: -227.64345, y: 146.4, z: -4.586937}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -20988,7 +21011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 2013491447}
-  jumpforce: 3000
+  noChange: 1
   initialForce: 10
   maxForce: 50
   forceIncreaseRate: 10
@@ -21558,7 +21581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 2013491447}
-  jumpforce: 3000
+  noChange: 1
   initialForce: 10
   maxForce: 50
   forceIncreaseRate: 10
@@ -23504,7 +23527,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013491447}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16228439, y: 0.7891673, z: -0.23565762, w: 0.54345584}
+  m_LocalRotation: {x: 0.16228439, y: 0.78916734, z: -0.23565768, w: 0.54345584}
   m_LocalPosition: {x: -227.64345, y: 146.4, z: -4.586937}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
