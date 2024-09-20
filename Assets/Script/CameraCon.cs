@@ -260,8 +260,18 @@ public class CameraCon : MonoBehaviour
             sanjigen.transform.localScale = mashiro_Scale;
             nijigen.transform.localScale = mashiro_Scale;
             effect = Resources.Load<EffekseerEffectAsset>("change3");
-            EffekseerHandle handle = EffekseerSystem.PlayEffect(effect, sanjigen.transform.position);
-            EffekseerHandle handle2 = EffekseerSystem.PlayEffect(effect, nijigen.transform.position);
+            if (sanji)
+            {
+                EffekseerHandle handle = EffekseerSystem.PlayEffect(effect, sanjigen.transform.position);
+                moveplayer3D.noChange = false;
+            }
+            else
+            {
+                EffekseerHandle handle2 = EffekseerSystem.PlayEffect(effect, nijigen.transform.position);
+                moveplayer2D.noChange = false;
+            }
+            
+            
             
             /*if (!sanji)
             {
@@ -277,6 +287,12 @@ public class CameraCon : MonoBehaviour
                 if (!sanji)
                 {
                     nijiRB.constraints = RigidbodyConstraints.FreezeAll;
+                    
+                }
+                else
+                {
+                    sanjiRB.constraints = RigidbodyConstraints.FreezeAll;
+                    
                 }
                 
             }
@@ -299,8 +315,14 @@ public class CameraCon : MonoBehaviour
                 sanjigen.transform.localScale = mashiro_Scale;
                 nijigen.transform.localScale = mashiro_Scale;
                 effect = Resources.Load<EffekseerEffectAsset>("change3");
-                EffekseerHandle handle = EffekseerSystem.PlayEffect(effect, sanjigen.transform.position);
-                EffekseerHandle handle2 = EffekseerSystem.PlayEffect(effect, nijigen.transform.position);
+                if (sanji)
+                {
+                    EffekseerHandle handle = EffekseerSystem.PlayEffect(effect, sanjigen.transform.position);
+                }
+                else
+                {
+                    EffekseerHandle handle2 = EffekseerSystem.PlayEffect(effect, nijigen.transform.position);
+                }
 
                 /*effect = Resources.Load<EffekseerEffectAsset>("change3");
                 EffekseerHandle handle = EffekseerSystem.PlayEffect(effect, sanjigen.transform.position);
@@ -330,10 +352,21 @@ public class CameraCon : MonoBehaviour
                     nijiRB.constraints = RigidbodyConstraints.FreezeRotation;
                     nijiRB.constraints = RigidbodyConstraints.FreezePositionX;
                     nijiRB.constraints = RigidbodyConstraints.FreezePositionZ;
+                    nijigen.transform.localScale = new Vector3(5f, 5f, 5f);
+                    moveplayer2D.noChange = true;
+                }
+                else
+                {
+                    sanjiRB.constraints = RigidbodyConstraints.None;
+                    sanjiRB.constraints = RigidbodyConstraints.FreezeRotation;
+                    sanjiRB.constraints = RigidbodyConstraints.FreezePositionX;
+                    sanjiRB.constraints = RigidbodyConstraints.FreezePositionZ;
+                    sanjigen.transform.localScale = new Vector3(5f, 5f, 5f);
+                    moveplayer3D.noChange = true;
                 }
 
-                sanjigen.transform.localScale = new Vector3(5f, 5f, 5f);
-                nijigen.transform.localScale = new Vector3(5f, 5f, 5f);
+                
+                
                 
             }
 
