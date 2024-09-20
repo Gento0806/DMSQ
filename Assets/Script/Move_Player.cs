@@ -27,6 +27,9 @@ public class Move_Player : MonoBehaviour
     bool jumpsieru = false;
     int dir = 0;
     float LookRotate;
+
+    Vector3 move;
+
     // 1フレーム前の位置
     private Vector3 _prevPosition;
     float rakka = 0.5f;
@@ -64,7 +67,7 @@ public class Move_Player : MonoBehaviour
     //
     bool tyakuchi = false;
 
-    private int jumphantei = 0;
+    private bool jumpsky = false;
 
     //----音----
     public enum move_type
@@ -146,11 +149,12 @@ public class Move_Player : MonoBehaviour
             moveZ = Input.GetAxis("Vertical")* speed; // 前後
                                                        // カメラの方向から、X-Z平面の単位ベクトルを取得
             Vector3 cameraForward = Vector3.Scale(MainCamera.transform.forward, new Vector3(1, 0, 1)).normalized;
+            Vector3 cameraForward2D = Vector3.Scale(MainCamera.transform.right, new Vector3(0, 0, 1)).normalized;
             // 方向キーの入力値とカメラの向きから、移動方向を決定
-            Vector3 move = cameraForward * moveZ + MainCamera.transform.right * moveX;
+            Vector3 moveRay = cameraForward * moveZ + MainCamera.transform.right * moveX;
             Vector3 PlayerPosition = this.transform.position;
             PlayerPosition.y += 1.5f;
-            Ray ray = new Ray(PlayerPosition, move);
+            Ray ray = new Ray(PlayerPosition, moveRay);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
@@ -220,7 +224,7 @@ public class Move_Player : MonoBehaviour
 
             if (cameracon.GetComponent<CameraCon>().sanji && banmove == false)
             {
-
+                move = cameraForward * moveZ + MainCamera.transform.right * moveX;
                 this.gameObject.transform.position += move * speed * Time.deltaTime;//移動
 
                 if (move != Vector3.zero)
@@ -281,7 +285,7 @@ public class Move_Player : MonoBehaviour
                     default:
                         break;
                 }
-                move = new Vector3(0, moveZ, moveX);
+                move = cameraForward2D * Input.GetAxis("Horizontal") * speed2d;
                 this.transform.position+=(move * Time.deltaTime*speed2d); //正面
                                                                                                    //transform.rotation = Quaternion.LookRotation(transform.position +(Vector3.forward * Input.GetAxisRaw("Horizontal") * -1)- transform.position);
 
@@ -307,7 +311,6 @@ public class Move_Player : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 imputkey = false;
-                jumphantei = 0;
             }
             if (((Input.GetButtonUp("Horizontal") || Input.GetButtonUp("Vertical")))
                 && !ismovestart
@@ -442,9 +445,8 @@ public class Move_Player : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
 
-        if (other.CompareTag("Floor") && Input.GetButtonDown("Jump") && system.GetComponent<Sisutemu>().bankey == false)
+        if (other.CompareTag("Floor") && Input.GetButtonDown("Jump") && system.GetComponent<Sisutemu>().bankey == false && jumpsky == false)
         {
-            jumphantei++;
             rb.velocity = Vector3.zero;
             rb.AddForce(0, jumpforce, 0);
             animator.SetBool("Jumpstart", true);
@@ -453,6 +455,7 @@ public class Move_Player : MonoBehaviour
             animator.SetBool("Walk", false);
             imputkey = true;
             Debug.Log("Jump");
+            jumpsky = true;
 
             //----音----
 
@@ -510,7 +513,7 @@ public class Move_Player : MonoBehaviour
 
         if (other.gameObject.tag == "Floor")
         {
-            
+            jumpsky = false;
             // 着地時のアニメーション
             animator.SetBool("Jumploop", false);    // 空中状態を終了
             animator.SetBool("Jumpend", true);   // 着地アニメーション開始
