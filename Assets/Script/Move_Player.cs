@@ -62,8 +62,9 @@ public class Move_Player : MonoBehaviour
     private Quaternion targetRotation;
     private float elapsedTime = 0.0f;
     //
+    bool tyakuchi = false;
 
-    
+    private int jumphantei = 0;
 
     //----音----
     public enum move_type
@@ -290,7 +291,7 @@ public class Move_Player : MonoBehaviour
 
             }
 
-            if (move != Vector3.zero)
+            if (move != Vector3.zero )
             {
                     transform.rotation = Quaternion.LookRotation(move);
 
@@ -306,6 +307,7 @@ public class Move_Player : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 imputkey = false;
+                jumphantei = 0;
             }
             if (((Input.GetButtonUp("Horizontal") || Input.GetButtonUp("Vertical")))
                 && !ismovestart
@@ -375,6 +377,12 @@ public class Move_Player : MonoBehaviour
             }
         }
 
+      //  空中にいるかのチェック（Y軸の速度がゼロでないとき空中と判定）
+
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("jumpend"))
+        {
+            animator.SetBool("Jumpend", false);  // 着地アニメーションが終わったらリセット
+        }
     }
 
     public void FixedUpdate()
@@ -436,8 +444,13 @@ public class Move_Player : MonoBehaviour
 
         if (other.CompareTag("Floor") && Input.GetButtonDown("Jump") && system.GetComponent<Sisutemu>().bankey == false)
         {
+            jumphantei++;
             rb.velocity = Vector3.zero;
             rb.AddForce(0, jumpforce, 0);
+            animator.SetBool("Jumpstart", true);
+            animator.SetBool("Jumploop", true);
+            animator.SetBool("Jumpend", false);
+            animator.SetBool("Walk", false);
             imputkey = true;
             Debug.Log("Jump");
 
@@ -446,6 +459,9 @@ public class Move_Player : MonoBehaviour
             ADXSoundManager.Instance.PlaySound("jump", cueReference2.AcbAsset.Handle, cueReference2.CueId, gameObject.transform, false);
             //----------
         }
+
+       
+
         // 通過したオブジェクトが指定したタグを持っているか確認
         /*if (other.CompareTag("saka1"))
         {
@@ -462,8 +478,24 @@ public class Move_Player : MonoBehaviour
             {
                 transform.Translate(0.0f, -0.8f, 0.0f);
             }
-            
+
         }*/
+
+    }
+
+    
+
+    // キャラクターが地面から離れたときに空中状態を設定する
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Floor"))
+        {
+            animator.SetBool("Walk", false);
+            // 空中状態のアニメーション
+            animator.SetBool("Jumploop", true);    // 空中状態を開始
+            animator.SetBool("Jumpend", false); // 着地をリセット
+            
+        }
     }
 
 
@@ -474,6 +506,15 @@ public class Move_Player : MonoBehaviour
         {
             SkyBoxChangeBool = true;
             ADXSoundManager.Instance.PlaySound("beforeclear", clear.AcbAsset.Handle, clear.CueId, gameObject.transform, false);
+        }
+
+        if (other.gameObject.tag == "Floor")
+        {
+            
+            // 着地時のアニメーション
+            animator.SetBool("Jumploop", false);    // 空中状態を終了
+            animator.SetBool("Jumpend", true);   // 着地アニメーション開始
+            animator.SetBool("Jumpstart", false); // ジャンプ開始をリセット
         }
     }
 
@@ -493,6 +534,9 @@ public class Move_Player : MonoBehaviour
                 Debug.LogWarning("Sisutemuのインスタンスにアクセスできませんでした。");
             }
         }
+
+      
+
     }
 
 
