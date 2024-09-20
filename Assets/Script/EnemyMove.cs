@@ -29,30 +29,29 @@ public class EnemyMove : MonoBehaviour
         LiveTime += Time.deltaTime;
         if (LiveTime > 30 || (sanji && System.GetComponent<Sisutemu>().DeathLine3D > this.transform.position.y) || (sanji == false && System.GetComponent<Sisutemu>().DeathLine2D > this.transform.position.y))
         {
-            Debug.Log("true");
             Destroy(this.gameObject);
         }
+        Debug.Log(cameracon.GetComponent<CameraCon>().sanji);
         if (sanji)
         {
             if (cameracon.GetComponent<CameraCon>().sanji == true)
             {
-                Enemyrigid.useGravity = true;
+                Enemyrigid.AddForce(new Vector3(0, -30f, 0));
             }
             else
             {
-                Enemyrigid.useGravity = false;
-                Enemyrigid.AddForce(new Vector3(-9.8f, 0, 0));
+                Enemyrigid.AddForce(new Vector3(30f, 0, 0));
             }
         }
         else
         {
             if (cameracon.GetComponent<CameraCon>().sanji == true)
             {
-                Enemyrigid.useGravity = false;
+
             }
             else
             {
-                Enemyrigid.useGravity = true;
+                Enemyrigid.AddForce(0, -30f, 0);
             }
         }
         /*
