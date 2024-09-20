@@ -16,10 +16,11 @@ public class Move_Player : MonoBehaviour
     //あたらしい移動に使う
     public GameObject MainCamera;
     float moveX, moveZ;
+    public bool noChange = true;
 
     static float speed = 4f; // 移動速度
     static float speed2d = 4f;
-    int jumpforce = 3500;
+    private int jumpforce = 5000;
     Rigidbody rb;
     bool imputkey = false;
    
@@ -391,37 +392,41 @@ public class Move_Player : MonoBehaviour
         else if (cameracon.GetComponent<CameraCon>().sanji == false)
         {
             rb.useGravity = false;
-            switch (dir)//重力方向の切り替え
+            if (noChange)
             {
-                case 0:
-                    rb.AddForce(0, -50f, 0, ForceMode.Acceleration);
-                    if (rb.velocity.y < 0)
-                    {
-                        rb.AddForce(0, -30, 0, ForceMode.Acceleration);
-                    }
-                    break;
-                case 1:
-                    rb.AddForce(0, 0, 10f, ForceMode.Acceleration);
-                    if (rb.velocity.y < 0)
-                    {
-                        rb.AddForce(0, 0, 10, ForceMode.Acceleration);
-                    }
-                    break;
-                case 2:
-                    rb.AddForce(0, 10f, 0, ForceMode.Acceleration);
-                    if (rb.velocity.y < 0)
-                    {
-                        rb.AddForce(0, 10, 0, ForceMode.Acceleration);
-                    }
-                    break;
-                case 3:
-                    rb.AddForce(0, 0, -10f, ForceMode.Acceleration);
-                    if (rb.velocity.y < 0)
-                    {
-                        rb.AddForce(0, 0, -10, ForceMode.Acceleration);
-                    }
-                    break;
+                switch (dir)//重力方向の切り替え
+                {
+                    case 0:
+                        rb.AddForce(0, -50f, 0, ForceMode.Acceleration);
+                        if (rb.velocity.y < 0)
+                        {
+                            rb.AddForce(0, -30, 0, ForceMode.Acceleration);
+                        }
+                        break;
+                    case 1:
+                        rb.AddForce(0, 0, 10f, ForceMode.Acceleration);
+                        if (rb.velocity.y < 0)
+                        {
+                            rb.AddForce(0, 0, 10, ForceMode.Acceleration);
+                        }
+                        break;
+                    case 2:
+                        rb.AddForce(0, 10f, 0, ForceMode.Acceleration);
+                        if (rb.velocity.y < 0)
+                        {
+                            rb.AddForce(0, 10, 0, ForceMode.Acceleration);
+                        }
+                        break;
+                    case 3:
+                        rb.AddForce(0, 0, -10f, ForceMode.Acceleration);
+                        if (rb.velocity.y < 0)
+                        {
+                            rb.AddForce(0, 0, -10, ForceMode.Acceleration);
+                        }
+                        break;
+                }
             }
+            
         }
     }
 
