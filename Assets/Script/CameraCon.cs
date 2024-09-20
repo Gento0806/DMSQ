@@ -36,8 +36,7 @@ public class CameraCon : MonoBehaviour
     float DelayTimeT;
     float DelayTime;
     public bool Qoshiteru = true;
-    private Tmpg tmpg_;
-
+   
     //ステージごとに変わる変数(2D-3D)
     public float dX; //Pos.x = Pos.y - 493;
     public float dY; //Pos.y = 123f;
