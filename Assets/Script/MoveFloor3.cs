@@ -20,6 +20,8 @@ public class MoveFloor3 : MonoBehaviour
     bool sound;
     //----------
 
+    CameraCon cameracon;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,7 @@ public class MoveFloor3 : MonoBehaviour
         distance = vec.magnitude;
         vec.Normalize();
         sound = true;
+        cameracon = GameObject.Find("CameraCon").GetComponent<CameraCon>();
     }
 
     // Update is called once per frame
@@ -49,7 +52,7 @@ public class MoveFloor3 : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Change") && flag == false)
+        if (Input.GetButtonDown("Change") && cameracon.Qoshiteru )
         {
             Invoke("switching", 2.0f);
         }
