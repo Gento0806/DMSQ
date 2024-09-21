@@ -364,15 +364,13 @@ public class Move_Player : MonoBehaviour
             // F‚ðüŒ`•âŠÔ‚µ‚ÄÝ’è
             Color currentColor = Color.Lerp(startColor, endColor, tImer);
             skyboxMaterial.SetColor("_Tint", currentColor);
-
-            Debug.Log(tImer);
             if (tImer >= t)
             {
                 CriAtomEx.ApplyDspBusSnapshot("Snapshot", 100);
                 ADXSoundManager.Instance.StopSound("move");
                 ADXSoundManager.Instance.StopSound("hover");
-                ADXSoundManager.Instance.StopSound("soner");
                 ADXSoundManager.Instance.StopSound("bgm");
+                ADXSoundManager.Instance.StopSound("soner");
                 ADXSoundManager.Instance.PlaySound("goal", goal.AcbAsset.Handle, goal.CueId, gameObject.transform, false);
                 SceneSelect.StageNumChange();
                 SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
