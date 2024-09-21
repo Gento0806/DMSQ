@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37092832, g: 0.24144235, b: 0.28507993, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708324, g: 0.24146679, b: 0.28508168, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1057,7 +1057,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307242640}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.13645327, y: 0.857448, z: -0.29133344, w: -0.40160713}
+  m_LocalRotation: {x: -0.1364533, y: 0.857448, z: -0.29133338, w: -0.40160722}
   m_LocalPosition: {x: 26.6, y: 46.5, z: 25.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9333,7 +9333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340245212}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10951676, y: 0.89028645, z: -0.30249083, w: 0.32232812}
+  m_LocalRotation: {x: 0.1095168, y: 0.89028645, z: -0.30249086, w: 0.32232815}
   m_LocalPosition: {x: -28.4, y: 46.5, z: 30.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9988,6 +9988,7 @@ MonoBehaviour:
   vcam3: {fileID: 1617382530}
   vcam4: {fileID: 307242641}
   vcam5: {fileID: 1988680858}
+  Hukan2D: {fileID: 1343551459}
   cameracon: {fileID: 1205310744}
   cueReference:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}

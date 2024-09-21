@@ -4,12 +4,16 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - Jump: {fileID: 21300000, guid: 937bae00ebe03074b9fd713e5180c620, type: 3}
-  - Hukan: {fileID: 21300000, guid: e5336ebfdf4cec241b7c1ea5ef7901f8, type: 3}
-  - Change: {fileID: 21300000, guid: d7b214e08ad7bd842b7192fc2d56d071, type: 3}
-  - L_Camera: {fileID: 21300000, guid: 4f9da391497fc0e4c80ab1379115c853, type: 3}
-  - R_Camera: {fileID: 21300000, guid: b111204026ac1f549a61249ed3836995, type: 3}
-  - Neutral: {fileID: 21300000, guid: 9d0d94366219a0247be78a3079c2599b, type: 3}
+  - Jump3D: {fileID: 21300000, guid: 937bae00ebe03074b9fd713e5180c620, type: 3}
+  - Hukan3D: {fileID: 21300000, guid: e5336ebfdf4cec241b7c1ea5ef7901f8, type: 3}
+  - Change3D: {fileID: 21300000, guid: d7b214e08ad7bd842b7192fc2d56d071, type: 3}
+  - L_Camera3D: {fileID: 21300000, guid: 4f9da391497fc0e4c80ab1379115c853, type: 3}
+  - R_Camera3D: {fileID: 21300000, guid: b111204026ac1f549a61249ed3836995, type: 3}
+  - Neutral3D: {fileID: 21300000, guid: 9d0d94366219a0247be78a3079c2599b, type: 3}
+  - Jump2D: {instanceID: 0}
+  - Hukan2D: {instanceID: 0}
+  - Change2D: {instanceID: 0}
+  - Neutral2D: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
