@@ -11,6 +11,7 @@ public class camera_ch : MonoBehaviour
     public CinemachineVirtualCameraBase vcam3;
     public CinemachineVirtualCameraBase vcam4;
     public CinemachineVirtualCameraBase vcam5;
+    public GameObject Hukan2D;
 
     Move_Player moveplayer2D;
     Move_Player moveplayer3D;
@@ -23,7 +24,7 @@ public class camera_ch : MonoBehaviour
 
     double c = 0;
 
-    bool vca5 = false;
+    bool vca5 = true;
 
     public CameraCon cameracon;
 
@@ -74,7 +75,7 @@ public class camera_ch : MonoBehaviour
 
             }
 
-            if (cameracon.Qoshiteru && cameracon.sanji)
+            /*if (cameracon.Qoshiteru && cameracon.sanji)
             {
                 if (Input.GetButtonDown("Change"))
                 {
@@ -88,7 +89,7 @@ public class camera_ch : MonoBehaviour
                 {
                     vca5 = true;
                 }
-            }
+            }*/
             
 
             if (vca5 == true)
@@ -113,12 +114,29 @@ public class camera_ch : MonoBehaviour
 
                 if (b % 2 == 1)
                 {
-                    vcam5.Priority = 3;
+                    if (cameracon.sanji)
+                    {
+                        vcam5.Priority = 3;
+                    }
+                    else
+                    {
+                        Hukan2D.SetActive(true);
+                        Hukan2D.GetComponent<CinemachineVirtualCameraBase>().Priority = 3;
+                    }
+                    
                     system.bankey = true;
                 }
                 if (b % 2 == 0)
                 {
-                    vcam5.Priority = 0;
+                    if (cameracon.sanji)
+                    {
+                        vcam5.Priority = 0;
+                    }
+                    else
+                    {
+                        Hukan2D.SetActive(false) ;
+                        Hukan2D.GetComponent<CinemachineVirtualCameraBase>().Priority = 0;
+                    }
                     system.bankey = false;
                 }
 
@@ -215,11 +233,23 @@ public class camera_ch : MonoBehaviour
             vcam5.Priority = 3;
         }
 
-        /*if (moveplayer2D.SkyBoxChangeBool || moveplayer3D.SkyBoxChangeBool)
+        if (cameracon.sanji)
         {
-            Nomal = false;
-            Goal = true;
-        }*/
+            if (moveplayer3D.SkyBoxChangeBool)
+            {
+                Nomal = false;
+                Goal = true;
+            }
+        }
+        else
+        {
+            if (moveplayer2D.SkyBoxChangeBool)
+            {
+                Nomal = false;
+                Goal = true;
+            }
+        }
+        
 
     }
 
