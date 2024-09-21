@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 0cb06c1e6935b2048a0e48257418d868, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37092832, g: 0.24144235, b: 0.28507993, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -612,6 +612,7 @@ GameObject:
   - component: {fileID: 148465553}
   - component: {fileID: 148465552}
   - component: {fileID: 148465556}
+  - component: {fileID: 148465557}
   m_Layer: 0
   m_Name: 2DCamera
   m_TagString: MainCamera
@@ -771,6 +772,15 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!45 &148465557
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148465551}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 0cb06c1e6935b2048a0e48257418d868, type: 2}
 --- !u!1001 &148798973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1140,7 +1150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307242640}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.13645327, y: 0.857448, z: -0.29133344, w: -0.40160713}
+  m_LocalRotation: {x: -0.1364533, y: 0.857448, z: -0.29133338, w: -0.40160722}
   m_LocalPosition: {x: 26.6, y: 46.5, z: 25.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10193,6 +10203,7 @@ GameObject:
   - component: {fileID: 1406384168}
   - component: {fileID: 1406384169}
   - component: {fileID: 1406384173}
+  - component: {fileID: 1406384174}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -10251,6 +10262,7 @@ MonoBehaviour:
   vcam3: {fileID: 1617382530}
   vcam4: {fileID: 307242641}
   vcam5: {fileID: 1988680858}
+  Hukan2D: {fileID: 0}
   cameracon: {fileID: 1205310744}
   cueReference:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
@@ -10377,6 +10389,15 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!45 &1406384174
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406384167}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 0cb06c1e6935b2048a0e48257418d868, type: 2}
 --- !u!1 &1412545406
 GameObject:
   m_ObjectHideFlags: 0
@@ -21673,7 +21694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874705263}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645329, w: 0.857448}
+  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645327, w: 0.857448}
   m_LocalPosition: {x: -33.4, y: 46.5, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
