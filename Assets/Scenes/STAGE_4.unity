@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 0cb06c1e6935b2048a0e48257418d868, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37092832, g: 0.24144235, b: 0.28507993, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6530,6 +6530,7 @@ GameObject:
   - component: {fileID: 527683580}
   - component: {fileID: 527683581}
   - component: {fileID: 527683585}
+  - component: {fileID: 527683586}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -6588,6 +6589,7 @@ MonoBehaviour:
   vcam3: {fileID: 1214305578}
   vcam4: {fileID: 1995419958}
   vcam5: {fileID: 2094368305}
+  Hukan2D: {fileID: 0}
   cameracon: {fileID: 52431557}
   cueReference:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
@@ -6663,7 +6665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527683579}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13855901, y: 0.80417466, z: -0.20637411, w: 0.5399207}
+  m_LocalRotation: {x: 0.138559, y: 0.8041747, z: -0.20637412, w: 0.5399206}
   m_LocalPosition: {x: -194.70773, y: 138.8, z: 7.891884}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
@@ -6714,6 +6716,15 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!45 &527683586
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527683579}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 0cb06c1e6935b2048a0e48257418d868, type: 2}
 --- !u!1 &539791781
 GameObject:
   m_ObjectHideFlags: 0
@@ -14690,7 +14701,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174674437}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.13645327, y: 0.857448, z: -0.29133344, w: -0.40160713}
+  m_LocalRotation: {x: -0.1364533, y: 0.857448, z: -0.29133338, w: -0.40160722}
   m_LocalPosition: {x: 26.6, y: 46.5, z: 25.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -21853,6 +21864,7 @@ GameObject:
   - component: {fileID: 1769211119}
   - component: {fileID: 1769211118}
   - component: {fileID: 1769211122}
+  - component: {fileID: 1769211123}
   m_Layer: 0
   m_Name: 2DCamera
   m_TagString: MainCamera
@@ -22012,6 +22024,15 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!45 &1769211123
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769211117}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 0cb06c1e6935b2048a0e48257418d868, type: 2}
 --- !u!4 &1772042718 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 40324b34490ff2c489082996d2d93af7, type: 3}
@@ -27735,7 +27756,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995419957}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.29133344, y: 0.40160713, z: -0.13645327, w: 0.857448}
+  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645329, w: 0.857448}
   m_LocalPosition: {x: -33.4, y: 46.5, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -28252,7 +28273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094368303}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13855901, y: 0.80417466, z: -0.20637411, w: 0.5399207}
+  m_LocalRotation: {x: 0.138559, y: 0.8041747, z: -0.20637412, w: 0.5399206}
   m_LocalPosition: {x: -194.70773, y: 138.8, z: 7.891884}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

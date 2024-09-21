@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 0cb06c1e6935b2048a0e48257418d868, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37092832, g: 0.24144235, b: 0.28507993, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1135,7 +1135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244856498}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645329, w: 0.857448}
+  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645327, w: 0.857448}
   m_LocalPosition: {x: -33.4, y: 46.5, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10616,7 +10616,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290988026}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16228439, y: 0.7891672, z: -0.23565763, w: 0.54345584}
+  m_LocalRotation: {x: 0.16228439, y: 0.7891673, z: -0.23565762, w: 0.54345584}
   m_LocalPosition: {x: -227.64345, y: 146.4, z: -4.586937}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -23394,6 +23394,7 @@ GameObject:
   - component: {fileID: 2013491448}
   - component: {fileID: 2013491449}
   - component: {fileID: 2013491453}
+  - component: {fileID: 2013491454}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -23452,6 +23453,7 @@ MonoBehaviour:
   vcam3: {fileID: 1159043490}
   vcam4: {fileID: 244856499}
   vcam5: {fileID: 1290988027}
+  Hukan2D: {fileID: 0}
   cameracon: {fileID: 695005628}
   cueReference:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
@@ -23527,7 +23529,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013491447}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16228439, y: 0.7891672, z: -0.23565763, w: 0.54345584}
+  m_LocalRotation: {x: 0.16228439, y: 0.7891673, z: -0.23565762, w: 0.54345584}
   m_LocalPosition: {x: -227.64345, y: 146.4, z: -4.586937}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
@@ -23578,6 +23580,15 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!45 &2013491454
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013491447}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 0cb06c1e6935b2048a0e48257418d868, type: 2}
 --- !u!1 &2021416246
 GameObject:
   m_ObjectHideFlags: 0
@@ -28743,6 +28754,7 @@ GameObject:
   - component: {fileID: 2135164022}
   - component: {fileID: 2135164021}
   - component: {fileID: 2135164025}
+  - component: {fileID: 2135164026}
   m_Layer: 0
   m_Name: 2DCamera
   m_TagString: MainCamera
@@ -28902,6 +28914,15 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!45 &2135164026
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135164020}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 0cb06c1e6935b2048a0e48257418d868, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
