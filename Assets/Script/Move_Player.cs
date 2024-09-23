@@ -48,13 +48,13 @@ public class Move_Player : MonoBehaviour
     public float sakaForce = 0.02f;
 
     //スカイボックス
-    public Material skyboxMaterial;
-    public Color startColor = Color.HSVToRGB(82f, 49f, 60f);
-    public Color endColor = Color.HSVToRGB(98f, 164f, 209f);
+    SkyBoxChange SkyBoxChangeBox;
+    
     //public float duration = 5.0f;
     public float tImer = 0;
     public bool SkyBoxChangeBool = false;
     public float t;
+    
     //
 
     //重力切替
@@ -106,8 +106,8 @@ public class Move_Player : MonoBehaviour
         currentForce = initialForce;
         currentstate = moveplayer;
         transit = moveplayer;
-        t = 4;
-        skyboxMaterial.SetColor("_Tint", startColor);
+
+        SkyBoxChangeBox = GameObject.Find("SkyBoxChange").GetComponent<SkyBoxChange>();
         animator = this.gameObject.GetComponent<Animator>();
        
     }
@@ -115,6 +115,23 @@ public class Move_Player : MonoBehaviour
     {
 
         Rigidbody rb = this.GetComponent<Rigidbody>();
+        if (rb.velocity.y <= 0.1f && rb.velocity.y >= -0.1f && Input.GetButtonDown("Jump"))
+        {
+            rb.velocity = Vector3.zero;
+            rb.AddForce(0, jumpforce, 0);
+            animator.SetBool("Jumpstart", true);
+            animator.SetBool("Jumploop", true);
+            animator.SetBool("Jumpend", false);
+            animator.SetBool("Walk", false);
+            imputkey = true;
+            Debug.Log("Jump");
+            jumpsky = true;
+
+            //----音----
+
+            ADXSoundManager.Instance.PlaySound("jump", cueReference2.AcbAsset.Handle, cueReference2.CueId, gameObject.transform, false);
+            //----------
+        }
         Vector3 ResetVelocity = new Vector3(0, 0, 0);
         ResetVelocity.y = rb.velocity.y;
         rb.velocity = ResetVelocity;
@@ -361,21 +378,7 @@ public class Move_Player : MonoBehaviour
         {
             // Timerを更新
             tImer += 1 * Time.deltaTime;
-            // 色を線形補間して設定
-            Color currentColor = Color.Lerp(startColor, endColor, tImer);
-            skyboxMaterial.SetColor("_Tint", currentColor);
-            if (tImer >= t)
-            {
-                CriAtomEx.ApplyDspBusSnapshot("Snapshot", 100);
-                ADXSoundManager.Instance.StopSound("move");
-                ADXSoundManager.Instance.StopSound("hover");
-                ADXSoundManager.Instance.StopSound("bgm");
-                ADXSoundManager.Instance.StopSound("soner");
-                ADXSoundManager.Instance.PlaySound("goal", goal.AcbAsset.Handle, goal.CueId, gameObject.transform, false);
-                SceneSelect.StageNumChange();
-                SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
-                SceneManager.LoadScene("Next");
-            }
+            SkyBoxChangeBox.SkyBoxChangePlay();
         }
 
       //  空中にいるかのチェック（Y軸の速度がゼロでないとき空中と判定）
@@ -443,10 +446,8 @@ public class Move_Player : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
 
-        if (other.CompareTag("Floor") && Input.GetButtonDown("Jump") && system.GetComponent<Sisutemu>().bankey == false && jumpsky == false)
+        /*if (other.CompareTag("Floor") && Input.GetButtonDown("Jump") && system.GetComponent<Sisutemu>().bankey == false && jumpsky == false)
         {
-            rb.velocity = Vector3.zero;
-            rb.AddForce(0, jumpforce, 0);
             animator.SetBool("Jumpstart", true);
             animator.SetBool("Jumploop", true);
             animator.SetBool("Jumpend", false);
@@ -459,7 +460,7 @@ public class Move_Player : MonoBehaviour
 
             ADXSoundManager.Instance.PlaySound("jump", cueReference2.AcbAsset.Handle, cueReference2.CueId, gameObject.transform, false);
             //----------
-        }
+        }*/
 
        
 
