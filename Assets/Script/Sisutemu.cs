@@ -88,6 +88,7 @@ public class Sisutemu : MonoBehaviour
         ADXSoundManager.Instance.PlaySound("damage", damage.AcbAsset.Handle, damage.CueId, gameObject.transform, false);
         if (lifePoint == 0)
         {
+            SceneSelect.StageNumGet();
             SceneManager.LoadScene("GameOver");
             //----‰¹----
             ADXSoundManager.Instance.StopSound("hover");

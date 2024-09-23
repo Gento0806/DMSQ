@@ -14,6 +14,13 @@ public class SceneSelect : MonoBehaviour
         SceneManager.LoadScene(stageID);
     }
 
+    //
+    public static void StageNumGet()
+    {
+        // 現在読み込んでいるシーンのインデックスを取得
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        StageNum = currentSceneIndex;
+    }
     public static void StageNumChange()
     {
         // 現在読み込んでいるシーンのインデックスを取得

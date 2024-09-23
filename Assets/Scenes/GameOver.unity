@@ -717,7 +717,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 21300000, guid: 50704623741de4d44a3bbda04255a522, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 546d09fa26ae9524e8c614cd0be82fce, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -732,12 +732,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 476849910}
         m_TargetAssemblyTypeName: SceneSelect, Assembly-CSharp
-        m_MethodName: StartGame
-        m_Mode: 3
+        m_MethodName: NextStage
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 16
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -774,7 +774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2822fa6a05d83f54890c110c37f3ac9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a436dbc1db9e5634d8d513edc2c07d28, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 21300000, guid: 50704623741de4d44a3bbda04255a522, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: cffbf6810a75a1b4aac2c93607218bfb, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1168,7 +1168,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 16
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2822fa6a05d83f54890c110c37f3ac9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3ecef0af6d35d54e99c27fc2e692a9e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
