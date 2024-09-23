@@ -442,7 +442,6 @@ public class Move_Player : MonoBehaviour
     //ジャンプ（そうた）
     private void OnTriggerStay(Collider other)
     {
-
         if (other.CompareTag("Floor") && Input.GetButtonDown("Jump") && system.GetComponent<Sisutemu>().bankey == false && jumpsky == false)
         {
             rb.velocity = Vector3.zero;
