@@ -8,12 +8,13 @@ public class MoveFloor3 : MonoBehaviour
     [SerializeField] GameObject floor;
     [SerializeField] float StartX, StartY, StartZ, EndX, EndY, EndZ;
     float x, y, z;
-    float time;
+    float time,time2;
     float distance, speed = 0;
     Vector3 vec;
     Vector3 StartPos, EndPos;
     bool flag=false;
     bool moving = false;
+    bool check=true;
     //----音----
     [SerializeField]
     CriWare.Assets.CriAtomCueReference floormove;
@@ -52,9 +53,19 @@ public class MoveFloor3 : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Change") && cameracon.Qoshiteru )
+        if (Input.GetButtonDown("Change") && check)
         {
+            check= false;
+            time2 = 0;
             Invoke("switching", 2.0f);
+        }
+        if (check == false)
+        {
+            time2 += Time.deltaTime;
+            if(time2 > 4.5)
+            {
+                check = true;
+            }
         }
     }
 
