@@ -129,7 +129,7 @@ public class Move_Player : MonoBehaviour
                 GoalObject.transform.position = this.gameObject.transform.position + new Vector3(0f, 2f, -3f);
             }
 
-            GoalObject.transform.position += new Vector3(0f, 0.015f, 0f);
+            GoalObject.transform.position += new Vector3(0f, 5f*Time.deltaTime, 0f);
 
             goaltouch = false;
             animator.SetBool("Goal", true);
@@ -138,7 +138,7 @@ public class Move_Player : MonoBehaviour
             if (tImer >= 3.5f / 1.5f)
             {
                 
-                if (tImer<= 3.5f / 1.5f+0.27f) GoalObject.transform.position -= new Vector3(0f, 0.2f, 0f);
+                if (tImer<= 3.5f / 1.5f+0.27f) GoalObject.transform.position -= new Vector3(0f, 60f*Time.deltaTime, 0f);
                 else
                 {
                     effect = Resources.Load<EffekseerEffectAsset>("change3");
