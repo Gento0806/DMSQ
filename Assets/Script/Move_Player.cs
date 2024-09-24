@@ -6,6 +6,7 @@ using System.Net;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Effekseer;
 
 
 public class Move_Player : MonoBehaviour
@@ -49,8 +50,8 @@ public class Move_Player : MonoBehaviour
 
     //スカイボックス
     SkyBoxChange SkyBoxChangeBox;
-
-    public GameObject GoalObject;
+    GameObject GoalObject;
+    EffekseerEffectAsset effect;
     private bool goaltouch;
     //public float duration = 5.0f;
     public float tImer = 0;
@@ -115,8 +116,57 @@ public class Move_Player : MonoBehaviour
     }
     void Update()
     {
-        if (cameracon.GetComponent<CameraCon>().sanji) jumpforce = 4500;
-        else jumpforce = 3500;
+
+        //クリアの処理(処理の順番の関係上先に書いてます)
+        if (SkyBoxChangeBool)
+        {
+            if (goaltouch)
+            {
+                transform.rotation = Quaternion.LookRotation(GoalObject.transform.position - this.gameObject.transform.position);
+                transform.rotation = Quaternion.LookRotation(new Vector3(20f, this.gameObject.transform.rotation.y, this.gameObject.transform.position.z));
+                GoalObject.transform.parent = this.gameObject.transform;
+                GoalObject.transform.rotation = Quaternion.LookRotation(Vector3.zero);
+                GoalObject.transform.position = this.gameObject.transform.position + new Vector3(0f, 2f, -3f);
+            }
+
+            GoalObject.transform.position += new Vector3(0f, 0.015f, 0f);
+
+            goaltouch = false;
+            animator.SetBool("Goal", true);
+            // Timerを更新
+            tImer += 1 * Time.deltaTime;
+            if (tImer >= 3.5f / 1.5f)
+            {
+                
+                if (tImer<= 3.5f / 1.5f+0.27f) GoalObject.transform.position -= new Vector3(0f, 0.2f, 0f);
+                else
+                {
+                    effect = Resources.Load<EffekseerEffectAsset>("change3");
+                    EffekseerHandle handle = EffekseerSystem.PlayEffect(effect, GoalObject.transform.position + new Vector3(0f, 1f, 0f));
+                }
+                SkyBoxChangeBox.SkyBoxChangePlay();
+            }
+
+        }
+
+        if (cameracon.GetComponent<CameraCon>().sanji)
+        {
+            jumpforce = 4500;
+            if (!SkyBoxChangeBool) GoalObject = GameObject.Find("3DMAP/Goal");
+            else if(SkyBoxChangeBool)GoalObject = GameObject.Find("mashiro_3model/Goal");
+
+        }
+        else
+        {
+            jumpforce = 3500;
+            if (!SkyBoxChangeBool) GoalObject = GameObject.Find("2DMAP/Goal");
+            else if(SkyBoxChangeBool) GoalObject = GameObject.Find("mashiro_2model/Goal");
+        }
+
+        
+
+
+       
 
         Rigidbody rb = this.GetComponent<Rigidbody>();
         if (rb.velocity.y <= 0.1f && rb.velocity.y >= -0.1f && Input.GetButtonDown("Jump") &&!SkyBoxChangeBool)
@@ -384,23 +434,7 @@ public class Move_Player : MonoBehaviour
         //    jumpsieru = true;
         //}
 
-        if (SkyBoxChangeBool)
-        {
-            if (goaltouch)
-            {
-                transform.rotation = Quaternion.LookRotation(GoalObject.transform.position - this.gameObject.transform.position);
-                transform.rotation = Quaternion.LookRotation(new Vector3(20f, this.gameObject.transform.rotation.y,this.gameObject.transform.position.z));
-            }
-            goaltouch = false;
-            animator.SetBool("Goal", true);
-            // Timerを更新
-            tImer += 1 * Time.deltaTime;
-            if (tImer >= 3.5f/1.5f)
-            {
-                SkyBoxChangeBox.SkyBoxChangePlay();
-            }
-           
-        }
+        
 
       //  空中にいるかのチェック（Y軸の速度がゼロでないとき空中と判定）
 
