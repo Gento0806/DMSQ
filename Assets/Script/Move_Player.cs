@@ -49,7 +49,9 @@ public class Move_Player : MonoBehaviour
 
     //スカイボックス
     SkyBoxChange SkyBoxChangeBox;
-    
+
+    public GameObject GoalObject;
+    private bool goaltouch;
     //public float duration = 5.0f;
     public float tImer = 0;
     public bool SkyBoxChangeBool = false;
@@ -134,6 +136,7 @@ public class Move_Player : MonoBehaviour
             ADXSoundManager.Instance.PlaySound("jump", cueReference2.AcbAsset.Handle, cueReference2.CueId, gameObject.transform, false);
             //----------
         }
+        
         Vector3 ResetVelocity = new Vector3(0, 0, 0);
         ResetVelocity.y = rb.velocity.y;
         rb.velocity = ResetVelocity;
@@ -383,9 +386,20 @@ public class Move_Player : MonoBehaviour
 
         if (SkyBoxChangeBool)
         {
+            if (goaltouch)
+            {
+                transform.rotation = Quaternion.LookRotation(GoalObject.transform.position - this.gameObject.transform.position);
+                transform.rotation = Quaternion.LookRotation(new Vector3(20f, this.gameObject.transform.rotation.y,this.gameObject.transform.position.z));
+            }
+            goaltouch = false;
+            animator.SetBool("Goal", true);
             // Timerを更新
             tImer += 1 * Time.deltaTime;
-            SkyBoxChangeBox.SkyBoxChangePlay();
+            if (tImer >= 3.5f/1.5f)
+            {
+                SkyBoxChangeBox.SkyBoxChangePlay();
+            }
+           
         }
 
       //  空中にいるかのチェック（Y軸の速度がゼロでないとき空中と判定）
@@ -514,6 +528,7 @@ public class Move_Player : MonoBehaviour
         if (other.gameObject.tag == "Goal")
         {
             SkyBoxChangeBool = true;
+            goaltouch = true;
             ADXSoundManager.Instance.PlaySound("beforeclear", clear.AcbAsset.Handle, clear.CueId, gameObject.transform, false);
         }
 
