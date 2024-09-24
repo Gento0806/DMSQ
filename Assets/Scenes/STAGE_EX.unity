@@ -18689,9 +18689,6 @@ MonoBehaviour:
   forceMagnitude: 20
   forceAmount: 10
   sakaForce: 0.02
-  skyboxMaterial: {fileID: 0}
-  startColor: {r: 0, g: 0, b: 0, a: 1}
-  endColor: {r: 0, g: 0, b: 0, a: 1}
   tImer: 0
   SkyBoxChangeBool: 0
   t: 0
@@ -29982,6 +29979,73 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1545032231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1545032234}
+  - component: {fileID: 1545032233}
+  - component: {fileID: 1545032232}
+  m_Layer: 0
+  m_Name: Slope1
+  m_TagString: saka1
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1545032232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545032231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db1ab3ec90b25674f8af4047af496e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddForce: {x: 0, y: 0, z: 0.1}
+--- !u!65 &1545032233
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545032231}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1545032234
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545032231}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -89.85554, y: 98.8, z: -170.83134}
+  m_LocalScale: {x: 23.4, y: 19.799992, z: 40.499985}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1547283205
 GameObject:
   m_ObjectHideFlags: 0
@@ -31739,6 +31803,73 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1238.8577, y: 1111.1094, z: 226.33315}
   m_Center: {x: -102.85702, y: 492.4511, z: -112.66656}
+--- !u!1 &1749126403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749126406}
+  - component: {fileID: 1749126405}
+  - component: {fileID: 1749126404}
+  m_Layer: 0
+  m_Name: Slope2
+  m_TagString: saka1
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1749126404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749126403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db1ab3ec90b25674f8af4047af496e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddForce: {x: 0, y: 0, z: -0.1}
+--- !u!65 &1749126405
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749126403}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1749126406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749126403}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -46.1, y: 38.6, z: -210.7}
+  m_LocalScale: {x: 30.9, y: 38.59999, z: 61.399994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759346262
 GameObject:
   m_ObjectHideFlags: 0
@@ -31842,9 +31973,6 @@ MonoBehaviour:
   forceMagnitude: 20
   forceAmount: 10
   sakaForce: 0.02
-  skyboxMaterial: {fileID: 2100000, guid: 0cb06c1e6935b2048a0e48257418d868, type: 2}
-  startColor: {r: 0.32156864, g: 0.19215687, b: 0.23529412, a: 1}
-  endColor: {r: 0.38431373, g: 0.6431373, b: 0.81960785, a: 1}
   tImer: 0
   SkyBoxChangeBool: 0
   t: 0
@@ -39547,7 +39675,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995419957}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645329, w: 0.857448}
+  m_LocalRotation: {x: 0.29133344, y: 0.40160713, z: -0.13645327, w: 0.857448}
   m_LocalPosition: {x: -33.4, y: 46.5, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -39721,9 +39849,6 @@ MonoBehaviour:
   forceMagnitude: 20
   forceAmount: 10
   sakaForce: 0.02
-  skyboxMaterial: {fileID: 2100000, guid: 0cb06c1e6935b2048a0e48257418d868, type: 2}
-  startColor: {r: 0.32156864, g: 0.19215687, b: 0.23529412, a: 1}
-  endColor: {r: 0.38431373, g: 0.6431373, b: 0.81960785, a: 1}
   tImer: 0
   SkyBoxChangeBool: 0
   t: 0
@@ -39775,7 +39900,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!23 &2004670192
 MeshRenderer:
@@ -41519,3 +41644,5 @@ SceneRoots:
   - {fileID: 1439600864}
   - {fileID: 1822058040}
   - {fileID: 5676320571497842346}
+  - {fileID: 1545032234}
+  - {fileID: 1749126406}
