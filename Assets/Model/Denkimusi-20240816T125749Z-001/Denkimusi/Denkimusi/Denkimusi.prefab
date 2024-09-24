@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d1557afbfc96b5846b399a4770c0a45b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 23.96
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d1557afbfc96b5846b399a4770c0a45b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 23.96
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d1557afbfc96b5846b399a4770c0a45b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 23.96
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d1557afbfc96b5846b399a4770c0a45b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -348,9 +348,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyMoveSpeed: 20
   sanji: 1
-  enemyfoot:
-    acbAsset: {fileID: -6750239444755058063, guid: bb73778c3ee81f04097150e9b1bc1b10, type: 3}
-    cueId: 0
 --- !u!136 &5537994936108054449
 CapsuleCollider:
   m_ObjectHideFlags: 0
