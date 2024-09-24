@@ -11,6 +11,7 @@ public class camera_ch : MonoBehaviour
     public CinemachineVirtualCameraBase vcam3;
     public CinemachineVirtualCameraBase vcam4;
     public CinemachineVirtualCameraBase vcam5;
+    public CinemachineVirtualCameraBase vcam6;
     public GameObject Hukan2D;
 
     Move_Player moveplayer2D;
@@ -21,6 +22,7 @@ public class camera_ch : MonoBehaviour
     double a = 0;
 
     double b = 0;
+    double Db =0;
 
     double c = 0;
 
@@ -90,13 +92,22 @@ public class camera_ch : MonoBehaviour
                     vca5 = true;
                 }
             }*/
-            
+
+            if (cameracon.sanji)
+            {
+                vca5 = true;
+            }
+            else
+            {
+                vca5 = false;
+            }
 
             if (vca5 == true)
             {
 
                 if (Input.GetButtonDown("Hukan"))
                 {
+                    Db = 0;
                     b++;
                     if (b % 2 == 1)
                     {
@@ -118,11 +129,11 @@ public class camera_ch : MonoBehaviour
                     {
                         vcam5.Priority = 3;
                     }
-                    else
-                    {
-                        Hukan2D.SetActive(true);
-                        Hukan2D.GetComponent<CinemachineVirtualCameraBase>().Priority = 3;
-                    }
+                    //else
+                    //{
+                    //    Hukan2D.SetActive(true);
+                    //    Hukan2D.GetComponent<CinemachineVirtualCameraBase>().Priority = 3;
+                    //}
                     
                     system.bankey = true;
                 }
@@ -132,11 +143,11 @@ public class camera_ch : MonoBehaviour
                     {
                         vcam5.Priority = 0;
                     }
-                    else
-                    {
-                        Hukan2D.SetActive(false) ;
-                        Hukan2D.GetComponent<CinemachineVirtualCameraBase>().Priority = 0;
-                    }
+                    //else
+                    //{
+                    //    Hukan2D.SetActive(false) ;
+                    //    Hukan2D.GetComponent<CinemachineVirtualCameraBase>().Priority = 0;
+                    //}
                     system.bankey = false;
                 }
 
@@ -148,7 +159,44 @@ public class camera_ch : MonoBehaviour
                 if (Input.GetButtonDown("Hukan"))
                 {
                     b = 0;
+                    Db++;
+                    if (Db % 2 == 1)
+                    {
+                        //----‰¹----
+                        ADXSoundManager.Instance.PlaySound("birdeye", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
+                        //----------
+                    }
+                    if (Db % 2 == 0)
+                    {
+                        //----‰¹----
+                        ADXSoundManager.Instance.PlaySound("birdeye", cueReference2.AcbAsset.Handle, cueReference2.CueId, gameObject.transform, false);
+                        //----------
+                    }
+                }
 
+                if (Db % 2 == 1)
+                {
+                   
+                        vcam6.Priority = 3;
+                    
+                    
+                    
+                        Hukan2D.SetActive(false);
+                        Hukan2D.GetComponent<CinemachineVirtualCameraBase>().Priority = 0;
+                    
+
+                    system.bankey = true;
+                }
+                if (Db % 2 == 0)
+                {
+                   
+                        vcam6.Priority = 0;
+                    
+                   
+                        Hukan2D.SetActive(true);
+                        Hukan2D.GetComponent<CinemachineVirtualCameraBase>().Priority = 3;
+                    
+                    system.bankey = false;
                 }
             }
 
