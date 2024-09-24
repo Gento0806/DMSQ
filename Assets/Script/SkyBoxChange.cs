@@ -55,7 +55,7 @@ public class SkyBoxChange : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1.0f;
-        t = 4;
+        t = 1f;
         foreach (Material material in Mat)
         {
             material.SetColor("_BaseColor", MatStartColor);
