@@ -36,7 +36,7 @@ public class CameraCon : MonoBehaviour
     float DelayTimeT;
     float DelayTime;
     public bool Qoshiteru = true;
-   
+
     //ステージごとに変わる変数(2D-3D)
     public float dX; //Pos.x = Pos.y - 493;
     public float dY; //Pos.y = 123f;
@@ -52,7 +52,7 @@ public class CameraCon : MonoBehaviour
     public float BallScale = 0;
     public float Max_Scale = 0;
     public float henkaTime = 0;
-    Vector3 mashiro_Scale= new Vector3(5f, 5f, 5f);//スケールを入れておくベクトル
+    Vector3 mashiro_Scale = new Vector3(5f, 5f, 5f);//スケールを入れておくベクトル
     Vector3 nijigen_Pos = new Vector3();
 
     Vector3 Origin = new Vector3(0, 0, 0);
@@ -85,7 +85,7 @@ public class CameraCon : MonoBehaviour
         //nijiRB = nijigen.GetComponent<Rigidbody>();
         CriAtomEx.ApplyDspBusSnapshot("Snapshot", 100);
 
-        
+
     }
 
     void Update()
@@ -93,7 +93,7 @@ public class CameraCon : MonoBehaviour
         if (sanji)
         {
             moveplayer3D = GameObject.Find("mashiro_3model").GetComponent<Move_Player>();
-            sanjiRB = GameObject.Find("mashiro_3model").GetComponent<Rigidbody>(); 
+            sanjiRB = GameObject.Find("mashiro_3model").GetComponent<Rigidbody>();
         }
         else
         {
@@ -179,58 +179,65 @@ public class CameraCon : MonoBehaviour
             {
                 if (sanji)
                 {
+                    if (!Camera3D.GetComponent<camera_ch>().Hukan)
+                    {
+                        //平行投影
+                        Camera.main.orthographic = true;
+                        //
+
+                        DelayTimeT = 0;
+
+                        //P_Ball2D.SetActive(true);
+                        //P_Ball3D.SetActive(true);
+                        //----隠す球ｰｰｰｰ
+                        cameraCh_P = true;
+                        BallScale = 5f;
+                        //--------------
 
 
-                    //平行投影
-                    Camera.main.orthographic = true;
-                    //
+                        //----音----
+                        ADXSoundManager.Instance.PlaySound("dimchange", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
+                        ADXSoundManager.Instance.StopSound("move");
+                        ADXSoundManager.Instance.StopSound("soner");
+                        ADXSoundManager.Instance.PlaySound("hover", hover.AcbAsset.Handle, hover.CueId, gameObject.transform, false);
+                        //----------
+                        CriAtomEx.ApplyDspBusSnapshot("Snapshot_0", 100);
 
-                    DelayTimeT = 0;
-
-                    //P_Ball2D.SetActive(true);
-                    //P_Ball3D.SetActive(true);
-                    //----隠す球ｰｰｰｰ
-                    cameraCh_P = true;
-                    BallScale = 5f;
-                    //--------------
+                        Qoshiteru = false;
+                        panel.GetComponent<PanelCon>().turn(SwitchTime);//ブラックアウト処理　※PanelConスクリプト参照
+                        playableDirector.Play();
+                    }
 
 
-                    //----音----
-                    ADXSoundManager.Instance.PlaySound("dimchange", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
-                    ADXSoundManager.Instance.StopSound("move");
-                    ADXSoundManager.Instance.StopSound("soner");
-                    ADXSoundManager.Instance.PlaySound("hover", hover.AcbAsset.Handle, hover.CueId, gameObject.transform, false);
-                    //----------
-                    CriAtomEx.ApplyDspBusSnapshot("Snapshot_0", 100);
-
-                    Qoshiteru = false;
-                    panel.GetComponent<PanelCon>().turn(SwitchTime);//ブラックアウト処理　※PanelConスクリプト参照
-                    playableDirector.Play();
 
 
                 }
                 else if (sanji == false)
                 {
-                    DelayTimeT = 0;
-                    //P_Ball2D.SetActive(true);
-                    //P_Ball3D.SetActive(true);
-                    //----隠す球ｰｰｰｰ
-                    cameraCh_P = true;
-                    BallScale = 5f;
-                    //--------------
+                    if (!Camera2D.GetComponent<camera_ch>().Hukan)
+                    {
+                        DelayTimeT = 0;
+                        //P_Ball2D.SetActive(true);
+                        //P_Ball3D.SetActive(true);
+                        //----隠す球ｰｰｰｰ
+                        cameraCh_P = true;
+                        BallScale = 5f;
+                        //--------------
 
-                    //----音----
-                    ADXSoundManager.Instance.PlaySound("dimchange", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
-                    ADXSoundManager.Instance.StopSound("move");
-                    ADXSoundManager.Instance.StopSound("soner");
-                    ADXSoundManager.Instance.PlaySound("hover", hover.AcbAsset.Handle, hover.CueId, gameObject.transform, false);
-                    //----------
-                    CriAtomEx.ApplyDspBusSnapshot("Snapshot", 100);
+                        //----音----
+                        ADXSoundManager.Instance.PlaySound("dimchange", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
+                        ADXSoundManager.Instance.StopSound("move");
+                        ADXSoundManager.Instance.StopSound("soner");
+                        ADXSoundManager.Instance.PlaySound("hover", hover.AcbAsset.Handle, hover.CueId, gameObject.transform, false);
+                        //----------
+                        CriAtomEx.ApplyDspBusSnapshot("Snapshot", 100);
 
 
-                    Qoshiteru = false;
-                    panel.GetComponent<PanelCon>().turn(SwitchTime);
-                    playableDirector2.Play();
+                        Qoshiteru = false;
+                        panel.GetComponent<PanelCon>().turn(SwitchTime);
+                        playableDirector2.Play();
+                    }
+
 
                 }
 
@@ -253,7 +260,7 @@ public class CameraCon : MonoBehaviour
         if (cameraCh_P)
         {
             nijigen_Pos = nijigen.transform.position;
-            BallScale -= 7f*Time.deltaTime;
+            BallScale -= 7f * Time.deltaTime;
             //sanjigen_Scale -= 0.4f;
             mashiro_Scale = new Vector3(BallScale, BallScale, BallScale);
             sanjigen.transform.localScale = mashiro_Scale;
@@ -269,9 +276,9 @@ public class CameraCon : MonoBehaviour
                 EffekseerHandle handle2 = EffekseerSystem.PlayEffect(effect, nijigen.transform.position);
                 moveplayer2D.noChange = false;
             }
-            
-            
-            
+
+
+
             /*if (!sanji)
             {
                 Pos.y = Pos.x + dYD;
@@ -286,23 +293,23 @@ public class CameraCon : MonoBehaviour
                 if (!sanji)
                 {
                     nijiRB.constraints = RigidbodyConstraints.FreezeAll;
-                    
+
                 }
                 else
                 {
                     sanjiRB.constraints = RigidbodyConstraints.FreezeAll;
-                    
+
                 }
-                
+
             }
 
-            henkaTime += (SwitchTime / 2)*Time.deltaTime;
+            henkaTime += (SwitchTime / 2) * Time.deltaTime;
             if (henkaTime >= SwitchTime)
             {
                 //Physics.gravity = new Vector3(0, -40f, 0); // 重力を下方向に戻す
                 cameraCh_P = false;
                 henkaTime = 0;
-                
+
             }
         }
         else
@@ -339,7 +346,7 @@ public class CameraCon : MonoBehaviour
                     Camera.main.orthographic = false;
                 }
             }
-            
+
 
             if (BallScale >= 5f)
             {
@@ -364,9 +371,9 @@ public class CameraCon : MonoBehaviour
                     moveplayer3D.noChange = true;
                 }
 
-                
-                
-                
+
+
+
             }
 
 
@@ -388,7 +395,7 @@ public class CameraCon : MonoBehaviour
     }
     public void moveCharacter()
     {
-        
+
 
         //現在位置の取得
         if (sanji)

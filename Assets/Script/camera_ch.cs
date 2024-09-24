@@ -19,10 +19,12 @@ public class camera_ch : MonoBehaviour
     Rigidbody sanjiRB;
     Rigidbody nijiRB;
 
+    public bool Hukan;
+
     double a = 0;
 
     double b = 0;
-    double Db =0;
+    double Db = 0;
 
     double c = 0;
 
@@ -49,6 +51,7 @@ public class camera_ch : MonoBehaviour
     {
         cameracon.GetComponent<CameraCon>();
         system = GameObject.Find("System").GetComponent<Sisutemu>();
+        Hukan = false;
     }
 
     void Update()
@@ -111,12 +114,14 @@ public class camera_ch : MonoBehaviour
                     b++;
                     if (b % 2 == 1)
                     {
+                        Hukan = true;
                         //----‰¹----
                         ADXSoundManager.Instance.PlaySound("birdeye", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
                         //----------
                     }
                     if (b % 2 == 0)
                     {
+                        Hukan = false;
                         //----‰¹----
                         ADXSoundManager.Instance.PlaySound("birdeye", cueReference2.AcbAsset.Handle, cueReference2.CueId, gameObject.transform, false);
                         //----------
@@ -127,14 +132,16 @@ public class camera_ch : MonoBehaviour
                 {
                     if (cameracon.sanji)
                     {
+                       
                         vcam5.Priority = 3;
+                        
                     }
                     //else
                     //{
                     //    Hukan2D.SetActive(true);
                     //    Hukan2D.GetComponent<CinemachineVirtualCameraBase>().Priority = 3;
                     //}
-                    
+
                     system.bankey = true;
                 }
                 if (b % 2 == 0)
@@ -162,12 +169,14 @@ public class camera_ch : MonoBehaviour
                     Db++;
                     if (Db % 2 == 1)
                     {
+                        Hukan = true;
                         //----‰¹----
                         ADXSoundManager.Instance.PlaySound("birdeye", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
                         //----------
                     }
                     if (Db % 2 == 0)
                     {
+                        Hukan = false;
                         //----‰¹----
                         ADXSoundManager.Instance.PlaySound("birdeye", cueReference2.AcbAsset.Handle, cueReference2.CueId, gameObject.transform, false);
                         //----------
@@ -177,25 +186,25 @@ public class camera_ch : MonoBehaviour
                 if (Db % 2 == 1)
                 {
                    
-                        vcam6.Priority = 3;
+                    vcam6.Priority = 3;
                     
-                    
-                    
-                        Hukan2D.SetActive(false);
-                        Hukan2D.GetComponent<CinemachineVirtualCameraBase>().Priority = 0;
-                    
+
+
+                    Hukan2D.SetActive(false);
+                    Hukan2D.GetComponent<CinemachineVirtualCameraBase>().Priority = 0;
+
 
                     system.bankey = true;
                 }
                 if (Db % 2 == 0)
                 {
-                   
-                        vcam6.Priority = 0;
-                    
-                   
-                        Hukan2D.SetActive(true);
-                        Hukan2D.GetComponent<CinemachineVirtualCameraBase>().Priority = 3;
-                    
+
+                    vcam6.Priority = 0;
+
+
+                    Hukan2D.SetActive(true);
+                    Hukan2D.GetComponent<CinemachineVirtualCameraBase>().Priority = 3;
+
                     system.bankey = false;
                 }
             }
@@ -297,7 +306,7 @@ public class camera_ch : MonoBehaviour
                 Goal = true;
             }
         }
-        
+
 
     }
 
