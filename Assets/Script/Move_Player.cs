@@ -325,6 +325,10 @@ public class Move_Player : MonoBehaviour
                 animator.SetBool("Walk", false);
             }
 
+            /*if(!(rb.velocity.y <= 0.1f && rb.velocity.y >= -0.1f))
+            {
+                animator.SetBool("Jumploop", true);
+            }*/
 
             if (Input.GetButtonDown("Jump"))
             {
@@ -491,14 +495,14 @@ public class Move_Player : MonoBehaviour
     // キャラクターが地面から離れたときに空中状態を設定する
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Floor"))
+        /*if (other.CompareTag("Floor"))
         {
             animator.SetBool("Walk", false);
             // 空中状態のアニメーション
             animator.SetBool("Jumploop", true);    // 空中状態を開始
             animator.SetBool("Jumpend", false); // 着地をリセット
             
-        }
+        }*/
     }
 
 
