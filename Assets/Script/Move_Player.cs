@@ -115,7 +115,7 @@ public class Move_Player : MonoBehaviour
     {
 
         Rigidbody rb = this.GetComponent<Rigidbody>();
-        if (rb.velocity.y <= 0.1f && rb.velocity.y >= -0.1f && Input.GetButtonDown("Jump"))
+        if (rb.velocity.y <= 0.1f && rb.velocity.y >= -0.1f && Input.GetButtonDown("Jump") &&!SkyBoxChangeBool)
         {
             rb.velocity = Vector3.zero;
             rb.AddForce(0, jumpforce, 0);
@@ -136,7 +136,7 @@ public class Move_Player : MonoBehaviour
         ResetVelocity.y = rb.velocity.y;
         rb.velocity = ResetVelocity;
 
-
+        /*
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             dir = 0;
@@ -152,7 +152,7 @@ public class Move_Player : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             dir = 3;
-        }
+        }*/
 
         
 
@@ -279,6 +279,7 @@ public class Move_Player : MonoBehaviour
                     //----------
                 }
 
+                /*
                 if (dir == 0 || dir == 2)
                     moveZ = 0;
                 else if (dir == 1 || dir == 3)
@@ -301,7 +302,7 @@ public class Move_Player : MonoBehaviour
                         break;
                     default:
                         break;
-                }
+                }*/
                 move = cameraForward2D * Input.GetAxis("Horizontal") * speed2d;
                 this.transform.position+=(move * Time.deltaTime*speed2d); //ê≥ñ 
                                                                                                    //transform.rotation = Quaternion.LookRotation(transform.position +(Vector3.forward * Input.GetAxisRaw("Horizontal") * -1)- transform.position);
