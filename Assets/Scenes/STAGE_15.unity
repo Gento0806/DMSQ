@@ -9486,6 +9486,94 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &696000882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 696000884}
+  - component: {fileID: 696000883}
+  m_Layer: 0
+  m_Name: SkyBoxChange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &696000883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696000882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20d9bb6b97159e4497b3c5aa1a3e187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skyboxMaterial: {fileID: 2100000, guid: 0cb06c1e6935b2048a0e48257418d868, type: 2}
+  startColor: {r: 0.32156864, g: 0.19215687, b: 0.23529412, a: 1}
+  endColor: {r: 0.38431373, g: 0.6431373, b: 0.81960785, a: 1}
+  MatStartColor: {r: 0.90588236, g: 0.20392157, b: 0.20392157, a: 1}
+  MatEndColor: {r: 0.77767885, g: 0.8924631, b: 0.9622642, a: 1}
+  EmiStartColor: {r: 0.8117647, g: 0.4509804, b: 0.4509804, a: 1}
+  EmiEndColor: {r: 1, g: 0.9979584, b: 0.61006284, a: 1}
+  WallStartColor: {r: 0.14117648, g: 0.08235294, b: 0.08235294, a: 1}
+  WallEndColor: {r: 0.76860094, g: 0.8890302, b: 0.9622642, a: 1}
+  tImer: 0
+  t: 0
+  Mat:
+  - {fileID: 2100000, guid: 7487745d4c8f8ea429973c02f6b357e9, type: 2}
+  - {fileID: 2100000, guid: 37c627ecf62c4db48b53a4b6da2ad53b, type: 2}
+  - {fileID: 2100000, guid: eebf36f34ff0858409161571a52c2863, type: 2}
+  - {fileID: 2100000, guid: 6e6aeeb2a814aeb4f98ab47c766abbe5, type: 2}
+  - {fileID: 2100000, guid: 6f967589f5106b441aeac6504fda34a8, type: 2}
+  - {fileID: 2100000, guid: 10c7cc634289534468383b966306341c, type: 2}
+  - {fileID: 2100000, guid: f9c23bc3da39d564cad9cca43cc05ead, type: 2}
+  - {fileID: 2100000, guid: c1939e1c7fd90b845a09d5ea457cf06e, type: 2}
+  - {fileID: 2100000, guid: ab49d08fc9bcc4646ad078a58aa64edf, type: 2}
+  Wall: {fileID: 2100000, guid: 57d3c0d62f19f734c97dbedf73e6bfc1, type: 2}
+  cueReference:
+    acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
+    cueId: 1
+  cueReference2:
+    acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
+    cueId: 3
+  cueReference3:
+    acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
+    cueId: 2
+  goal:
+    acbAsset: {fileID: -6750239444755058063, guid: dfa07cc2a15f5d34bb831b2fd40fd116, type: 3}
+    cueId: 12
+  hover:
+    acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
+    cueId: 10
+  clear:
+    acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
+    cueId: 13
+  soner:
+    acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
+    cueId: 12
+  moveplayer: 0
+--- !u!4 &696000884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696000882}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.6, y: 143.9, z: 0.70000005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &702497501
 GameObject:
   m_ObjectHideFlags: 0
@@ -15512,9 +15600,6 @@ MonoBehaviour:
   forceMagnitude: 20
   forceAmount: 10
   sakaForce: 0.02
-  skyboxMaterial: {fileID: 0}
-  startColor: {r: 0, g: 0, b: 0, a: 1}
-  endColor: {r: 0, g: 0, b: 0, a: 1}
   tImer: 0
   SkyBoxChangeBool: 0
   t: 0
@@ -17456,7 +17541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174674437}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.13645327, y: 0.857448, z: -0.29133344, w: -0.40160713}
+  m_LocalRotation: {x: -0.1364533, y: 0.857448, z: -0.29133338, w: -0.40160722}
   m_LocalPosition: {x: 26.6, y: 46.5, z: 25.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -25041,9 +25126,6 @@ MonoBehaviour:
   forceMagnitude: 20
   forceAmount: 10
   sakaForce: 0.02
-  skyboxMaterial: {fileID: 2100000, guid: 0cb06c1e6935b2048a0e48257418d868, type: 2}
-  startColor: {r: 0.32156864, g: 0.19215687, b: 0.23529412, a: 1}
-  endColor: {r: 0.38431373, g: 0.6431373, b: 0.81960785, a: 1}
   tImer: 0
   SkyBoxChangeBool: 0
   t: 0
@@ -31458,7 +31540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995419957}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.29133344, y: 0.40160713, z: -0.13645327, w: 0.857448}
+  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645329, w: 0.857448}
   m_LocalPosition: {x: -33.4, y: 46.5, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -31565,9 +31647,6 @@ MonoBehaviour:
   forceMagnitude: 20
   forceAmount: 10
   sakaForce: 0.02
-  skyboxMaterial: {fileID: 2100000, guid: 0cb06c1e6935b2048a0e48257418d868, type: 2}
-  startColor: {r: 0.32156864, g: 0.19215687, b: 0.23529412, a: 1}
-  endColor: {r: 0.38431373, g: 0.6431373, b: 0.81960785, a: 1}
   tImer: 0
   SkyBoxChangeBool: 0
   t: 0
@@ -32539,3 +32618,4 @@ SceneRoots:
   - {fileID: 1738858164}
   - {fileID: 2138991714}
   - {fileID: 2088155558}
+  - {fileID: 696000884}
