@@ -113,6 +113,8 @@ public class Move_Player : MonoBehaviour
     }
     void Update()
     {
+        if (cameracon.GetComponent<CameraCon>().sanji) jumpforce = 4500;
+        else jumpforce = 3500;
 
         Rigidbody rb = this.GetComponent<Rigidbody>();
         if (rb.velocity.y <= 0.1f && rb.velocity.y >= -0.1f && Input.GetButtonDown("Jump") &&!SkyBoxChangeBool)
