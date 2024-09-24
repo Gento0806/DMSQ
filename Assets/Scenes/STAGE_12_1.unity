@@ -9112,7 +9112,7 @@ Transform:
   m_GameObject: {fileID: 847148376}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -20.900003, y: 147.86, z: 39.60001}
+  m_LocalPosition: {x: -20.900003, y: 151.33, z: 39.60001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14081,8 +14081,8 @@ MonoBehaviour:
   - {fileID: 2084169545}
   Sanji: 1
   bankey: 0
-  DeathLine3D: -15
-  DeathLine2D: 125
+  DeathLine3D: -20
+  DeathLine2D: 90
   RespawnPoint3D: {fileID: 695859765}
   RespawnPoint2D: {fileID: 441685533}
   Player3D: {fileID: 2004670187}
@@ -14201,9 +14201,6 @@ MonoBehaviour:
   forceMagnitude: 20
   forceAmount: 10
   sakaForce: 0.02
-  skyboxMaterial: {fileID: 0}
-  startColor: {r: 0, g: 0, b: 0, a: 1}
-  endColor: {r: 0, g: 0, b: 0, a: 1}
   tImer: 0
   SkyBoxChangeBool: 0
   t: 0
@@ -14645,7 +14642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7bdb43a04b293c4f9aca58f65e1cf69, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 142.33
+      value: 145.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e7bdb43a04b293c4f9aca58f65e1cf69, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15043,7 +15040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a58e81baf4e0764c8faaa390a9c903b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -18.5
+      value: -18.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a58e81baf4e0764c8faaa390a9c903b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15554,7 +15551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174674437}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.1364533, y: 0.857448, z: -0.29133338, w: -0.40160722}
+  m_LocalRotation: {x: -0.13645327, y: 0.857448, z: -0.29133344, w: -0.40160713}
   m_LocalPosition: {x: 26.6, y: 46.5, z: 25.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -22717,9 +22714,6 @@ MonoBehaviour:
   forceMagnitude: 20
   forceAmount: 10
   sakaForce: 0.02
-  skyboxMaterial: {fileID: 2100000, guid: 0cb06c1e6935b2048a0e48257418d868, type: 2}
-  startColor: {r: 0.32156864, g: 0.19215687, b: 0.23529412, a: 1}
-  endColor: {r: 0.38431373, g: 0.6431373, b: 0.81960785, a: 1}
   tImer: 0
   SkyBoxChangeBool: 0
   t: 0
@@ -28930,9 +28924,6 @@ MonoBehaviour:
   forceMagnitude: 20
   forceAmount: 10
   sakaForce: 0.02
-  skyboxMaterial: {fileID: 2100000, guid: 0cb06c1e6935b2048a0e48257418d868, type: 2}
-  startColor: {r: 0.32156864, g: 0.19215687, b: 0.23529412, a: 1}
-  endColor: {r: 0.38431373, g: 0.6431373, b: 0.81960785, a: 1}
   tImer: 0
   SkyBoxChangeBool: 0
   t: 0
