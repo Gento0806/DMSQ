@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37168851, g: 0.24183217, b: 0.28540978, a: 1}
+  m_IndirectSpecularColor: {r: 0.37092832, g: 0.24144235, b: 0.28507993, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6262,6 +6262,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 260781365}
     m_Modifications:
+    - target: {fileID: 4110491418246297740, guid: c5571854bce875d4e8eacc0402a512d1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5290842819813249882, guid: c5571854bce875d4e8eacc0402a512d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38
@@ -8393,6 +8397,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 260781365}
     m_Modifications:
+    - target: {fileID: 4110491418246297740, guid: c5571854bce875d4e8eacc0402a512d1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5290842819813249882, guid: c5571854bce875d4e8eacc0402a512d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18
@@ -14452,6 +14460,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 260781365}
     m_Modifications:
+    - target: {fileID: 4110491418246297740, guid: c5571854bce875d4e8eacc0402a512d1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5290842819813249882, guid: c5571854bce875d4e8eacc0402a512d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18
@@ -15091,6 +15103,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 260781365}
     m_Modifications:
+    - target: {fileID: 4110491418246297740, guid: c5571854bce875d4e8eacc0402a512d1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5290842819813249882, guid: c5571854bce875d4e8eacc0402a512d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38
@@ -28973,7 +28989,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995419957}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.29133344, y: 0.40160713, z: -0.13645327, w: 0.857448}
+  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645326, w: 0.85744804}
   m_LocalPosition: {x: -33.4, y: 46.5, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
