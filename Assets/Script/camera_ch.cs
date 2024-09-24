@@ -287,7 +287,15 @@ public class camera_ch : MonoBehaviour
         }
         else if (Goal)
         {
-            vcam5.Priority = 3;
+            if (cameracon.sanji)
+            {
+                vcam5.Priority = 3;
+            }
+            else
+            {
+                vcam6.Priority = 3;
+            }
+            
         }
 
         if (cameracon.sanji)

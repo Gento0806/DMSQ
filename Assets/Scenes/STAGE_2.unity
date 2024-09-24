@@ -8025,7 +8025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1045812072}
   m_Layer: 0
-  m_Name: 2DMap
+  m_Name: 2DMAP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8772,7 +8772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1269794399}
   m_Layer: 0
-  m_Name: 3DMap
+  m_Name: 3DMAP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21325,6 +21325,7 @@ MonoBehaviour:
   vcam5: {fileID: 1290988027}
   vcam6: {fileID: 549890534}
   Hukan2D: {fileID: 1759599689}
+  Hukan: 0
   cameracon: {fileID: 695005628}
   cueReference:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
@@ -26797,6 +26798,7 @@ MonoBehaviour:
   vcam5: {fileID: 1290988027}
   vcam6: {fileID: 549890534}
   Hukan2D: {fileID: 1759599689}
+  Hukan: 0
   cameracon: {fileID: 695005628}
   cueReference:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}

@@ -839,6 +839,7 @@ MonoBehaviour:
   vcam5: {fileID: 1988680858}
   vcam6: {fileID: 1609335532}
   Hukan2D: {fileID: 1448213232}
+  Hukan: 0
   cameracon: {fileID: 1205310744}
   cueReference:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
@@ -857,7 +858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 158391857}
   m_Layer: 0
-  m_Name: 3DMap
+  m_Name: 3DMAP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1648,7 +1649,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307242640}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.13645327, y: 0.857448, z: -0.29133344, w: -0.40160713}
+  m_LocalRotation: {x: -0.1364533, y: 0.857448, z: -0.29133338, w: -0.40160722}
   m_LocalPosition: {x: 26.6, y: 46.5, z: 25.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10046,7 +10047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1130573784}
   m_Layer: 0
-  m_Name: 2DMap
+  m_Name: 2DMAP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11975,6 +11976,7 @@ MonoBehaviour:
   vcam5: {fileID: 1988680858}
   vcam6: {fileID: 1609335532}
   Hukan2D: {fileID: 1448213232}
+  Hukan: 0
   cameracon: {fileID: 1205310744}
   cueReference:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
@@ -23663,7 +23665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874705263}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645327, w: 0.857448}
+  m_LocalRotation: {x: 0.29133344, y: 0.40160713, z: -0.13645327, w: 0.857448}
   m_LocalPosition: {x: -33.4, y: 46.5, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
