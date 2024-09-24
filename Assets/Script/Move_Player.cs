@@ -312,7 +312,7 @@ public class Move_Player : MonoBehaviour
 
             }
 
-            if (move != Vector3.zero )
+            if (move != Vector3.zero && rb.velocity.y <= 0.1f && rb.velocity.y >= -0.1f)
             {
                     transform.rotation = Quaternion.LookRotation(move);
 
