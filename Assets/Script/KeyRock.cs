@@ -19,11 +19,13 @@ public class KeyRock : MonoBehaviour
     AudioSource audiosource;
     int KeyNow;
     int a = 0;
+    bool key0;
     // Start is called before the first frame update
     void Start()
     {
         KeyNow = 0;
         audiosource = GetComponent<AudioSource>();
+        key0 = true;
     }
 
     // Update is called once per frame
@@ -55,7 +57,12 @@ public class KeyRock : MonoBehaviour
             int LockNum=Lock.Length;
             for(int i=0;i<LockNum; i++)
             {
-                ADXSoundManager.Instance.PlaySound("key_open", key_open.AcbAsset.Handle, key_open.CueId, gameObject.transform, false);
+                if(key0)
+                {
+                    ADXSoundManager.Instance.PlaySound("key_open", key_open.AcbAsset.Handle, key_open.CueId, gameObject.transform, false);
+                    key0 = false;
+                }
+                
                 Destroy(Lock[i]);
             }
         }
