@@ -47,12 +47,17 @@ public class SceneSelect : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.R))//クリアデータのリセット
+        if (Input.GetButtonDown("Option") && Input.GetButtonDown("Share"))//クリアデータのリセット
         {
             for(int i=1;i< StageNumImage.Length; i++)
             {
                 img = StageNumImage[i].GetComponent<Image>();
+                btn = StageNumImage[i].GetComponent<Button>();
+                SpriteState sp = btn.spriteState;
+
                 img.sprite = BeforeImage[i];
+                sp.selectedSprite = SelectedBeforeImage[i];
+                btn.spriteState = sp;
                 ClearNum[i] = false;
             }
         }
