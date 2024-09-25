@@ -6,15 +6,16 @@ using UnityEngine;
 public class camera_ch : MonoBehaviour
 {
 
-    public CinemachineVirtualCameraBase vcam1;
-    public CinemachineVirtualCameraBase vcam2;
-    public CinemachineVirtualCameraBase vcam3;
-    public CinemachineVirtualCameraBase vcam4;
-    public CinemachineVirtualCameraBase vcam5;
-    public CinemachineVirtualCameraBase vcam6;
-    public CinemachineVirtualCameraBase vcam7;
-    public CinemachineVirtualCameraBase vcam8;
-    public CinemachineVirtualCameraBase vcam9;
+    CinemachineVirtualCameraBase vcam1;
+    CinemachineVirtualCameraBase vcam2;
+    CinemachineVirtualCameraBase vcam3;
+    CinemachineVirtualCameraBase vcam4;
+    CinemachineVirtualCameraBase vcam5;
+    CinemachineVirtualCameraBase vcam6;
+    CinemachineVirtualCameraBase vcam7;
+    CinemachineVirtualCameraBase vcam8;
+    CinemachineVirtualCameraBase vcam9;
+
     public GameObject Hukan2D;
 
     Move_Player moveplayer2D;
@@ -57,6 +58,24 @@ public class camera_ch : MonoBehaviour
         cameracon.GetComponent<CameraCon>();
         system = GameObject.Find("System").GetComponent<Sisutemu>();
         Hukan = false;
+        GameObject  d3camera1= GameObject.Find("3DCamera1");
+        vcam1 = d3camera1.GetComponent<CinemachineVirtualCameraBase>();
+        GameObject d3camera2 = GameObject.Find("3DCamera2");
+        vcam2 = d3camera2.GetComponent<CinemachineVirtualCameraBase>();
+        GameObject d3camera3 = GameObject.Find("3DCamera3");
+        vcam3 = d3camera3.GetComponent<CinemachineVirtualCameraBase>();
+        GameObject d3camera4 = GameObject.Find("3DCamera4");
+        vcam4 = d3camera4.GetComponent<CinemachineVirtualCameraBase>();
+        GameObject d3camera5 = GameObject.Find("3DCamera5");
+        vcam5 = d3camera5.GetComponent<CinemachineVirtualCameraBase>();
+        GameObject d2fukan = GameObject.Find("2Dhukann");
+        vcam6 = d2fukan.GetComponent<CinemachineVirtualCameraBase>();
+        GameObject d3camera7 = GameObject.Find("3DCamera6");
+        vcam7 = d3camera7.GetComponent<CinemachineVirtualCameraBase>();
+        GameObject d3camera8 = GameObject.Find("3DCamera7");
+        vcam8 = d3camera8.GetComponent<CinemachineVirtualCameraBase>();
+        GameObject d3camera9 = GameObject.Find("3DCamera8");
+        vcam9 = d3camera9.GetComponent<CinemachineVirtualCameraBase>();
     }
 
     void Update()
