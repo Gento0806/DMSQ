@@ -12,6 +12,9 @@ public class camera_ch : MonoBehaviour
     public CinemachineVirtualCameraBase vcam4;
     public CinemachineVirtualCameraBase vcam5;
     public CinemachineVirtualCameraBase vcam6;
+    public CinemachineVirtualCameraBase vcam7;
+    public CinemachineVirtualCameraBase vcam8;
+    public CinemachineVirtualCameraBase vcam9;
     public GameObject Hukan2D;
 
     Move_Player moveplayer2D;
@@ -27,6 +30,8 @@ public class camera_ch : MonoBehaviour
     double Db = 0;
 
     double c = 0;
+
+    double d = 0;
 
     bool vca5 = true;
 
@@ -132,9 +137,94 @@ public class camera_ch : MonoBehaviour
                 {
                     if (cameracon.sanji)
                     {
-                       
                         vcam5.Priority = 3;
-                        
+                        vcam7.Priority = 3;
+                        vcam8.Priority = 3;
+                        vcam9.Priority = 3;
+                        //vcam5.Priority = 3;
+                        if (Input.GetButtonDown("KirikaeLeft")) // Left click
+                        {
+                            d++;
+
+                        }
+                        else if (Input.GetButtonDown("KirikaeRight")) // Right click
+                        {
+                            d--;
+
+                        }
+
+                        if (d >= 1)
+                        {
+                            vcam5.Priority = 3;
+                            vcam7.Priority = 3;
+                            vcam8.Priority = 3;
+                            vcam9.Priority = 4;
+
+                            if (d >= 2)
+                            {
+                                vcam5.Priority = 3;
+                                vcam7.Priority = 3;
+                                vcam8.Priority = 4;
+                                vcam9.Priority = 3;
+
+                                if (d >= 3)
+                                {
+                                    vcam5.Priority = 3;
+                                    vcam7.Priority = 4;
+                                    vcam8.Priority = 3;
+                                    vcam9.Priority = 3;
+                                    if (d >= 4)
+                                    {
+                                        vcam5.Priority = 4;
+                                        vcam7.Priority = 3;
+                                        vcam8.Priority = 3;
+                                        vcam9.Priority = 3;
+                                        d = 0;
+                                    }
+                                }
+                            }
+                        }
+                        else if (d <= 0)
+                        {
+                            vcam5.Priority = 4;
+                            vcam7.Priority = 3;
+                            vcam8.Priority = 3;
+                            vcam9.Priority = 3;
+
+                            if (d <= -1)
+                            {
+                                vcam5.Priority = 3;
+                                vcam7.Priority = 4;
+                                vcam8.Priority = 3;
+                                vcam9.Priority = 3;
+
+                                if (d <= -2)
+                                {
+                                    vcam5.Priority = 3;
+                                    vcam7.Priority = 3;
+                                    vcam8.Priority = 4;
+                                    vcam9.Priority = 3;
+
+                                    if (d <= -3)
+                                    {
+                                        vcam5.Priority = 3;
+                                        vcam7.Priority = 3;
+                                        vcam8.Priority = 3;
+                                        vcam9.Priority = 4;
+
+                                        if (d <= -4)
+                                        {
+                                            vcam5.Priority = 4;
+                                            vcam7.Priority = 3;
+                                            vcam8.Priority = 3;
+                                            vcam9.Priority = 3;
+
+                                            d = 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                     //else
                     //{
@@ -149,6 +239,9 @@ public class camera_ch : MonoBehaviour
                     if (cameracon.sanji)
                     {
                         vcam5.Priority = 0;
+                        vcam7.Priority = 0;
+                        vcam8.Priority = 0;
+                        vcam9.Priority = 0;
                     }
                     //else
                     //{
@@ -181,6 +274,7 @@ public class camera_ch : MonoBehaviour
                         ADXSoundManager.Instance.PlaySound("birdeye", cueReference2.AcbAsset.Handle, cueReference2.CueId, gameObject.transform, false);
                         //----------
                     }
+
                 }
 
                 if (Db % 2 == 1)
