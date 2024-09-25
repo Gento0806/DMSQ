@@ -45,6 +45,10 @@ public class camera_ch : MonoBehaviour
     CriWare.Assets.CriAtomCueReference cueReference;
     [SerializeField]
     CriWare.Assets.CriAtomCueReference cueReference2;
+    [SerializeField]
+    CriWare.Assets.CriAtomCueReference near_dir;
+    [SerializeField]
+    CriWare.Assets.CriAtomCueReference far_dir;
     //----------
 
     //360“xƒJƒƒ‰
@@ -96,12 +100,14 @@ public class camera_ch : MonoBehaviour
             if (Input.GetButtonDown("KirikaeLeft")) // Left click
             {
                 a++;
-
+                //--sound--
+                ADXSoundManager.Instance.PlaySound("neardir", near_dir.AcbAsset.Handle, near_dir.CueId, gameObject.transform, false);
             }
             else if (Input.GetButtonDown("KirikaeRight")) // Right click
             {
                 a--;
-
+                //--sound--
+                ADXSoundManager.Instance.PlaySound("neardir", near_dir.AcbAsset.Handle, near_dir.CueId, gameObject.transform, false);
             }
 
             /*if (cameracon.Qoshiteru && cameracon.sanji)
@@ -164,12 +170,14 @@ public class camera_ch : MonoBehaviour
                         if (Input.GetButtonDown("KirikaeLeft")) // Left click
                         {
                             d++;
-
+                            //--sound--
+                            ADXSoundManager.Instance.PlaySound("fardir", far_dir.AcbAsset.Handle, far_dir.CueId, gameObject.transform, false);
                         }
                         else if (Input.GetButtonDown("KirikaeRight")) // Right click
                         {
                             d--;
-
+                            //--sound--
+                            ADXSoundManager.Instance.PlaySound("fardir", far_dir.AcbAsset.Handle, far_dir.CueId, gameObject.transform, false);
                         }
 
                         if (d >= 1)

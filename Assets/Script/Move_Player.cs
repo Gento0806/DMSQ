@@ -411,7 +411,7 @@ public class Move_Player : MonoBehaviour
                     ADXSoundManager.Instance.StopSound("hover");
                     ADXSoundManager.Instance.PlaySound("move", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
                     ADXSoundManager.Instance.PlaySound("soner", soner.AcbAsset.Handle, soner.CueId, gameObject.transform, false);
-                    //Debug.Log("idle");
+                    Debug.Log("idle");
 
                 }
                 if (currentstate == move_type.move && transit == move_type.idle)
@@ -419,7 +419,7 @@ public class Move_Player : MonoBehaviour
                     ADXSoundManager.Instance.StopSound("move");
                     ADXSoundManager.Instance.StopSound("soner");
                     ADXSoundManager.Instance.PlaySound("hover", hover.AcbAsset.Handle, hover.CueId, gameObject.transform, false);
-                    //Debug.Log("move");
+                    Debug.Log("move");
 
                 }
                 currentstate = transit;
