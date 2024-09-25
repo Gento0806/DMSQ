@@ -1233,6 +1233,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeforeImage: []
   AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
   StageNumImage: []
 --- !u!114 &393374879
 MonoBehaviour:
@@ -1725,6 +1727,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeforeImage: []
   AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
   StageNumImage: []
 --- !u!114 &469761976
 MonoBehaviour:
@@ -2176,6 +2180,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeforeImage: []
   AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
   StageNumImage: []
 --- !u!114 &528671032
 MonoBehaviour:
@@ -2398,6 +2404,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeforeImage: []
   AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
   StageNumImage: []
 --- !u!114 &609270878
 MonoBehaviour:
@@ -3152,6 +3160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeforeImage: []
   AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
   StageNumImage: []
 --- !u!114 &1100188067
 MonoBehaviour:
@@ -3508,6 +3518,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeforeImage: []
   AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
   StageNumImage: []
 --- !u!114 &1142949349
 MonoBehaviour:
@@ -3746,6 +3758,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeforeImage: []
   AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
   StageNumImage: []
 --- !u!114 &1217026220
 MonoBehaviour:
@@ -3945,6 +3959,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeforeImage: []
   AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
   StageNumImage: []
 --- !u!114 &1424093519
 MonoBehaviour:
@@ -4185,6 +4201,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeforeImage: []
   AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
   StageNumImage: []
 --- !u!114 &1434035056
 MonoBehaviour:
@@ -4443,6 +4461,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeforeImage: []
   AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
   StageNumImage: []
 --- !u!114 &1468678029
 MonoBehaviour:
@@ -4916,6 +4936,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeforeImage: []
   AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
   StageNumImage: []
 --- !u!114 &1498480007
 MonoBehaviour:
@@ -5470,6 +5492,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeforeImage: []
   AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
   StageNumImage: []
 --- !u!114 &1641398320
 MonoBehaviour:
@@ -5940,6 +5964,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeforeImage: []
   AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
   StageNumImage: []
 --- !u!114 &1736034922
 MonoBehaviour:
@@ -6120,6 +6146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeforeImage: []
   AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
   StageNumImage: []
 --- !u!114 &1758098695
 MonoBehaviour:
@@ -6810,6 +6838,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeforeImage: []
   AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
   StageNumImage: []
 --- !u!114 &1930699682
 MonoBehaviour:
@@ -7050,6 +7080,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeforeImage: []
   AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
   StageNumImage: []
 --- !u!114 &1931765354
 MonoBehaviour:
@@ -7246,6 +7278,42 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3b554d354a703ac4ba37cccdc5eadbf3, type: 3}
   - {fileID: 21300000, guid: b33daff6f3d87324594aa38ba862735d, type: 3}
   - {fileID: 21300000, guid: b33daff6f3d87324594aa38ba862735d, type: 3}
+  SelectedBeforeImage:
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 66006d60ef066ec4e895d7d841a1625e, type: 3}
+  - {fileID: 21300000, guid: 80048def782db294cb59efa4ae706d10, type: 3}
+  - {fileID: 21300000, guid: 5aadfabc53a68d74bbacd9c03bb46661, type: 3}
+  - {fileID: 21300000, guid: 2483bfdf8d9ed794bb96841591ad3280, type: 3}
+  - {fileID: 21300000, guid: b82ceb8d1eaec604bace41d0582928ac, type: 3}
+  - {fileID: 21300000, guid: 62e17c9114219b944996e26280433b53, type: 3}
+  - {fileID: 21300000, guid: 0a34006a707fdf74498d0385658ab7e5, type: 3}
+  - {fileID: 21300000, guid: eef248e7710e78a4f972efd3a2f0ca94, type: 3}
+  - {fileID: 21300000, guid: 9ea56433ccb83484a850ffa597417e93, type: 3}
+  - {fileID: 21300000, guid: bb37209e009e01547bdf82152a943203, type: 3}
+  - {fileID: 21300000, guid: 0af0e0a5395794f4c9f2f8a2ecec8c73, type: 3}
+  - {fileID: 21300000, guid: 34cfc12fc09c4684b86a26d436df9001, type: 3}
+  - {fileID: 21300000, guid: 21c349686278e39439129f6973f10f93, type: 3}
+  - {fileID: 21300000, guid: 010c50b609863164ebf8eb231c3154f6, type: 3}
+  - {fileID: 21300000, guid: 454d9365809b8424da3ff63bc82c2c70, type: 3}
+  - {fileID: 21300000, guid: 0ad197aa0c2cab6468757d49be101aec, type: 3}
+  SelectedAfterImage:
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 816f4f841d5ab54459b9b899e227b599, type: 3}
+  - {fileID: 21300000, guid: d2f661b856ed54849a63355f855c0334, type: 3}
+  - {fileID: 21300000, guid: 2328c5dce28b0de45892db93f7339ae0, type: 3}
+  - {fileID: 21300000, guid: 8ce154d3dab5fee469e35bb1b872e863, type: 3}
+  - {fileID: 21300000, guid: 3394292a8e72be34696b650eda78b32b, type: 3}
+  - {fileID: 21300000, guid: 82e0d0279a59b9d4e9d31206124442ac, type: 3}
+  - {fileID: 21300000, guid: 9ccaa146cb379604eb00943d04f34c30, type: 3}
+  - {fileID: 21300000, guid: 8f0ff16446fa70041908543e9e4cb597, type: 3}
+  - {fileID: 21300000, guid: 8221f3745696287469745261e07bc2db, type: 3}
+  - {fileID: 21300000, guid: 4f468022e9160a54dbea2ae7aca7968a, type: 3}
+  - {fileID: 21300000, guid: f30d601e1db393b4e9f7b6960760985b, type: 3}
+  - {fileID: 21300000, guid: f6868e18e9e72e14d8f4e00b21ca8907, type: 3}
+  - {fileID: 21300000, guid: 9b1647d09b7c2c642810843d568e6130, type: 3}
+  - {fileID: 21300000, guid: 17b41f8a9a521ce4f94b0ed5cb1f9ffd, type: 3}
+  - {fileID: 21300000, guid: 86a5b3d45697fa04c91c9efdd59c715d, type: 3}
+  - {fileID: 21300000, guid: 86a5b3d45697fa04c91c9efdd59c715d, type: 3}
   StageNumImage:
   - {fileID: 0}
   - {fileID: 1963135504}
