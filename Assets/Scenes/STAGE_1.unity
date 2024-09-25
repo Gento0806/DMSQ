@@ -766,6 +766,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f83de665703934b94d612b59c87dba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vcam1: {fileID: 1340245213}
+  vcam2: {fileID: 307242641}
+  vcam3: {fileID: 1617382530}
+  vcam4: {fileID: 1874705264}
+  vcam5: {fileID: 1988680858}
+  vcam6: {fileID: 992788358}
   Hukan2D: {fileID: 1448213232}
   Hukan: 0
   cameracon: {fileID: 1205310744}
@@ -793,7 +799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &153560274
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1209,7 +1215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307242640}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.1364533, y: 0.857448, z: -0.29133338, w: -0.40160722}
+  m_LocalRotation: {x: -0.13645327, y: 0.857448, z: -0.29133344, w: -0.40160713}
   m_LocalPosition: {x: 26.6, y: 46.5, z: 25.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1735,7 +1741,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403451954}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.09741971, y: 0.89344174, z: -0.23519197, w: -0.3700757}
+  m_LocalRotation: {x: -0.0974197, y: 0.89344174, z: -0.23519196, w: -0.3700757}
   m_LocalPosition: {x: 150.9, y: 139.2, z: 99.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9081,7 +9087,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1182963010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10080,7 +10086,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340245212}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10951676, y: 0.89028645, z: -0.30249083, w: 0.32232812}
+  m_LocalRotation: {x: 0.1095168, y: 0.89028645, z: -0.30249086, w: 0.32232815}
   m_LocalPosition: {x: -28.4, y: 46.5, z: 30.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10731,6 +10737,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f83de665703934b94d612b59c87dba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vcam1: {fileID: 1340245213}
+  vcam2: {fileID: 1874705264}
+  vcam3: {fileID: 1617382530}
+  vcam4: {fileID: 307242641}
+  vcam5: {fileID: 1988680858}
+  vcam6: {fileID: 992788358}
   Hukan2D: {fileID: 1343551459}
   Hukan: 0
   cameracon: {fileID: 1205310744}
@@ -10808,7 +10820,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406384167}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09741971, y: 0.8934418, z: -0.23519197, w: 0.3700757}
+  m_LocalRotation: {x: 0.0974197, y: 0.8934418, z: -0.23519197, w: 0.3700757}
   m_LocalPosition: {x: -149.1, y: 139.2, z: 99.8}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
@@ -10885,7 +10897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1412339513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22424,7 +22436,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874705263}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645327, w: 0.857448}
+  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645326, w: 0.85744804}
   m_LocalPosition: {x: -33.4, y: 46.5, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -22880,7 +22892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988680857}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09741971, y: 0.8934418, z: -0.23519197, w: 0.3700757}
+  m_LocalRotation: {x: 0.0974197, y: 0.8934418, z: -0.23519197, w: 0.3700757}
   m_LocalPosition: {x: -149.1, y: 139.2, z: 99.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
