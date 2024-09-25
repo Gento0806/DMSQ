@@ -13,6 +13,7 @@ public class KeyRock : MonoBehaviour
     [SerializeField] GameObject[] Lock;
     [SerializeField] AudioClip GetKeySound;
     [SerializeField] CriWare.Assets.CriAtomCueReference getkey;
+    [SerializeField] CriWare.Assets.CriAtomCueReference key_open;
     [SerializeField] GameObject KeyNumImage;
     [SerializeField] Sprite[] KeyNumSprite;
     AudioSource audiosource;
@@ -54,6 +55,7 @@ public class KeyRock : MonoBehaviour
             int LockNum=Lock.Length;
             for(int i=0;i<LockNum; i++)
             {
+                ADXSoundManager.Instance.PlaySound("key_open", key_open.AcbAsset.Handle, key_open.CueId, gameObject.transform, false);
                 Destroy(Lock[i]);
             }
         }

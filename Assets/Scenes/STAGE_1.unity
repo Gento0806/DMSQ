@@ -766,12 +766,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f83de665703934b94d612b59c87dba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vcam1: {fileID: 1340245213}
-  vcam2: {fileID: 307242641}
-  vcam3: {fileID: 1617382530}
-  vcam4: {fileID: 1874705264}
-  vcam5: {fileID: 1988680858}
-  vcam6: {fileID: 992788358}
   Hukan2D: {fileID: 1448213232}
   Hukan: 0
   cameracon: {fileID: 1205310744}
@@ -781,6 +775,12 @@ MonoBehaviour:
   cueReference2:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
     cueId: 6
+  near_dir:
+    acbAsset: {fileID: 0}
+    cueId: 0
+  far_dir:
+    acbAsset: {fileID: 0}
+    cueId: 0
   Player: {fileID: 0}
 --- !u!1 &153560273
 GameObject:
@@ -1160,7 +1160,6 @@ GameObject:
   - component: {fileID: 307242642}
   - component: {fileID: 307242641}
   - component: {fileID: 307242644}
-  - component: {fileID: 307242643}
   m_Layer: 0
   m_Name: 3DCamera2
   m_TagString: Untagged
@@ -1215,7 +1214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307242640}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.13645327, y: 0.857448, z: -0.29133344, w: -0.40160713}
+  m_LocalRotation: {x: -0.1364533, y: 0.857448, z: -0.29133338, w: -0.40160722}
   m_LocalPosition: {x: 26.6, y: 46.5, z: 25.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1223,21 +1222,6 @@ Transform:
   - {fileID: 640648356}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 27, y: 180, z: 0}
---- !u!114 &307242643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307242640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6281c95259018ce40a3331f64bf84e96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cueReference:
-    acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
-    cueId: 8
 --- !u!114 &307242644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1741,7 +1725,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403451954}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0974197, y: 0.89344174, z: -0.23519196, w: -0.3700757}
+  m_LocalRotation: {x: -0.09741971, y: 0.89344174, z: -0.23519197, w: -0.3700757}
   m_LocalPosition: {x: 150.9, y: 139.2, z: 99.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10031,7 +10015,6 @@ GameObject:
   - component: {fileID: 1340245214}
   - component: {fileID: 1340245213}
   - component: {fileID: 1340245216}
-  - component: {fileID: 1340245215}
   m_Layer: 0
   m_Name: 3DCamera1
   m_TagString: Untagged
@@ -10094,21 +10077,6 @@ Transform:
   - {fileID: 1760762651}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 27, y: 90, z: 0}
---- !u!114 &1340245215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340245212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6281c95259018ce40a3331f64bf84e96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cueReference:
-    acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
-    cueId: 8
 --- !u!114 &1340245216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10737,12 +10705,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f83de665703934b94d612b59c87dba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vcam1: {fileID: 1340245213}
-  vcam2: {fileID: 1874705264}
-  vcam3: {fileID: 1617382530}
-  vcam4: {fileID: 307242641}
-  vcam5: {fileID: 1988680858}
-  vcam6: {fileID: 992788358}
   Hukan2D: {fileID: 1343551459}
   Hukan: 0
   cameracon: {fileID: 1205310744}
@@ -10752,6 +10714,12 @@ MonoBehaviour:
   cueReference2:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
     cueId: 6
+  near_dir:
+    acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
+    cueId: 8
+  far_dir:
+    acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
+    cueId: 15
   Player: {fileID: 942430501}
 --- !u!81 &1406384170
 AudioListener:
@@ -16688,7 +16656,6 @@ GameObject:
   - component: {fileID: 1617382531}
   - component: {fileID: 1617382530}
   - component: {fileID: 1617382529}
-  - component: {fileID: 1617382528}
   m_Layer: 0
   m_Name: 3DCamera3
   m_TagString: Untagged
@@ -16696,21 +16663,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1617382528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617382527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6281c95259018ce40a3331f64bf84e96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cueReference:
-    acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
-    cueId: 8
 --- !u!114 &1617382529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22381,7 +22333,6 @@ GameObject:
   - component: {fileID: 1874705265}
   - component: {fileID: 1874705264}
   - component: {fileID: 1874705267}
-  - component: {fileID: 1874705266}
   m_Layer: 0
   m_Name: 3DCamera4
   m_TagString: Untagged
@@ -22444,21 +22395,6 @@ Transform:
   - {fileID: 578426479}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1874705266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1874705263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6281c95259018ce40a3331f64bf84e96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cueReference:
-    acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
-    cueId: 8
 --- !u!114 &1874705267
 MonoBehaviour:
   m_ObjectHideFlags: 0
