@@ -759,6 +759,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18bf93871afa98a47b501d75d1a44f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BeforeImage: []
+  AfterImage: []
+  StageNumImage: []
 --- !u!114 &1570752969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1087,6 +1090,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18bf93871afa98a47b501d75d1a44f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BeforeImage: []
+  AfterImage: []
+  StageNumImage: []
 --- !u!114 &1771887399
 MonoBehaviour:
   m_ObjectHideFlags: 0
