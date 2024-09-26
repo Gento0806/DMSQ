@@ -7622,12 +7622,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f83de665703934b94d612b59c87dba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vcam1: {fileID: 477373514}
-  vcam2: {fileID: 1174674440}
-  vcam3: {fileID: 1214305578}
-  vcam4: {fileID: 1995419958}
-  vcam5: {fileID: 2094368305}
   Hukan2D: {fileID: 0}
+  Hukan: 0
   cameracon: {fileID: 52431557}
   cueReference:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
@@ -7635,6 +7631,12 @@ MonoBehaviour:
   cueReference2:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
     cueId: 6
+  near_dir:
+    acbAsset: {fileID: 0}
+    cueId: 0
+  far_dir:
+    acbAsset: {fileID: 0}
+    cueId: 0
   Player: {fileID: 0}
 --- !u!81 &527683582
 AudioListener:
@@ -7704,7 +7706,7 @@ Transform:
   m_GameObject: {fileID: 527683579}
   serializedVersion: 2
   m_LocalRotation: {x: 0.20040353, y: 0.78548366, z: -0.32178223, w: 0.48919332}
-  m_LocalPosition: {x: -247.18, y: 249.8, z: 100}
+  m_LocalPosition: {x: -315.4, y: 316, z: 110}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8025,7 +8027,7 @@ Transform:
   m_GameObject: {fileID: 619098368}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.22, y: -96.2, z: -55}
+  m_LocalPosition: {x: 0, y: -30, z: -45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29466,7 +29468,7 @@ Transform:
   m_GameObject: {fileID: 2094368303}
   serializedVersion: 2
   m_LocalRotation: {x: 0.20040353, y: 0.78548366, z: -0.32178223, w: 0.48919332}
-  m_LocalPosition: {x: -247.18, y: 249.8, z: 100}
+  m_LocalPosition: {x: -315.4, y: 316, z: 110}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
