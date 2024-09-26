@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Effekseer;
-
+using Unity.Mathematics;
 
 public class Move_Player : MonoBehaviour
 {
@@ -116,6 +116,8 @@ public class Move_Player : MonoBehaviour
     }
     void Update()
     {
+
+
 
         //ƒNƒŠƒA‚Ìˆ—(ˆ—‚Ì‡”Ô‚ÌŠÖŒWãæ‚É‘‚¢‚Ä‚Ü‚·)
         if (SkyBoxChangeBool)
