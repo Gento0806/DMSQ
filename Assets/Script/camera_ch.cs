@@ -333,9 +333,9 @@ public class camera_ch : MonoBehaviour
             if (a >= 1)
             {
                 vcam1.Priority = 0;
-                vcam2.Priority = 0;
+                vcam2.Priority = 1;
                 vcam3.Priority = 0;
-                vcam4.Priority = 1;
+                vcam4.Priority = 0;
 
                 if (a >= 2)
                 {
@@ -347,9 +347,9 @@ public class camera_ch : MonoBehaviour
                     if (a >= 3)
                     {
                         vcam1.Priority = 0;
-                        vcam2.Priority = 1;
+                        vcam2.Priority = 0;
                         vcam3.Priority = 0;
-                        vcam4.Priority = 0;
+                        vcam4.Priority = 1;
 
                         if (a >= 4)
                         {
@@ -373,9 +373,9 @@ public class camera_ch : MonoBehaviour
                 if (a <= -1)
                 {
                     vcam1.Priority = 0;
-                    vcam2.Priority = 1;
+                    vcam2.Priority = 0;
                     vcam3.Priority = 0;
-                    vcam4.Priority = 0;
+                    vcam4.Priority = 1;
 
                     if (a <= -2)
                     {
@@ -387,9 +387,9 @@ public class camera_ch : MonoBehaviour
                         if (a <= -3)
                         {
                             vcam1.Priority = 0;
-                            vcam2.Priority = 0;
+                            vcam2.Priority = 1;
                             vcam3.Priority = 0;
-                            vcam4.Priority = 1;
+                            vcam4.Priority = 0;
 
                             if (a <= -4)
                             {
