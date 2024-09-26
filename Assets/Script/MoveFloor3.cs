@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class MoveFloor3 : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class MoveFloor3 : MonoBehaviour
     //----------
 
     CameraCon cameracon;
+    camera_ch camera_ch;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,7 @@ public class MoveFloor3 : MonoBehaviour
         vec.Normalize();
         sound = true;
         cameracon = GameObject.Find("CameraCon").GetComponent<CameraCon>();
+        
     }
 
     // Update is called once per frame
@@ -53,7 +56,13 @@ public class MoveFloor3 : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Change") && check)
+        if(cameracon.sanji)
+            camera_ch = GameObject.Find("MainCamera").GetComponent<camera_ch>();
+        else
+            camera_ch = GameObject.Find("2DCamera").GetComponent<camera_ch>();
+
+        Debug.Log(check && camera_ch.Hukan);
+        if (Input.GetButtonDown("Change") && check&&camera_ch.Hukan==false)
         {
             check= false;
             time2 = 0;
