@@ -11734,10 +11734,10 @@ MonoBehaviour:
     cueId: 6
   near_dir:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
-    cueId: 8
+    cueId: 16
   far_dir:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
-    cueId: 15
+    cueId: 16
   Player: {fileID: 0}
 --- !u!81 &1406384170
 AudioListener:
