@@ -116,8 +116,12 @@ public class Move_Player : MonoBehaviour
     }
     void Update()
     {
-
-
+        //‰ñ“]~‚ß
+        var rot = transform.rotation.eulerAngles;
+        rot.x = 0;
+        rot.z = 0;
+        transform.rotation = Quaternion.Euler(rot);
+        //
 
         //ƒNƒŠƒA‚Ìˆ—(ˆ—‚Ì‡”Ô‚ÌŠÖŒWãæ‚É‘‚¢‚Ä‚Ü‚·)
         if (SkyBoxChangeBool)
