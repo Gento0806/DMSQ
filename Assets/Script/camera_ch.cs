@@ -6,15 +6,10 @@ using UnityEngine;
 public class camera_ch : MonoBehaviour
 {
 
-    CinemachineVirtualCameraBase vcam1;
-    CinemachineVirtualCameraBase vcam2;
     CinemachineVirtualCameraBase vcam3;
-    CinemachineVirtualCameraBase vcam4;
     CinemachineVirtualCameraBase vcam5;
     CinemachineVirtualCameraBase vcam6;
-    CinemachineVirtualCameraBase vcam7;
-    CinemachineVirtualCameraBase vcam8;
-    CinemachineVirtualCameraBase vcam9;
+
 
     public GameObject Hukan2D;
 
@@ -56,30 +51,30 @@ public class camera_ch : MonoBehaviour
     bool Nomal = true;
     bool Goal = false;
     //
+    GameObject rotatepoint;
+    GameObject fukanpoint;
+    // ‰ñ“]‘¬“x
+    public float rotationSpeed = 10f;
 
     void Start()
     {
         cameracon.GetComponent<CameraCon>();
         system = GameObject.Find("System").GetComponent<Sisutemu>();
         Hukan = false;
-        GameObject  d3camera1= GameObject.Find("3DCamera1");
-        vcam1 = d3camera1.GetComponent<CinemachineVirtualCameraBase>();
-        GameObject d3camera2 = GameObject.Find("3DCamera2");
-        vcam2 = d3camera2.GetComponent<CinemachineVirtualCameraBase>();
-        GameObject d3camera3 = GameObject.Find("3DCamera3");
+
+        GameObject d3camera3 = GameObject.Find("3DCamera1");
         vcam3 = d3camera3.GetComponent<CinemachineVirtualCameraBase>();
-        GameObject d3camera4 = GameObject.Find("3DCamera4");
-        vcam4 = d3camera4.GetComponent<CinemachineVirtualCameraBase>();
-        GameObject d3camera5 = GameObject.Find("3DCamera5");
+
+        GameObject d3camera5 = GameObject.Find("3DCamera2");
         vcam5 = d3camera5.GetComponent<CinemachineVirtualCameraBase>();
         GameObject d2fukan = GameObject.Find("2Dhukann");
         vcam6 = d2fukan.GetComponent<CinemachineVirtualCameraBase>();
-        GameObject d3camera7 = GameObject.Find("3DCamera6");
-        vcam7 = d3camera7.GetComponent<CinemachineVirtualCameraBase>();
-        GameObject d3camera8 = GameObject.Find("3DCamera7");
-        vcam8 = d3camera8.GetComponent<CinemachineVirtualCameraBase>();
-        GameObject d3camera9 = GameObject.Find("3DCamera8");
-        vcam9 = d3camera9.GetComponent<CinemachineVirtualCameraBase>();
+
+        rotatepoint = GameObject.Find("Mashiro_Kara3D");
+        fukanpoint = GameObject.Find("Map_Center");
+
+        vcam3.Priority = 1;
+        vcam5.Priority = 0;
     }
 
     void Update()
@@ -97,17 +92,19 @@ public class camera_ch : MonoBehaviour
 
         if (Nomal)
         {
-            if (Input.GetButtonDown("KirikaeLeft")) // Left click
+            if (Input.GetButton("KirikaeLeft")) // Left click
             {
-                a++;
+                rotatepoint.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+                fukanpoint.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
                 //--sound--
-                ADXSoundManager.Instance.PlaySound("neardir", near_dir.AcbAsset.Handle, near_dir.CueId, gameObject.transform, false);
+                //ADXSoundManager.Instance.PlaySound("neardir", near_dir.AcbAsset.Handle, near_dir.CueId, gameObject.transform, false);
             }
-            else if (Input.GetButtonDown("KirikaeRight")) // Right click
+            else if (Input.GetButton("KirikaeRight")) // Right click
             {
-                a--;
+                rotatepoint.transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0);
+                fukanpoint.transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0);
                 //--sound--
-                ADXSoundManager.Instance.PlaySound("neardir", near_dir.AcbAsset.Handle, near_dir.CueId, gameObject.transform, false);
+                //ADXSoundManager.Instance.PlaySound("neardir", near_dir.AcbAsset.Handle, near_dir.CueId, gameObject.transform, false);
             }
 
             /*if (cameracon.Qoshiteru && cameracon.sanji)
@@ -145,6 +142,10 @@ public class camera_ch : MonoBehaviour
                     if (b % 2 == 1)
                     {
                         Hukan = true;
+                        rotatepoint.transform.rotation = Quaternion.identity;
+                        fukanpoint.transform.rotation = Quaternion.identity;
+                        vcam3.Priority = 0;
+                        vcam5.Priority = 1;
                         //----‰¹----
                         ADXSoundManager.Instance.PlaySound("birdeye", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
                         //----------
@@ -152,6 +153,10 @@ public class camera_ch : MonoBehaviour
                     if (b % 2 == 0)
                     {
                         Hukan = false;
+                        rotatepoint.transform.rotation = Quaternion.identity;
+                        fukanpoint.transform.rotation = Quaternion.identity;
+                        vcam3.Priority = 1;
+                        vcam5.Priority = 0;
                         //----‰¹----
                         ADXSoundManager.Instance.PlaySound("birdeye", cueReference2.AcbAsset.Handle, cueReference2.CueId, gameObject.transform, false);
                         //----------
@@ -162,10 +167,7 @@ public class camera_ch : MonoBehaviour
                 {
                     if (cameracon.sanji)
                     {
-                        vcam5.Priority = 3;
-                        vcam7.Priority = 3;
-                        vcam8.Priority = 3;
-                        vcam9.Priority = 3;
+
                         //vcam5.Priority = 3;
                         if (Input.GetButtonDown("KirikaeLeft")) // Left click
                         {
@@ -180,78 +182,8 @@ public class camera_ch : MonoBehaviour
                             ADXSoundManager.Instance.PlaySound("fardir", far_dir.AcbAsset.Handle, far_dir.CueId, gameObject.transform, false);
                         }
 
-                        if (d >= 1)
-                        {
-                            vcam5.Priority = 3;
-                            vcam7.Priority = 3;
-                            vcam8.Priority = 3;
-                            vcam9.Priority = 4;
-
-                            if (d >= 2)
-                            {
-                                vcam5.Priority = 3;
-                                vcam7.Priority = 3;
-                                vcam8.Priority = 4;
-                                vcam9.Priority = 3;
-
-                                if (d >= 3)
-                                {
-                                    vcam5.Priority = 3;
-                                    vcam7.Priority = 4;
-                                    vcam8.Priority = 3;
-                                    vcam9.Priority = 3;
-                                    if (d >= 4)
-                                    {
-                                        vcam5.Priority = 4;
-                                        vcam7.Priority = 3;
-                                        vcam8.Priority = 3;
-                                        vcam9.Priority = 3;
-                                        d = 0;
-                                    }
-                                }
-                            }
-                        }
-                        else if (d <= 0)
-                        {
-                            vcam5.Priority = 4;
-                            vcam7.Priority = 3;
-                            vcam8.Priority = 3;
-                            vcam9.Priority = 3;
-
-                            if (d <= -1)
-                            {
-                                vcam5.Priority = 3;
-                                vcam7.Priority = 4;
-                                vcam8.Priority = 3;
-                                vcam9.Priority = 3;
-
-                                if (d <= -2)
-                                {
-                                    vcam5.Priority = 3;
-                                    vcam7.Priority = 3;
-                                    vcam8.Priority = 4;
-                                    vcam9.Priority = 3;
-
-                                    if (d <= -3)
-                                    {
-                                        vcam5.Priority = 3;
-                                        vcam7.Priority = 3;
-                                        vcam8.Priority = 3;
-                                        vcam9.Priority = 4;
-
-                                        if (d <= -4)
-                                        {
-                                            vcam5.Priority = 4;
-                                            vcam7.Priority = 3;
-                                            vcam8.Priority = 3;
-                                            vcam9.Priority = 3;
-
-                                            d = 0;
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                        
+                    
                     }
                     //else
                     //{
@@ -265,10 +197,7 @@ public class camera_ch : MonoBehaviour
                 {
                     if (cameracon.sanji)
                     {
-                        vcam5.Priority = 0;
-                        vcam7.Priority = 0;
-                        vcam8.Priority = 0;
-                        vcam9.Priority = 0;
+
                     }
                     //else
                     //{
@@ -290,6 +219,7 @@ public class camera_ch : MonoBehaviour
                     if (Db % 2 == 1)
                     {
                         Hukan = true;
+
                         //----‰¹----
                         ADXSoundManager.Instance.PlaySound("birdeye", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
                         //----------
@@ -332,31 +262,19 @@ public class camera_ch : MonoBehaviour
 
             if (a >= 1)
             {
-                vcam1.Priority = 0;
-                vcam2.Priority = 1;
-                vcam3.Priority = 0;
-                vcam4.Priority = 0;
+
 
                 if (a >= 2)
                 {
-                    vcam1.Priority = 0;
-                    vcam2.Priority = 0;
-                    vcam3.Priority = 1;
-                    vcam4.Priority = 0;
+
 
                     if (a >= 3)
                     {
-                        vcam1.Priority = 0;
-                        vcam2.Priority = 0;
-                        vcam3.Priority = 0;
-                        vcam4.Priority = 1;
+
 
                         if (a >= 4)
                         {
-                            vcam1.Priority = 1;
-                            vcam2.Priority = 0;
-                            vcam3.Priority = 0;
-                            vcam4.Priority = 0;
+
 
                             a = 0;
                         }
@@ -365,38 +283,23 @@ public class camera_ch : MonoBehaviour
             }
             else if (a <= 0)
             {
-                vcam1.Priority = 1;
-                vcam2.Priority = 0;
-                vcam3.Priority = 0;
-                vcam4.Priority = 0;
+
 
                 if (a <= -1)
                 {
-                    vcam1.Priority = 0;
-                    vcam2.Priority = 0;
-                    vcam3.Priority = 0;
-                    vcam4.Priority = 1;
+
 
                     if (a <= -2)
                     {
-                        vcam1.Priority = 0;
-                        vcam2.Priority = 0;
-                        vcam3.Priority = 1;
-                        vcam4.Priority = 0;
+
 
                         if (a <= -3)
                         {
-                            vcam1.Priority = 0;
-                            vcam2.Priority = 1;
-                            vcam3.Priority = 0;
-                            vcam4.Priority = 0;
+
 
                             if (a <= -4)
                             {
-                                vcam1.Priority = 1;
-                                vcam2.Priority = 0;
-                                vcam3.Priority = 0;
-                                vcam4.Priority = 0;
+
 
                                 a = 0;
                             }
