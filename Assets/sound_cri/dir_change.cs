@@ -17,11 +17,11 @@ public class dir_change : MonoBehaviour
     {
         if(Input.GetButtonDown("KirikaeLeft"))
         {
-            ADXSoundManager.Instance.PlaySound("dirchange", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
+            //ADXSoundManager.Instance.PlaySound("dirchange", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
         }
         else if (Input.GetButtonDown("KirikaeRight"))
         {
-            ADXSoundManager.Instance.PlaySound("dirchange", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
+            //ADXSoundManager.Instance.PlaySound("dirchange", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
         }
     }
 }
