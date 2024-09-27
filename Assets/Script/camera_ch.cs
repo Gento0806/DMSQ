@@ -54,7 +54,7 @@ public class camera_ch : MonoBehaviour
     GameObject rotatepoint;
     GameObject fukanpoint;
     // ‰ñ“]‘¬“x
-    public float rotationSpeed = 10f;
+    float rotationSpeed = 60f;
 
     void Start()
     {
