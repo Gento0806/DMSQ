@@ -795,7 +795,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 21300000, guid: d1683b203eca08d40b7c2b07b870a38e, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 83bf4da15bff0074cae3192b867a8fa5, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -852,7 +852,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3f2ad9d631a29b749a5425bd10f57555, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8e6f7ffebd3991b479136e537821dbfa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 21300000, guid: 1e263937a05e5f34ca1640e07ecb3908, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 3d541e437412aba4d9c3a5d42b5fbbc3, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1025,7 +1025,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 17
+          m_IntArgument: 16
           m_FloatArgument: 0
           m_StringArgument: 4
           m_BoolArgument: 0
@@ -1062,7 +1062,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 20768ea5f1e0a2e4591448921a028b4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 87dac54a3201f6242956af97bb4a2290, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

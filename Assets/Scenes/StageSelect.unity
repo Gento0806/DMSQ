@@ -407,7 +407,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4ad1785a82f0cb44cbd42fd2086468ec, type: 3}
   - {fileID: 21300000, guid: 5d67df263e67176418f2b1fb8aee1a59, type: 3}
   - {fileID: 21300000, guid: 5da704cc50b5bf3449deb7030564e808, type: 3}
-  - {fileID: 21300000, guid: f914fe76edd87f04c84b9311a2b150da, type: 3}
   - {fileID: 21300000, guid: c1f0f2e4829df8441a5a5f9f282dc98a, type: 3}
   - {fileID: 21300000, guid: d971d064176f5d344ab2c898cd32cf3f, type: 3}
   - {fileID: 21300000, guid: 44e350671d02eae458929198f4132558, type: 3}
@@ -5393,7 +5392,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1641398315
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7260,7 +7259,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 34fa25f9f2b98b04b9d32ed9d8c9848e, type: 3}
   - {fileID: 21300000, guid: ced23ea9760250b48a9f1e38322414f4, type: 3}
   - {fileID: 21300000, guid: 1795f0a53d1b8504183af0f37e2b2354, type: 3}
-  - {fileID: 21300000, guid: 44e9320c824b4764ba6444badea4db00, type: 3}
   AfterImage:
   - {fileID: 0}
   - {fileID: 21300000, guid: 98871f0f90ef759418e6b64ea8e3dc7c, type: 3}
@@ -7278,7 +7276,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b29599405a2e4ff4c87f4d2ea3898e08, type: 3}
   - {fileID: 21300000, guid: 3b554d354a703ac4ba37cccdc5eadbf3, type: 3}
   - {fileID: 21300000, guid: b33daff6f3d87324594aa38ba862735d, type: 3}
-  - {fileID: 21300000, guid: 63c5df690f62ec148b0222f5262da63d, type: 3}
   SelectedBeforeImage:
   - {fileID: 0}
   - {fileID: 21300000, guid: 66006d60ef066ec4e895d7d841a1625e, type: 3}
@@ -7296,7 +7293,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 21c349686278e39439129f6973f10f93, type: 3}
   - {fileID: 21300000, guid: 010c50b609863164ebf8eb231c3154f6, type: 3}
   - {fileID: 21300000, guid: 454d9365809b8424da3ff63bc82c2c70, type: 3}
-  - {fileID: 21300000, guid: 0ad197aa0c2cab6468757d49be101aec, type: 3}
   SelectedAfterImage:
   - {fileID: 0}
   - {fileID: 21300000, guid: 816f4f841d5ab54459b9b899e227b599, type: 3}
@@ -7314,7 +7310,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9b1647d09b7c2c642810843d568e6130, type: 3}
   - {fileID: 21300000, guid: 17b41f8a9a521ce4f94b0ed5cb1f9ffd, type: 3}
   - {fileID: 21300000, guid: 86a5b3d45697fa04c91c9efdd59c715d, type: 3}
-  - {fileID: 21300000, guid: d60cfe87016df804c9d8529bc768a27b, type: 3}
   StageNumImage:
   - {fileID: 0}
   - {fileID: 1963135504}
@@ -7332,7 +7327,6 @@ MonoBehaviour:
   - {fileID: 1931765350}
   - {fileID: 1736034918}
   - {fileID: 469761972}
-  - {fileID: 1641398314}
 --- !u!114 &1963135507
 MonoBehaviour:
   m_ObjectHideFlags: 0

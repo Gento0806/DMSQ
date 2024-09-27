@@ -686,6 +686,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18bf93871afa98a47b501d75d1a44f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BeforeImage: []
+  AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
+  StageNumImage: []
 --- !u!114 &476849911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1117,6 +1122,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18bf93871afa98a47b501d75d1a44f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BeforeImage: []
+  AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
+  StageNumImage: []
 --- !u!114 &2044685273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1276,6 +1286,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18bf93871afa98a47b501d75d1a44f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BeforeImage: []
+  AfterImage: []
+  SelectedBeforeImage: []
+  SelectedAfterImage: []
+  StageNumImage: []
 --- !u!114 &2145437379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1327,7 +1342,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 17
+          m_IntArgument: 16
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
