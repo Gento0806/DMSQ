@@ -232,7 +232,7 @@ public class Move_Player : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                if (Vector3.Distance(hit.point, this.transform.position) < 5 && hit.collider.gameObject.tag != "saka1" && hit.collider.gameObject.tag != "Goal" && hit.collider.gameObject.tag != "Floor")
+                if (Vector3.Distance(hit.point, this.transform.position) < 5 && hit.collider.gameObject.tag != "saka1" && hit.collider.gameObject.tag != "Goal" && hit.collider.gameObject.tag != "Floor"&& hit.collider.gameObject.tag != "Key")
                 {
                     Debug.Log(hit.collider.gameObject.name);
                     banmove = true;
