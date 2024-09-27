@@ -300,7 +300,7 @@ public class Move_Player : MonoBehaviour
             {
                 move = cameraForward * moveZ + MainCamera.transform.right * moveX;
                 this.gameObject.transform.position += move * speed * Time.deltaTime;//ˆÚ“®
-
+                Debug.Log(ismovestart);
                 if (move != Vector3.zero)
                 {
                     //----‰¹----
@@ -391,7 +391,7 @@ public class Move_Player : MonoBehaviour
             {
                 imputkey = false;
             }
-            if (((Input.GetButtonUp("Horizontal") || Input.GetButtonUp("Vertical")))
+            if (move == Vector3.zero
                 && !ismovestart
                 )
             {

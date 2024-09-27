@@ -24,6 +24,8 @@ public class MoveFloor2 : MonoBehaviour
     public bool ReturunFlag;//元の場所に戻したい場合
     bool Return = false;
 
+    CameraCon cameracon;
+    camera_ch camera_ch;
 
     // Start is called before the first frame update
     void Start()
@@ -35,12 +37,18 @@ public class MoveFloor2 : MonoBehaviour
         distance = vec.magnitude;
         vec.Normalize();
         sound = true;
+        cameracon = GameObject.Find("CameraCon").GetComponent<CameraCon>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Change"))
+        if (cameracon.sanji)
+            camera_ch = GameObject.Find("MainCamera").GetComponent<camera_ch>();
+        else
+            camera_ch = GameObject.Find("2DCamera").GetComponent<camera_ch>();
+
+        if (Input.GetButtonDown("Change") && !camera_ch.Hukan)
         {
             ChangeMode();
             if (ReturunFlag)

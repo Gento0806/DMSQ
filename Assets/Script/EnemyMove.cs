@@ -27,7 +27,7 @@ public class EnemyMove : MonoBehaviour
         RaycastHit hit;
         this.transform.position += this.transform.forward * EnemyMoveSpeed * Time.deltaTime;
         LiveTime += Time.deltaTime;
-        if (LiveTime > 30 || (sanji && System.GetComponent<Sisutemu>().DeathLine3D > this.transform.position.y) || (sanji == false && System.GetComponent<Sisutemu>().DeathLine2D > this.transform.position.y))
+        if (LiveTime > 30 || (sanji && System.GetComponent<Sisutemu>().DeathLine3D > this.transform.position.y) || (sanji == false && (System.GetComponent<Sisutemu>().DeathLine2D > this.transform.position.y) || 600 < this.transform.position.y))
         {
             Destroy(this.gameObject);
         }
