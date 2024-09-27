@@ -20947,12 +20947,11 @@ MonoBehaviour:
     cueId: 6
   near_dir:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
-    cueId: 8
+    cueId: 16
   far_dir:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
-    cueId: 15
+    cueId: 16
   Player: {fileID: 0}
-  rotationSpeed: 100
 --- !u!81 &2013491450
 AudioListener:
   m_ObjectHideFlags: 0
@@ -26428,7 +26427,6 @@ MonoBehaviour:
     acbAsset: {fileID: 0}
     cueId: 0
   Player: {fileID: 0}
-  rotationSpeed: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -99,19 +99,31 @@ public class camera_ch : MonoBehaviour
             {
                 rotatepoint.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
                 fukanpoint.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
-                //--sound--
-                ADXSoundManager.Instance.PlaySound("neardir", near_dir.AcbAsset.Handle, near_dir.CueId, gameObject.transform, false);
+                if (cameracon.sanji)
+                {
+                    //--sound--
+                    ADXSoundManager.Instance.PlaySound("neardir", near_dir.AcbAsset.Handle, near_dir.CueId, gameObject.transform, false);
+                }
+                
             }
             else if (Input.GetButton("KirikaeRight")) // Right click
             {
                 rotatepoint.transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0);
                 fukanpoint.transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0);
-                //--sound--
-                ADXSoundManager.Instance.PlaySound("neardir", near_dir.AcbAsset.Handle, near_dir.CueId, gameObject.transform, false);
+                if (cameracon)
+                {
+                    //--sound--
+                    ADXSoundManager.Instance.PlaySound("neardir", near_dir.AcbAsset.Handle, near_dir.CueId, gameObject.transform, false);
+                }
+                
             }
             else
             {
-                ADXSoundManager.Instance.StopSound("neardir");
+                if (cameracon.sanji)
+                {
+                    ADXSoundManager.Instance.StopSound("neardir");
+                }
+                
             }
 
             /*if (cameracon.Qoshiteru && cameracon.sanji)
@@ -154,7 +166,7 @@ public class camera_ch : MonoBehaviour
                         vcam3.Priority = 0;
                         vcam5.Priority = 1;
                         //----‰¹----
-                        //ADXSoundManager.Instance.PlaySound("birdeye", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
+                        ADXSoundManager.Instance.PlaySound("birdeye", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
                         //----------
                     }
                     if (b % 2 == 0)
@@ -165,7 +177,7 @@ public class camera_ch : MonoBehaviour
                         vcam3.Priority = 1;
                         vcam5.Priority = 0;
                         //----‰¹----
-                        //ADXSoundManager.Instance.PlaySound("birdeye", cueReference2.AcbAsset.Handle, cueReference2.CueId, gameObject.transform, false);
+                        ADXSoundManager.Instance.PlaySound("birdeye", cueReference2.AcbAsset.Handle, cueReference2.CueId, gameObject.transform, false);
                         //----------
                     }
                 }
