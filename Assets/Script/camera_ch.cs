@@ -75,6 +75,9 @@ public class camera_ch : MonoBehaviour
 
         vcam3.Priority = 1;
         vcam5.Priority = 0;
+
+        rotatepoint.transform.rotation = Quaternion.identity;
+        fukanpoint.transform.rotation = Quaternion.identity;
     }
 
     void Update()
@@ -142,8 +145,8 @@ public class camera_ch : MonoBehaviour
                     if (b % 2 == 1)
                     {
                         Hukan = true;
-                        rotatepoint.transform.rotation = Quaternion.identity;
-                        fukanpoint.transform.rotation = Quaternion.identity;
+                        //rotatepoint.transform.rotation = Quaternion.identity;
+                        //fukanpoint.transform.rotation = Quaternion.identity;
                         vcam3.Priority = 0;
                         vcam5.Priority = 1;
                         //----‰¹----
@@ -153,8 +156,8 @@ public class camera_ch : MonoBehaviour
                     if (b % 2 == 0)
                     {
                         Hukan = false;
-                        rotatepoint.transform.rotation = Quaternion.identity;
-                        fukanpoint.transform.rotation = Quaternion.identity;
+                        //rotatepoint.transform.rotation = Quaternion.identity;
+                        //fukanpoint.transform.rotation = Quaternion.identity;
                         vcam3.Priority = 1;
                         vcam5.Priority = 0;
                         //----‰¹----
@@ -260,59 +263,16 @@ public class camera_ch : MonoBehaviour
                 }
             }
 
-            if (a >= 1)
-            {
-
-
-                if (a >= 2)
-                {
-
-
-                    if (a >= 3)
-                    {
-
-
-                        if (a >= 4)
-                        {
-
-
-                            a = 0;
-                        }
-                    }
-                }
-            }
-            else if (a <= 0)
-            {
-
-
-                if (a <= -1)
-                {
-
-
-                    if (a <= -2)
-                    {
-
-
-                        if (a <= -3)
-                        {
-
-
-                            if (a <= -4)
-                            {
-
-
-                                a = 0;
-                            }
-                        }
-                    }
-                }
-            }
+            
+            
 
         }
         else if (Goal)
         {
             if (cameracon.sanji)
             {
+                rotatepoint.transform.rotation = Quaternion.identity;
+                fukanpoint.transform.rotation = Quaternion.identity;
                 vcam5.Priority = 3;
             }
             else
