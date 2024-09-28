@@ -16,16 +16,20 @@ public class KeyRock : MonoBehaviour
     [SerializeField] CriWare.Assets.CriAtomCueReference key_open;
     [SerializeField] GameObject KeyNumImage;
     [SerializeField] Sprite[] KeyNumSprite;
+    [SerializeField] GameObject CameraCon;
     AudioSource audiosource;
+    CameraCon cameracon;
+    
     int KeyNow;
     int a = 0;
-    bool key0;
+    public bool key0;
     // Start is called before the first frame update
     void Start()
     {
         KeyNow = 0;
         audiosource = GetComponent<AudioSource>();
         key0 = true;
+        cameracon = GameObject.Find("CameraCon").GetComponent<CameraCon>();
     }
 
     // Update is called once per frame
@@ -57,12 +61,11 @@ public class KeyRock : MonoBehaviour
             int LockNum=Lock.Length;
             for(int i=0;i<LockNum; i++)
             {
-                if(key0)
+                if(cameracon.key0)
                 {
                     ADXSoundManager.Instance.PlaySound("key_open", key_open.AcbAsset.Handle, key_open.CueId, gameObject.transform, false);
-                    key0 = false;
                 }
-                
+                cameracon.key0 = false;
                 Destroy(Lock[i]);
             }
         }
@@ -75,7 +78,7 @@ public class KeyRock : MonoBehaviour
         {
             ADXSoundManager.Instance.PlaySound("KeyRock", getkey.AcbAsset.Handle, getkey.CueId, gameObject.transform, false);
             other.gameObject.SetActive(false);
-            audiosource.PlayOneShot(GetKeySound);
+           // audiosource.PlayOneShot(GetKeySound);
         }
     }
 }
