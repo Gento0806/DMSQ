@@ -154,7 +154,7 @@ public class camera_ch : MonoBehaviour
             if (vca5 == true)
             {
 
-                if (Input.GetButtonDown("Hukan"))
+                if (Input.GetButtonDown("Hukan") && cameracon.Qoshiteru)
                 {
                     Db = 0;
                     b++;
@@ -231,7 +231,7 @@ public class camera_ch : MonoBehaviour
             else if (vca5 == false)
             {
 
-                if (Input.GetButtonDown("Hukan"))
+                if (Input.GetButtonDown("Hukan") && cameracon.Qoshiteru)
                 {
                     b = 0;
                     Db++;
