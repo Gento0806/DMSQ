@@ -74,6 +74,8 @@ public class Move_Player : MonoBehaviour
 
     private bool jumpsky = false;
 
+    camera_ch cameraCH;
+
     //----音----
     public enum move_type
     {
@@ -102,7 +104,7 @@ public class Move_Player : MonoBehaviour
     Vector3 vec;
     //----------
 
-   
+    public bool play ;
     void Start()
     {
         Time.timeScale = 1.0f;
@@ -120,6 +122,15 @@ public class Move_Player : MonoBehaviour
     }
     void Update()
     {
+        if (cameracon.GetComponent<CameraCon>().sanji)
+        {
+            cameraCH = GameObject.Find("MainCamera").GetComponent<camera_ch>();
+        }
+        else
+        {
+            cameraCH = GameObject.Find("2DCamera").GetComponent<camera_ch>();
+        }
+
         //回転止め
         var rot = transform.rotation.eulerAngles;
         rot.x = 0;
@@ -130,6 +141,7 @@ public class Move_Player : MonoBehaviour
         //クリアの処理(処理の順番の関係上先に書いてます)
         if (SkyBoxChangeBool)
         {
+            play = false;
             if (goaltouch)
             {
                 transform.rotation = Quaternion.LookRotation(GoalObject.transform.position - this.gameObject.transform.position);
@@ -179,7 +191,7 @@ public class Move_Player : MonoBehaviour
        
 
         Rigidbody rb = this.GetComponent<Rigidbody>();
-        if (rb.velocity.y <= 0.1f && rb.velocity.y >= -0.1f && Input.GetButtonDown("Jump") &&!SkyBoxChangeBool)
+        if (rb.velocity.y <= 0.1f && rb.velocity.y >= -0.1f && Input.GetButtonDown("Jump") &&!SkyBoxChangeBool && !cameraCH.Hukan)
         {
             rb.velocity = Vector3.zero;
             rb.AddForce(0, jumpforce, 0);
@@ -225,6 +237,7 @@ public class Move_Player : MonoBehaviour
 
         if (system.GetComponent<Sisutemu>().bankey == false && SkyBoxChangeBool == false)
         {
+            play = true;
             //あたらしい移動（大地)
             // 移動量
             moveX = Input.GetAxis("Horizontal") * speed; // 左右
