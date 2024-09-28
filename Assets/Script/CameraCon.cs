@@ -186,7 +186,7 @@ public class CameraCon : MonoBehaviour
                         //
 
                         DelayTimeT = 0;
-
+                        sanjigen.GetComponent<Move_Player>().enabled = false;
                         //P_Ball2D.SetActive(true);
                         //P_Ball3D.SetActive(true);
                         //----隠す球ｰｰｰｰ
@@ -223,6 +223,7 @@ public class CameraCon : MonoBehaviour
                         cameraCh_P = true;
                         BallScale = 5f;
                         //--------------
+                        nijigen.GetComponent<Move_Player>().enabled = false;
 
                         //----音----
                         ADXSoundManager.Instance.PlaySound("dimchange", cueReference.AcbAsset.Handle, cueReference.CueId, gameObject.transform, false);
@@ -354,6 +355,7 @@ public class CameraCon : MonoBehaviour
                 henkaTime = 0;
                 if (!sanji)
                 {
+                    nijigen.GetComponent<Move_Player>().enabled = true;
                     nijiRB.constraints = RigidbodyConstraints.None;
                     nijiRB.constraints = RigidbodyConstraints.FreezeRotation;
                     nijiRB.constraints = RigidbodyConstraints.FreezePositionX;
@@ -363,6 +365,7 @@ public class CameraCon : MonoBehaviour
                 }
                 else
                 {
+                    sanjigen.GetComponent<Move_Player>().enabled = true;
                     sanjiRB.constraints = RigidbodyConstraints.None;
                     sanjiRB.constraints = RigidbodyConstraints.FreezeRotation;
                     sanjiRB.constraints = RigidbodyConstraints.FreezePositionX;

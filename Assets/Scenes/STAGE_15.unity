@@ -5173,6 +5173,7 @@ MonoBehaviour:
   VCamera2D: {fileID: 847148377}
   sanji: 1
   Qoshiteru: 1
+  key0: 1
   dX: 472.4
   dY: 148.8
   dXD: 3.54
@@ -16686,6 +16687,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1901853595}
     m_Modifications:
+    - target: {fileID: 2005614619825838877, guid: 8dc9b9b47b0e7a740bd65a92839e73b4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496392599980350787, guid: 8dc9b9b47b0e7a740bd65a92839e73b4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 57d3c0d62f19f734c97dbedf73e6bfc1, type: 2}
+    - target: {fileID: 4999981127934615892, guid: 8dc9b9b47b0e7a740bd65a92839e73b4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924116070309048309, guid: 8dc9b9b47b0e7a740bd65a92839e73b4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 57d3c0d62f19f734c97dbedf73e6bfc1, type: 2}
     - target: {fileID: 1712875508251087983, guid: 63da3a4f1f0c1da4bb3b7de5895192fd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -16730,22 +16747,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: 0 (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 2005614619825838877, guid: 8dc9b9b47b0e7a740bd65a92839e73b4, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2496392599980350787, guid: 8dc9b9b47b0e7a740bd65a92839e73b4, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 57d3c0d62f19f734c97dbedf73e6bfc1, type: 2}
-    - target: {fileID: 4999981127934615892, guid: 8dc9b9b47b0e7a740bd65a92839e73b4, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924116070309048309, guid: 8dc9b9b47b0e7a740bd65a92839e73b4, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 57d3c0d62f19f734c97dbedf73e6bfc1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3086756837446310016, guid: 8dc9b9b47b0e7a740bd65a92839e73b4, type: 3}
@@ -26811,6 +26812,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ebae78c5c3a222349aa21351bc6e95e4, type: 3}
   - {fileID: 21300000, guid: 7897de89f5b5c304b927f5a4860b955e, type: 3}
   - {fileID: 21300000, guid: 8d68361f07182f442bdef4295fb39a48, type: 3}
+  CameraCon: {fileID: 0}
+  key0: 0
 --- !u!1 &1764453506
 GameObject:
   m_ObjectHideFlags: 0
@@ -32807,6 +32810,7 @@ MonoBehaviour:
   L_CameraHukan: {fileID: 21300000, guid: 1ad2613f8e77fc84cbbc29e6adf6ddad, type: 3}
   R_CameraHukan: {fileID: 21300000, guid: 0e789ee3cd279e64ab73893f9abb8773, type: 3}
   NeutralHukan: {fileID: 21300000, guid: 5c544c568f667c54b89c6878e7e774d3, type: 3}
+  NeutralHukan2D: {fileID: 21300000, guid: a2f8db0a224c26a4bad5e6cfef449ba1, type: 3}
   Jump2D: {fileID: 21300000, guid: 644df1c5592e88d4f94806fc54a29e83, type: 3}
   Hukan2D: {fileID: 21300000, guid: b2e89e2d617c55148a91c26826fe566a, type: 3}
   Change2D: {fileID: 21300000, guid: 8ce42099b10c1764d8b7ef0c06eb5433, type: 3}
@@ -33388,6 +33392,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ebae78c5c3a222349aa21351bc6e95e4, type: 3}
   - {fileID: 21300000, guid: 7897de89f5b5c304b927f5a4860b955e, type: 3}
   - {fileID: 21300000, guid: 8d68361f07182f442bdef4295fb39a48, type: 3}
+  CameraCon: {fileID: 0}
+  key0: 0
 --- !u!1 &2008044583 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 464301605175173324, guid: 424e162209b1eed47888dc7fcef653dd, type: 3}

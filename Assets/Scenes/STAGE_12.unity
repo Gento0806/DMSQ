@@ -5207,6 +5207,7 @@ MonoBehaviour:
   VCamera2D: {fileID: 847148377}
   sanji: 1
   Qoshiteru: 1
+  key0: 1
   dX: 425.2
   dY: 30
   dXD: -12.79
@@ -9464,7 +9465,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527683579}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14968996, y: 0.7732909, z: -0.19844848, w: 0.5832944}
+  m_LocalRotation: {x: 0.14968996, y: 0.7732909, z: -0.19844846, w: 0.5832944}
   m_LocalPosition: {x: -239, y: 137.94, z: -25.900002}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
@@ -34019,6 +34020,7 @@ MonoBehaviour:
   L_CameraHukan: {fileID: 21300000, guid: 1ad2613f8e77fc84cbbc29e6adf6ddad, type: 3}
   R_CameraHukan: {fileID: 21300000, guid: 0e789ee3cd279e64ab73893f9abb8773, type: 3}
   NeutralHukan: {fileID: 21300000, guid: 5c544c568f667c54b89c6878e7e774d3, type: 3}
+  NeutralHukan2D: {fileID: 21300000, guid: a2f8db0a224c26a4bad5e6cfef449ba1, type: 3}
   Jump2D: {fileID: 21300000, guid: 644df1c5592e88d4f94806fc54a29e83, type: 3}
   Hukan2D: {fileID: 21300000, guid: b2e89e2d617c55148a91c26826fe566a, type: 3}
   Change2D: {fileID: 21300000, guid: 8ce42099b10c1764d8b7ef0c06eb5433, type: 3}
@@ -35246,7 +35248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094368303}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14968996, y: 0.7732909, z: -0.19844848, w: 0.5832944}
+  m_LocalRotation: {x: 0.14968996, y: 0.7732909, z: -0.19844846, w: 0.5832944}
   m_LocalPosition: {x: -239, y: 137.94, z: -25.900002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
