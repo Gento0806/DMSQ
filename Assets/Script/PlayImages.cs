@@ -34,14 +34,15 @@ public class PlayImages : MonoBehaviour
     {
         image = GetComponent<Image>();
         cameracon = GameObject.Find("CameraCon").GetComponent<CameraCon>();
-        camerach = GameObject.Find("MainCamera").GetComponent<camera_ch>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (cameracon.sanji)
         {
+            camerach = GameObject.Find("MainCamera").GetComponent<camera_ch>();
             if (!camerach.Hukan)
             {
                 if (Input.GetButton("Jump")) image.sprite = Jump3D;
@@ -61,6 +62,7 @@ public class PlayImages : MonoBehaviour
         }
         else
         {
+            camerach = GameObject.Find("2DCamera").GetComponent<camera_ch>();
             if (!camerach.Hukan)
             {
                 if (Input.GetButton("Jump")) image.sprite = Jump2D;

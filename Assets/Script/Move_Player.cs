@@ -11,6 +11,8 @@ using Unity.Mathematics;
 
 public class Move_Player : MonoBehaviour
 {
+    
+
     //アニメーション
     private Animator animator;
 
@@ -112,6 +114,8 @@ public class Move_Player : MonoBehaviour
 
         SkyBoxChangeBox = GameObject.Find("SkyBoxChange").GetComponent<SkyBoxChange>();
         animator = this.gameObject.GetComponent<Animator>();
+
+        
        
     }
     void Update()
