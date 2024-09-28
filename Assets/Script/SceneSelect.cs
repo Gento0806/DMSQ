@@ -22,7 +22,7 @@ public class SceneSelect : MonoBehaviour
     void Start()
     {
         Debug.Log("aaa");
-        if (SceneManager.GetActiveScene().buildIndex == 17&&this.gameObject.name== "StageButton1")//シーン選択画面のボタン１のみ読み込む
+        if (SceneManager.GetActiveScene().buildIndex == 16&&this.gameObject.name== "StageButton1")//シーン選択画面のボタン１のみ読み込む
         {
             for (int i = 1; i <= StageNumImage.Length; i++)//クリア状況によって画像を入れ替える
             {
