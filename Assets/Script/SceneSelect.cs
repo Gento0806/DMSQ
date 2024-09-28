@@ -21,9 +21,10 @@ public class SceneSelect : MonoBehaviour
     Button btn;
     void Start()
     {
+        Debug.Log("aaa");
         if (SceneManager.GetActiveScene().buildIndex == 17&&this.gameObject.name== "StageButton1")//シーン選択画面のボタン１のみ読み込む
         {
-            for (int i = 1; i < StageNumImage.Length; i++)//クリア状況によって画像を入れ替える
+            for (int i = 1; i <= StageNumImage.Length; i++)//クリア状況によって画像を入れ替える
             {
                 img = StageNumImage[i].GetComponent<Image>();
 
@@ -42,14 +43,16 @@ public class SceneSelect : MonoBehaviour
                 }
                 btn.spriteState = sp;
             }
+            Debug.Log(ClearNum[1]);
         }
 
     }
     void Update()
     {
+        Debug.Log("aaa");
         if (Input.GetButtonDown("Option") && Input.GetButtonDown("Share"))//クリアデータのリセット
         {
-            for(int i=1;i< StageNumImage.Length; i++)
+            for(int i=1;i<= StageNumImage.Length; i++)
             {
                 img = StageNumImage[i].GetComponent<Image>();
                 btn = StageNumImage[i].GetComponent<Button>();
