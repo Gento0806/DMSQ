@@ -22,6 +22,7 @@ public class PlayImages : MonoBehaviour
     public Sprite L_CameraHukan;
     public Sprite R_CameraHukan;
     public Sprite NeutralHukan;
+    public Sprite NeutralHukan2D;
 
     //2D
     public Sprite Jump2D;
@@ -60,10 +61,18 @@ public class PlayImages : MonoBehaviour
         }
         else
         {
-            if (Input.GetButton("Jump")) image.sprite = Jump2D;
-            else if (Input.GetButton("Hukan")) image.sprite = Hukan2D;
-            else if (Input.GetButton("Change")) image.sprite = Change2D;
-            else image.sprite = Neutral2D;
+            if (!camerach.Hukan)
+            {
+                if (Input.GetButton("Jump")) image.sprite = Jump2D;
+                else if (Input.GetButton("Hukan")) image.sprite = Hukan2D;
+                else if (Input.GetButton("Change")) image.sprite = Change2D;
+                else image.sprite = Neutral2D;
+            }
+            else
+            {
+                image.sprite = NeutralHukan2D;
+            }
+            
         }
         
     }
