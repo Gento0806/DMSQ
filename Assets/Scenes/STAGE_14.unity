@@ -5081,6 +5081,7 @@ MonoBehaviour:
   VCamera2D: {fileID: 847148377}
   sanji: 1
   Qoshiteru: 1
+  key0: 1
   dX: 189
   dY: 100
   dXD: -3.3
@@ -14566,9 +14567,6 @@ PrefabInstance:
       addedObject: {fileID: 1762985434}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a58e81baf4e0764c8faaa390a9c903b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1762985441}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a58e81baf4e0764c8faaa390a9c903b, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1762985433}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a58e81baf4e0764c8faaa390a9c903b, type: 3}
       insertIndex: -1
@@ -22688,6 +22686,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3d27c9d720e4d2f4e8deefdca64770fc, type: 3}
   - {fileID: 21300000, guid: ebae78c5c3a222349aa21351bc6e95e4, type: 3}
   - {fileID: 21300000, guid: 7897de89f5b5c304b927f5a4860b955e, type: 3}
+  CameraCon: {fileID: 0}
+  key0: 0
 --- !u!1 &1762985432 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a58e81baf4e0764c8faaa390a9c903b, type: 3}
@@ -22880,21 +22880,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5a58e81baf4e0764c8faaa390a9c903b, type: 3}
   m_PrefabInstance: {fileID: 955067742}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1762985441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762985432}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4059d348077b72459b3847103e640ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabObjectsToChange:
-  - {fileID: 134615949565341207, guid: f3feb99b1d9bdb84ab436bc3b9391472, type: 3}
-  requiredTouches: 2
 --- !u!114 &1762985442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22928,6 +22913,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3d27c9d720e4d2f4e8deefdca64770fc, type: 3}
   - {fileID: 21300000, guid: ebae78c5c3a222349aa21351bc6e95e4, type: 3}
   - {fileID: 21300000, guid: 7897de89f5b5c304b927f5a4860b955e, type: 3}
+  CameraCon: {fileID: 0}
+  key0: 0
 --- !u!82 &1762985443
 AudioSource:
   m_ObjectHideFlags: 0

@@ -2,44 +2,57 @@ using UnityEngine;
 
 public class Key_open : MonoBehaviour
 {
-    public GameObject[] prefabObjectsToChange; // インスペクターで指定するプレハブ
-    private GameObject[] instantiatedObjects; // インスタンス化されたプレハブを保持
-    public int requiredTouches = 3; // カギを取る回数
-    private static int sharedTouchCount = 0; // すべてのキャラクターで共有されるカウント
-
+    public GameObject[] KeyObj; //鍵のオブジェクト (偶数：3次元　奇数:2次元)
+    public GameObject[] KeyWallObj; //壁のオブジェクト 
+    int KeyNum; // カギを取る回数
+    int GetKeyNum=0;
     private void Start()
     {
-        // プレハブをインスタンス化してシーン上に配置
-        instantiatedObjects = new GameObject[prefabObjectsToChange.Length];
-        for (int i = 0; i < prefabObjectsToChange.Length; i++)
-        {
-            instantiatedObjects[i] = Instantiate(prefabObjectsToChange[i]);
-            instantiatedObjects[i].SetActive(false); // 初期状態を非アクティブに
-        }
+        KeyNum = KeyObj.Length;
     }
 
+    void Update()
+    {
+        GetKeyNum = 0;
+        for(int i=0; i<KeyNum; i++)
+        {
+            if (KeyObj[i].activeSelf == false)
+            {
+                GetKeyNum++;
+            }
+        }
+        if( KeyNum == GetKeyNum)
+        {
+            for(int i=0;i<KeyWallObj.Length;i++)
+            {
+                if(this.gameObject.name== "mashiro_3model")
+                {
+                    Destroy(KeyWallObj[i]);
+                }
+            }
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Key"))
         {
-            sharedTouchCount++;
-
-            // カギを取る回数が設定値未満の場合にオブジェクトを変更
-            if (sharedTouchCount < requiredTouches && sharedTouchCount - 1 < instantiatedObjects.Length)
+            
+            for(int i = 0; i < KeyNum; i++)
             {
-                instantiatedObjects[sharedTouchCount - 1].SetActive(true);
-            }
-            else if (sharedTouchCount == requiredTouches && instantiatedObjects.Length > 0)
-            {
-                // 指定された回数でオブジェクトを非アクティブにする
-                foreach (GameObject obj in instantiatedObjects)
+                if (other.gameObject == KeyObj[i])
                 {
-                    obj.SetActive(false);
+                    other.gameObject.SetActive(false);
+                    if (i % 2 == 0)
+                    {
+                        KeyObj[i+1].SetActive(false);
+                    }
+                    else
+                    {
+                        KeyObj[i-1].SetActive(false);
+                    }
+                    break;
                 }
             }
-
-            // 触れた鍵（Key）オブジェクトを削除
-            Destroy(other.gameObject);
         }
     }
 }
