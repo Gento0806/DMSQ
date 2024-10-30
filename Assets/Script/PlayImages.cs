@@ -29,16 +29,28 @@ public class PlayImages : MonoBehaviour
     public Sprite Hukan2D;
     public Sprite Change2D;
     public Sprite Neutral2D;
+
+    
     // Start is called before the first frame update
     void Start()
     {
         image = GetComponent<Image>();
         cameracon = GameObject.Find("CameraCon").GetComponent<CameraCon>();
     }
-
     // Update is called once per frame
+    string[] controller;
     void Update()
     {
+        controller = Input.GetJoystickNames();
+
+        if (!string.IsNullOrEmpty(controller[1])){
+            Debug.Log("Dual Sence");
+        }
+        else
+        {
+            Debug.Log("No Device");
+        }
+
 
         if (cameracon.sanji)
         {
