@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -697, y: -423.5}
+  m_AnchoredPosition: {x: -820, y: -420}
   m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &91646630
@@ -169,14 +169,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91646628}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6408886e0103aa74bbd363e0b0c8e158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 91646631}
+  leftButton: {fileID: 0}
+  rightButton: {fileID: 0}
   panelImage: {fileID: 577486749}
-  newSprite: {fileID: 21300000, guid: c4f1e74dd6dc8a247b177b298abeb9b7, type: 3}
+  pageSprites: []
 --- !u!114 &91646631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,6 +386,7 @@ GameObject:
   - component: {fileID: 577486751}
   - component: {fileID: 577486750}
   - component: {fileID: 577486749}
+  - component: {fileID: 577486752}
   m_Layer: 5
   m_Name: image
   m_TagString: Untagged
@@ -412,7 +414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c4f1e74dd6dc8a247b177b298abeb9b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1870c71426612ce438c89b0df0b3ac16, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -439,7 +441,7 @@ RectTransform:
   m_GameObject: {fileID: 577486748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1078569282}
@@ -447,9 +449,30 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 103}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -3}
+  m_SizeDelta: {x: 0, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &577486752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577486748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6408886e0103aa74bbd363e0b0c8e158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftButton: {fileID: 91646631}
+  rightButton: {fileID: 1756740069}
+  panelImage: {fileID: 577486749}
+  pageSprites:
+  - {fileID: 21300000, guid: 1870c71426612ce438c89b0df0b3ac16, type: 3}
+  - {fileID: 21300000, guid: 6d9792b72bd10e142bc80cc38a08711f, type: 3}
+  - {fileID: 21300000, guid: a50b07d035ada4d4986493297fe66a49, type: 3}
+  - {fileID: 21300000, guid: 960fbaba948fd524389801173f31593d, type: 3}
+  - {fileID: 21300000, guid: 9ed2e2efc8c6e4c46a46ce0d13d6e2ef, type: 3}
 --- !u!1 &637330963
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,7 +716,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 21300000, guid: 5839bdb7b7e598c41afc45448623c50a, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 3d541e437412aba4d9c3a5d42b5fbbc3, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -713,7 +736,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 12
+          m_IntArgument: 15
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -750,7 +773,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 065a800ec0cca954da084af665802171, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 87dac54a3201f6242956af97bb4a2290, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -999,8 +1022,8 @@ RectTransform:
   - {fileID: 2101067222}
   - {fileID: 577486751}
   - {fileID: 1063638978}
-  - {fileID: 91646629}
   - {fileID: 1756740067}
+  - {fileID: 91646629}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1181,7 +1204,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -498.90002, y: -418}
+  m_AnchoredPosition: {x: -620, y: -420}
   m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1756740068
@@ -1191,14 +1214,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756740066}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6408886e0103aa74bbd363e0b0c8e158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 1756740069}
+  leftButton: {fileID: 0}
+  rightButton: {fileID: 0}
   panelImage: {fileID: 577486749}
-  newSprite: {fileID: 21300000, guid: f03da0c66c4bf0f4db49e4868840023d, type: 3}
+  pageSprites: []
 --- !u!114 &1756740069
 MonoBehaviour:
   m_ObjectHideFlags: 0
