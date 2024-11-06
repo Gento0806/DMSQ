@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37092832, g: 0.24144235, b: 0.28507993, a: 1}
+  m_IndirectSpecularColor: {r: 0.37168851, g: 0.24183217, b: 0.28540978, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5076,6 +5076,7 @@ MonoBehaviour:
   VCamera2D: {fileID: 847148377}
   sanji: 1
   Qoshiteru: 1
+  key0: 1
   dX: 170
   dY: 0
   dXD: -10
@@ -7046,7 +7047,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527683579}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.20040354, y: 0.78548366, z: -0.3217822, w: 0.48919338}
+  m_LocalRotation: {x: 0.20040351, y: 0.78548366, z: -0.32178223, w: 0.4891933}
   m_LocalPosition: {x: -324.6, y: 334.1, z: 108.8}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_ConstrainProportionsScale: 0
@@ -7702,10 +7703,28 @@ MonoBehaviour:
   L_Camera3D: {fileID: 21300000, guid: bc9da01ddf5d6da43a0345c26bf7448b, type: 3}
   R_Camera3D: {fileID: 21300000, guid: ed421c477eeaa55479f30c1f7d68ce7b, type: 3}
   Neutral3D: {fileID: 21300000, guid: f9210553d53203d49833221160d11026, type: 3}
+  KeyBoardJump3D: {fileID: 21300000, guid: 57dc37c95a70dbd408085c241905ee8c, type: 3}
+  KeyBoardHukan3D: {fileID: 21300000, guid: 1ec7100aa367520449d5e1f036d82d7f, type: 3}
+  KeyBoardChange3D: {fileID: 21300000, guid: b00b586ee90d81f4b8ce0cb7a9ccd1a2, type: 3}
+  KeyBoardL_Camera3D: {fileID: 21300000, guid: c702f6a1a6675004ab86d8101dc64359, type: 3}
+  KeyBoardR_Camera3D: {fileID: 21300000, guid: e7778ce0c612ed94c8145db91b176e1d, type: 3}
+  KeyBoardNeutral3D: {fileID: 21300000, guid: dec9c0e8b79cfe44abc71ab14a1d64e2, type: 3}
+  L_CameraHukan: {fileID: 21300000, guid: 1ad2613f8e77fc84cbbc29e6adf6ddad, type: 3}
+  R_CameraHukan: {fileID: 21300000, guid: 0e789ee3cd279e64ab73893f9abb8773, type: 3}
+  NeutralHukan: {fileID: 21300000, guid: 5c544c568f667c54b89c6878e7e774d3, type: 3}
+  NeutralHukan2D: {fileID: 21300000, guid: a2f8db0a224c26a4bad5e6cfef449ba1, type: 3}
+  KeyBoardL_CameraHukan: {fileID: 21300000, guid: 6b65f15b1d9a89d4184c18fc75b700b0, type: 3}
+  KeyBoardR_CameraHukan: {fileID: 21300000, guid: 5f0327e9f1c8ce94aaee6f566f933162, type: 3}
+  KeyBoardNeutralHukan: {fileID: 21300000, guid: 90c7d04d1716cb443ab5174d86c2ccbe, type: 3}
+  KeyBoardNeutralHukan2D: {fileID: 21300000, guid: 1327c9873aef4dd469379b32cd5e9a27, type: 3}
   Jump2D: {fileID: 21300000, guid: 644df1c5592e88d4f94806fc54a29e83, type: 3}
   Hukan2D: {fileID: 21300000, guid: b2e89e2d617c55148a91c26826fe566a, type: 3}
   Change2D: {fileID: 21300000, guid: 8ce42099b10c1764d8b7ef0c06eb5433, type: 3}
   Neutral2D: {fileID: 21300000, guid: 340792f162364b44eaa2d8abc32e6231, type: 3}
+  KeyBoardJump2D: {fileID: 21300000, guid: 4a3fdd2c42c0e3244bbade8b93ff5a31, type: 3}
+  KeyBoardHukan2D: {fileID: 21300000, guid: e0e17ce542c51aa47b337799d2c12dc6, type: 3}
+  KeyBoardChange2D: {fileID: 21300000, guid: d2718e31e0d67f84e8472f9b6f7f98d2, type: 3}
+  KeyBoardNeutral2D: {fileID: 21300000, guid: 7fafcfe331c70664182f0f19ea91f5ed, type: 3}
 --- !u!1 &675615464 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -12653348756766715, guid: 424e162209b1eed47888dc7fcef653dd, type: 3}
@@ -13578,6 +13597,7 @@ MonoBehaviour:
     acbAsset: {fileID: 0}
     cueId: 0
   moveplayer: 0
+  play: 0
 --- !u!23 &886285520
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21622,6 +21642,7 @@ MonoBehaviour:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
     cueId: 12
   moveplayer: 1
+  play: 0
 --- !u!320 &1762985435
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -27774,7 +27795,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995419957}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2913334, y: 0.40160716, z: -0.13645326, w: 0.85744804}
+  m_LocalRotation: {x: 0.29133344, y: 0.40160713, z: -0.13645327, w: 0.857448}
   m_LocalPosition: {x: -33.4, y: 46.5, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -27969,6 +27990,7 @@ MonoBehaviour:
     acbAsset: {fileID: -6750239444755058063, guid: 65de4c79eac592248979ff40f1b7fa84, type: 3}
     cueId: 12
   moveplayer: 1
+  play: 0
 --- !u!54 &2004670191
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28442,7 +28464,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094368303}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.20040354, y: 0.78548366, z: -0.3217822, w: 0.48919338}
+  m_LocalRotation: {x: 0.20040351, y: 0.78548366, z: -0.32178223, w: 0.4891933}
   m_LocalPosition: {x: -324.6, y: 334.1, z: 108.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
