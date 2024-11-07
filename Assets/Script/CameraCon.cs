@@ -428,6 +428,7 @@ public class CameraCon : MonoBehaviour
                 sanjigen.transform.position = hit.point;
                 Debug.Log(hit.point);
             }
+            ADXSoundManager.Instance.StopSound("neardir");
         }
         else//2D
         {
@@ -441,7 +442,7 @@ public class CameraCon : MonoBehaviour
             nijigen.transform.position = Pos;
             //nijiRB.constraints = RigidbodyConstraints.FreezeRotation;
         }
-
+        ADXSoundManager.Instance.StopSound("neardir");
     }
 }
 
