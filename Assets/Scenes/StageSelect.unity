@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7257,8 +7257,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c5f44aa71d9a1f44b835b11c61933d22, type: 3}
   - {fileID: 21300000, guid: 6efe0ce0129fe354182b6d31ad163058, type: 3}
   - {fileID: 21300000, guid: 34fa25f9f2b98b04b9d32ed9d8c9848e, type: 3}
-  - {fileID: 21300000, guid: ced23ea9760250b48a9f1e38322414f4, type: 3}
-  - {fileID: 21300000, guid: 1795f0a53d1b8504183af0f37e2b2354, type: 3}
   AfterImage:
   - {fileID: 0}
   - {fileID: 21300000, guid: 98871f0f90ef759418e6b64ea8e3dc7c, type: 3}
@@ -7274,8 +7272,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 45d93e93e571f3a4e9f3e0391a2dd8f0, type: 3}
   - {fileID: 21300000, guid: 239b89340682d774eac8af884bc2a65c, type: 3}
   - {fileID: 21300000, guid: b29599405a2e4ff4c87f4d2ea3898e08, type: 3}
-  - {fileID: 21300000, guid: 3b554d354a703ac4ba37cccdc5eadbf3, type: 3}
-  - {fileID: 21300000, guid: b33daff6f3d87324594aa38ba862735d, type: 3}
   SelectedBeforeImage:
   - {fileID: 0}
   - {fileID: 21300000, guid: 66006d60ef066ec4e895d7d841a1625e, type: 3}
@@ -7291,8 +7287,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0af0e0a5395794f4c9f2f8a2ecec8c73, type: 3}
   - {fileID: 21300000, guid: 34cfc12fc09c4684b86a26d436df9001, type: 3}
   - {fileID: 21300000, guid: 21c349686278e39439129f6973f10f93, type: 3}
-  - {fileID: 21300000, guid: 010c50b609863164ebf8eb231c3154f6, type: 3}
-  - {fileID: 21300000, guid: 454d9365809b8424da3ff63bc82c2c70, type: 3}
   SelectedAfterImage:
   - {fileID: 0}
   - {fileID: 21300000, guid: 816f4f841d5ab54459b9b899e227b599, type: 3}
@@ -7308,8 +7302,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f30d601e1db393b4e9f7b6960760985b, type: 3}
   - {fileID: 21300000, guid: f6868e18e9e72e14d8f4e00b21ca8907, type: 3}
   - {fileID: 21300000, guid: 9b1647d09b7c2c642810843d568e6130, type: 3}
-  - {fileID: 21300000, guid: 17b41f8a9a521ce4f94b0ed5cb1f9ffd, type: 3}
-  - {fileID: 21300000, guid: 86a5b3d45697fa04c91c9efdd59c715d, type: 3}
   StageNumImage:
   - {fileID: 0}
   - {fileID: 1963135504}
@@ -7325,8 +7317,6 @@ MonoBehaviour:
   - {fileID: 1930699678}
   - {fileID: 393374875}
   - {fileID: 1931765350}
-  - {fileID: 1736034918}
-  - {fileID: 469761972}
 --- !u!114 &1963135507
 MonoBehaviour:
   m_ObjectHideFlags: 0
